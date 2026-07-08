@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.marechiaroostia.it/sitemap.xml
+# Pagina di conferma: utile agli utenti ma inutile in ricerca
+Disallow: /thank-you.html
+
+Sitemap: https://marechiaroostia.it/sitemap.xml
