@@ -283,7 +283,7 @@
       <h2 class="reveal d1">Verifica disponibilità e ricevi il listino</h2>
       <p class="reveal d2">Lasciaci i tuoi dati: ti ricontattiamo con la disponibilità delle cabine, le condizioni della stagione 2026 e i vantaggi Fondatore. Nessun impegno.</p>
     </div>
-    <form class="form reveal d1" id="contact-form" action="https://formspree.io/f/mkollnqp" method="POST" novalidate>
+    <form class="form reveal d1" id="contact-form" action="javascript:void(0)" novalidate>
       <div class="form-row">
         <div class="field">
           <label for="nome">Nome e cognome</label>
@@ -311,9 +311,6 @@
         <label for="messaggio">Messaggio</label>
         <textarea id="messaggio" name="messaggio" placeholder="Numero di persone, periodo, o qualsiasi domanda sulle cabine" required></textarea>
       </div>
-      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0" aria-hidden="true">
-      <input type="hidden" name="_subject" value="Richiesta CABINE dal sito Marechiaro">
-      <input type="hidden" name="_next" value="https://marechiaroostia.it/thank-you.html">
       <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
       <div class="form-actions">
         <button type="submit" class="submit" id="submit-btn">Richiedi disponibilità</button>
@@ -399,5 +396,51 @@
     });
   }
 </script>
+
+<script>
+(function(){
+  function initWAForm(){
+    var form = document.getElementById('contact-form');
+    if(!form) return;
+    // rimuovo eventuale action/method per sicurezza: gestiamo tutto noi
+    form.setAttribute('action', 'javascript:void(0)');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var g = function(id){ var el=document.getElementById(id); return el ? (el.value||'').trim() : ''; };
+      var nome = g('nome');
+      var tel = g('telefono');
+      var email = g('email');
+      var motivo = g('motivo');
+      var messaggio = g('messaggio');
+      // validazione minima
+      if(!nome || !email || !messaggio){
+        var st = document.getElementById('form-status');
+        if(st){ st.className='form-status show err'; st.textContent='Compila nome, email e messaggio prima di inviare.'; }
+        return;
+      }
+      var righe = [];
+      righe.push('Ciao Marechiaro! Vorrei informazioni.');
+      righe.push('');
+      righe.push('Nome: ' + nome);
+      if(tel) righe.push('Telefono: ' + tel);
+      righe.push('Email: ' + email);
+      if(motivo) righe.push('Richiesta: ' + motivo);
+      righe.push('');
+      righe.push('Messaggio: ' + messaggio);
+      var testo = encodeURIComponent(righe.join('\n'));
+      var url = 'https://wa.me/393484059720?text=' + testo;
+      var st = document.getElementById('form-status');
+      if(st){ st.className='form-status show ok'; st.textContent='Apriamo WhatsApp con la tua richiesta gia pronta: premi invio nella chat per inviarla.'; }
+      window.open(url, '_blank');
+    });
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initWAForm);
+  } else {
+    initWAForm();
+  }
+})();
+</script>
+
 </body>
 </html>
