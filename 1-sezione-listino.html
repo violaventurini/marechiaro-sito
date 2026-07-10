@@ -1,0 +1,137 @@
+<!-- ============================================================
+     SEZIONE LISTINO PREZZI · Marechiaro Ostia
+     Incolla questo blocco nella home (index.html), prima della
+     sezione contatti. Autonomo: porta il proprio CSS inline.
+     ============================================================ -->
+<section id="listino" class="mc-listino" aria-labelledby="listino-title">
+  <div class="mc-listino-inner">
+
+    <p class="mc-eyebrow" data-it="Listino prezzi · Spiaggia" data-en="Price list · Beach">Listino prezzi · Spiaggia</p>
+    <h2 id="listino-title" class="mc-listino-h2" data-it="Il nostro listino" data-en="Our price list">Il nostro listino</h2>
+
+    <!-- Toggle lingua -->
+    <div class="mc-lang-toggle" role="tablist" aria-label="Lingua listino">
+      <button type="button" class="mc-lang-btn is-active" data-lang="it" role="tab" aria-selected="true">IT</button>
+      <button type="button" class="mc-lang-btn" data-lang="en" role="tab" aria-selected="false">EN</button>
+    </div>
+
+    <!-- NOLEGGIO GIORNALIERO -->
+    <div class="mc-listino-group">
+      <h3 class="mc-group-title" data-it="Noleggio giornaliero" data-en="Daily rental">Noleggio giornaliero</h3>
+      <div class="mc-row mc-row-head">
+        <span class="mc-cell-name"></span>
+        <span class="mc-cell-price" data-it="Lun – Ven" data-en="Mon – Fri">Lun – Ven</span>
+        <span class="mc-cell-price mc-weekend" data-it="Sab · Dom · Festivi" data-en="Sat · Sun · Holidays">Sab · Dom · Festivi</span>
+      </div>
+      <div class="mc-row">
+        <span class="mc-cell-name" data-it="Lettino" data-en="Sunbed">Lettino</span>
+        <span class="mc-cell-price">€ 8,00</span>
+        <span class="mc-cell-price mc-weekend">€ 14,00</span>
+      </div>
+      <div class="mc-row">
+        <span class="mc-cell-name" data-it="Ombrellone" data-en="Umbrella">Ombrellone</span>
+        <span class="mc-cell-price">€ 14,00</span>
+        <span class="mc-cell-price mc-weekend">€ 18,00</span>
+      </div>
+      <div class="mc-row">
+        <span class="mc-cell-name">
+          <span data-it="Cabina" data-en="Changing Cabin">Cabina</span>
+          <small data-it="Spogliatoio privato · intera giornata" data-en="Private changing room · full day">Spogliatoio privato · intera giornata</small>
+        </span>
+        <span class="mc-cell-price">€ 70,00</span>
+        <span class="mc-cell-price mc-weekend">€ 100,00</span>
+      </div>
+    </div>
+
+    <!-- OFFERTA SPIAGGIA -->
+    <div class="mc-listino-group">
+      <h3 class="mc-group-title" data-it="Offerta spiaggia" data-en="Beach package">Offerta spiaggia</h3>
+      <div class="mc-row mc-row-head">
+        <span class="mc-cell-name"></span>
+        <span class="mc-cell-price" data-it="Lun – Ven" data-en="Mon – Fri">Lun – Ven</span>
+        <span class="mc-cell-price mc-weekend" data-it="Sab · Dom · Festivi" data-en="Sat · Sun · Holidays">Sab · Dom · Festivi</span>
+      </div>
+      <div class="mc-row">
+        <span class="mc-cell-name mc-cell-offer">
+          <span data-it="1 Ombrellone + 2 Lettini" data-en="1 Umbrella + 2 Sunbeds">1 Ombrellone + 2 Lettini</span>
+          <small data-it="La nostra formula giornata intera" data-en="Our full-day formula">La nostra formula giornata intera</small>
+        </span>
+        <span class="mc-cell-price">€ 30,00</span>
+        <span class="mc-cell-price mc-weekend">€ 44,00</span>
+      </div>
+    </div>
+
+    <!-- MEZZA GIORNATA -->
+    <div class="mc-listino-group">
+      <h3 class="mc-group-title" data-it="Mezza giornata" data-en="Half day">Mezza giornata</h3>
+      <div class="mc-row mc-row-head">
+        <span class="mc-cell-name"></span>
+        <span class="mc-cell-price" data-it="Lun – Ven" data-en="Mon – Fri">Lun – Ven</span>
+        <span class="mc-cell-price mc-weekend" data-it="Sab · Dom" data-en="Sat · Sun">Sab · Dom</span>
+      </div>
+      <div class="mc-row">
+        <span class="mc-cell-name mc-cell-offer">
+          <span data-it="1 Ombrellone + 2 Lettini" data-en="1 Umbrella + 2 Sunbeds">1 Ombrellone + 2 Lettini</span>
+          <small data-it="Ingresso pomeridiano dalle 14:00" data-en="Afternoon entry from 2:00 PM">Ingresso pomeridiano dalle 14:00</small>
+        </span>
+        <span class="mc-cell-price">€ 20,00</span>
+        <span class="mc-cell-price mc-weekend">€ 30,00</span>
+      </div>
+    </div>
+
+    <p class="mc-listino-foot" data-it="Ti auguriamo una splendida giornata di mare." data-en="We wish you a wonderful day by the sea.">Ti auguriamo una splendida giornata di mare.</p>
+
+    <a class="mc-listino-cta" href="https://wa.me/393484059720?text=Ciao%20Marechiaro%2C%20vorrei%20prenotare%20un%20posto%20in%20spiaggia."
+       data-it="Prenota su WhatsApp" data-en="Book on WhatsApp">Prenota su WhatsApp</a>
+
+  </div>
+</section>
+
+<style>
+.mc-listino{background:#efe6d6;padding:80px 24px;color:#3a3128;}
+.mc-listino-inner{max-width:640px;margin:0 auto;text-align:center;}
+.mc-listino .mc-eyebrow{font-family:'Jost',sans-serif;font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:#b5442f;margin:0 0 12px;}
+.mc-listino-h2{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:500;font-size:2.6rem;color:#8a2c1d;margin:0 0 28px;}
+.mc-lang-toggle{display:inline-flex;gap:0;border:1px solid #c9a24b;border-radius:40px;overflow:hidden;margin-bottom:40px;}
+.mc-lang-btn{font-family:'Jost',sans-serif;font-size:.72rem;letter-spacing:.18em;padding:8px 22px;background:transparent;color:#7a6a45;border:0;cursor:pointer;transition:.2s;}
+.mc-lang-btn.is-active{background:#b5442f;color:#efe6d6;}
+.mc-listino-group{margin-bottom:44px;text-align:left;}
+.mc-group-title{font-family:'Jost',sans-serif;font-size:.82rem;letter-spacing:.24em;text-transform:uppercase;color:#b5442f;margin:0 0 18px;padding-bottom:10px;border-bottom:1px solid rgba(201,162,75,.5);}
+.mc-row{display:grid;grid-template-columns:1fr auto auto;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(58,49,40,.08);}
+.mc-row-head{border-bottom:0;padding-bottom:2px;}
+.mc-row-head .mc-cell-price{font-family:'Jost',sans-serif;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:#9c8a5f;font-weight:400;}
+.mc-cell-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.5rem;color:#3a3128;line-height:1.15;}
+.mc-cell-name small{display:block;font-family:'Jost',sans-serif;font-size:.68rem;letter-spacing:.04em;color:#9c8a5f;margin-top:2px;}
+.mc-cell-offer span{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;color:#8a2c1d;font-size:1.5rem;}
+.mc-cell-price{min-width:96px;text-align:right;font-family:'Jost',sans-serif;font-size:1.02rem;color:#6b5d4a;}
+.mc-cell-price.mc-weekend{font-weight:600;color:#8a2c1d;}
+.mc-listino-foot{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:1.25rem;color:#9c8a5f;margin:8px 0 32px;}
+.mc-listino-cta{display:inline-block;font-family:'Jost',sans-serif;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;background:#b5442f;color:#efe6d6;text-decoration:none;padding:14px 34px;border-radius:40px;transition:.2s;}
+.mc-listino-cta:hover{background:#8a2c1d;}
+@media(max-width:520px){
+  .mc-row{grid-template-columns:1fr auto;gap:6px 12px;}
+  .mc-row .mc-cell-price:first-of-type{grid-column:1;text-align:left;padding-left:2px;font-size:.9rem;}
+  .mc-cell-name{grid-row:span 2;}
+  .mc-listino-h2{font-size:2.1rem;}
+}
+</style>
+
+<script>
+(function(){
+  var sec=document.getElementById('listino');
+  if(!sec)return;
+  function setLang(lang){
+    sec.querySelectorAll('[data-'+lang+']').forEach(function(el){
+      el.textContent=el.getAttribute('data-'+lang);
+    });
+    sec.querySelectorAll('.mc-lang-btn').forEach(function(b){
+      var on=b.getAttribute('data-lang')===lang;
+      b.classList.toggle('is-active',on);
+      b.setAttribute('aria-selected',on);
+    });
+  }
+  sec.querySelectorAll('.mc-lang-btn').forEach(function(b){
+    b.addEventListener('click',function(){setLang(b.getAttribute('data-lang'));});
+  });
+})();
+</script>
