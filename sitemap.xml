@@ -1,38 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
   <url>
     <loc>https://marechiaroostia.it/</loc>
-    <lastmod>2026-07-08</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://marechiaroostia.it/img/marechiaro-ostia-spiaggia-hero.jpg</image:loc>
+      <image:title>Marechiaro, stabilimento balneare a Lido di Ostia</image:title>
+      <image:caption>Spiaggia attrezzata con lettini e ombrelloni sul litorale romano</image:caption>
+    </image:image>
   </url>
+
   <url>
-    <loc>https://marechiaroostia.it/cabine.html</loc>
-    <lastmod>2026-07-08</lastmod>
+    <loc>https://marechiaroostia.it/aperitivi.html</loc>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://marechiaroostia.it/img/inaugurazione-marechiaro-ostia.jpg</image:loc>
+      <image:title>Inaugurazione Marechiaro Ostia, 20 luglio 2026</image:title>
+      <image:caption>Aperitivo al tramonto, cocktail bar e dj set sulla spiaggia di Ostia</image:caption>
+    </image:image>
   </url>
+
   <url>
-    <loc>https://marechiaroostia.it/food-drink.html</loc>
-    <lastmod>2026-07-08</lastmod>
+    <loc>https://marechiaroostia.it/spiaggia.html</loc>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://marechiaroostia.it/img/marechiaro-ostia-spiaggia-fd0a.jpg</image:loc>
+      <image:title>Lettini e ombrelloni al Marechiaro di Ostia</image:title>
+    </image:image>
   </url>
+
   <url>
-    <loc>https://marechiaroostia.it/fondatore.html</loc>
-    <lastmod>2026-07-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://marechiaroostia.it/note-legali.html</loc>
-    <lastmod>2026-07-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://marechiaroostia.it/listino.html</loc>
+    <loc>https://marechiaroostia.it/contatti.html</loc>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
 </urlset>
