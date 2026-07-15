@@ -1,16 +1,4 @@
 User-agent: *
 Allow: /
 
-# Pagine legali: raggiungibili, non indicizzate
-Disallow: /privacy.html
-Disallow: /cookie.html
-Disallow: /note-legali.html
-
-# Vecchie pagine, non piu' collegate
-Disallow: /tariffe.html
-Disallow: /listino.html
-Disallow: /food-drink.html
-Disallow: /cabine.html
-Disallow: /fondatore.html
-
 Sitemap: https://marechiaroostia.it/sitemap.xml
