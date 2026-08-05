@@ -1,0 +1,4 @@
+# I documenti di lavoro restano nel repository ma non vengono serviti online.
+# Chi prova a raggiungerli riceve la 404.
+/_strumenti/*          /404.html   404
+/LEGGIMI-GITHUB.md     /404.html   404

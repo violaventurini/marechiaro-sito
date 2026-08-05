@@ -1,0 +1,435 @@
+/* ============================================================
+   MARECHIARO OSTIA — impianto "avorio", versione dinamica
+   Il movimento viene da tipografia, scorrimento e colore.
+   Una sola fotografia, in apertura.
+   ============================================================ */
+:root{
+  --avorio:#FBF7EF; --beige:#EBE0CE; --bruno:#2B231C;
+  --bruno-60:rgba(43,35,28,.6); --bruno-35:rgba(43,35,28,.35); --bruno-14:rgba(43,35,28,.14);
+  --rosso:#ED262E; --g:clamp(1.25rem,5vw,4.5rem);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--avorio);color:var(--bruno);
+  font-family:'Jost',system-ui,sans-serif;font-weight:300;font-size:1.02rem;line-height:1.72;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--rosso);outline-offset:4px}
+
+h1,h2,h3{font-family:'Fraunces',Georgia,'Times New Roman',serif;font-weight:400;margin:0;
+  font-variation-settings:"SOFT" 85,"WONK" 0,"opsz" 120;
+  line-height:1.03;letter-spacing:-.012em}
+h1{font-size:clamp(3.2rem,12vw,8.5rem)}
+h2{font-size:clamp(2rem,5.2vw,3.9rem);line-height:1.08}
+h3{font-size:clamp(1.5rem,3.6vw,2.8rem);line-height:1.1}
+p{margin:0 0 1.05em;max-width:52ch}
+
+.eti{display:block;font-size:.63rem;font-weight:500;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--rosso);margin-bottom:1.1rem}
+.guida{color:var(--bruno-60);max-width:46ch;font-size:1.06rem}
+.wrap{max-width:1240px;margin-inline:auto;padding-inline:var(--g)}
+.sez{padding-block:clamp(4.5rem,11vw,9rem);position:relative}
+
+.btn{display:inline-flex;align-items:center;padding:1.05rem 2rem;font-size:.66rem;letter-spacing:.2em;
+  text-transform:uppercase;font-weight:500;border:1px solid var(--bruno);background:var(--bruno);
+  color:var(--avorio);transition:background .3s,border-color .3s,transform .3s}
+.btn:hover{background:#150F0B;border-color:#150F0B;transform:translateY(-2px)}
+.btn.chiaro{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.55);color:#fff;
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.btn.chiaro:hover{background:#fff;color:var(--bruno);border-color:#fff}
+.btn.scuro{background:transparent;border-color:var(--bruno-35);color:var(--bruno)}
+.btn.scuro:hover{background:var(--bruno);border-color:var(--bruno);color:var(--avorio)}
+.azioni{display:flex;gap:.7rem;flex-wrap:wrap}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto 0;z-index:200;display:flex;align-items:center;gap:2rem;
+  padding:1rem var(--g);border-bottom:1px solid transparent;
+  transition:background .45s,border-color .45s,padding .45s}
+.nav.posata{background:rgba(251,247,239,.74);backdrop-filter:blur(24px) saturate(170%);
+  -webkit-backdrop-filter:blur(24px) saturate(170%);border-bottom-color:rgba(43,35,28,.1);padding-block:.7rem}
+.marchio{position:relative;display:block;line-height:0}
+.marchio .logo{display:block;height:32px;width:auto;transition:opacity .45s,height .45s}
+.marchio .logo--rosso{position:absolute;left:0;top:0;opacity:0}
+.nav.posata .marchio .logo{height:27px}
+.nav.posata .marchio .logo--bianco{opacity:0}
+.nav.posata .marchio .logo--rosso{opacity:1}
+.menu{display:flex;gap:1.7rem;margin-left:auto;font-size:.66rem;letter-spacing:.2em;
+  text-transform:uppercase;color:rgba(255,255,255,.85);transition:color .45s}
+.nav.posata .menu{color:var(--bruno-60)}
+.menu a{padding-bottom:3px;border-bottom:1px solid transparent;transition:.25s}
+.menu a:hover{border-color:var(--rosso);color:var(--rosso)}
+.pren{padding:.7rem 1.35rem;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;
+  font-weight:500;border:1px solid rgba(255,255,255,.55);color:#fff;transition:.3s}
+.nav.posata .pren{background:var(--bruno);border-color:var(--bruno);color:var(--avorio)}
+.pren:hover{background:#fff;color:var(--bruno);border-color:#fff}
+.nav.posata .pren:hover{background:var(--bruno);border-color:var(--bruno);color:#fff}
+@media(max-width:980px){.menu{display:none}}
+
+/* HERO — l'unica fotografia */
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;
+  color:#fff;overflow:hidden}
+.hero__foto{position:absolute;inset:0;z-index:0;overflow:hidden;
+  -webkit-mask-image:linear-gradient(to bottom,#000 72%,rgba(0,0,0,.6) 89%,transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 72%,rgba(0,0,0,.6) 89%,transparent 100%)}
+.hero__foto img{position:absolute;inset:-6%;width:112%;height:112%;object-fit:cover;
+  animation:respiro 38s ease-in-out infinite alternate}
+@keyframes respiro{to{transform:scale(1.07) translate3d(1.5%,-1.5%,0)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to bottom,rgba(30,20,12,.30) 0%,rgba(30,20,12,.04) 36%,rgba(28,18,12,.58) 100%)}
+.hero__testo{position:relative;z-index:3;padding:0 1.5rem;max-width:980px}
+.eti--chiara{color:rgba(255,255,255,.72);opacity:0;animation:sale .8s .05s cubic-bezier(.2,.75,.25,1) forwards}
+.rassicura{margin:1.6rem auto 0;max-width:44ch;font-size:.72rem;letter-spacing:.14em;
+  text-transform:uppercase;color:rgba(255,255,255,.66);opacity:0;
+  animation:sale .9s 1.35s cubic-bezier(.2,.75,.25,1) forwards}
+@media(max-width:520px){.rassicura{font-size:.64rem;letter-spacing:.1em}}
+.hero h1 .p{display:inline-block;opacity:0;transform:translateY(.34em);
+  animation:sale .95s cubic-bezier(.2,.75,.25,1) forwards}
+@keyframes sale{to{opacity:1;transform:none}}
+.sottotitolo{font-family:'Fraunces',Georgia,serif;font-variation-settings:"SOFT" 90;font-style:italic;
+  font-size:clamp(1.05rem,2.4vw,1.7rem);color:rgba(255,255,255,.9);
+  margin:1rem auto 2.2rem;max-width:26ch;opacity:0;animation:sale .9s .95s cubic-bezier(.2,.75,.25,1) forwards}
+.hero .azioni{justify-content:center;opacity:0;animation:sale .9s 1.15s cubic-bezier(.2,.75,.25,1) forwards}
+.giu{position:absolute;bottom:1.8rem;left:50%;transform:translateX(-50%);z-index:3;
+  font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.7);
+  animation:pulsa 2.6s ease-in-out infinite}
+@keyframes pulsa{50%{opacity:.35;transform:translate(-50%,6px)}}
+
+/* NASTRO DOPPIO */
+.nastri{position:relative;background:rgba(235,224,206,.55);
+  backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);
+  border-block:1px solid var(--bruno-14);overflow:hidden;padding-block:.5rem}
+.nastro{overflow:hidden;white-space:nowrap}
+.nastro span{display:inline-block;padding-block:.45rem;
+  font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:var(--bruno-60)}
+.nastro span i{font-style:normal;margin-inline:2.4rem;color:var(--rosso)}
+.nastro--dx span{animation:verso-sx 46s linear infinite}
+.nastro--sx span{animation:verso-dx 54s linear infinite;color:var(--bruno-35)}
+@keyframes verso-sx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes verso-dx{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+
+/* ============ LA GIORNATA — quadrante circolare ============ */
+.giornata{position:relative;height:420vh}
+.giornata__fisso{position:sticky;top:0;height:100svh;overflow:hidden;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:clamp(1rem,3vh,2.5rem);padding:5rem 1.25rem 2rem}
+.cielo{position:absolute;inset:0;z-index:0;
+  background:linear-gradient(to bottom,var(--c1,#DCE9F0) 0%,var(--c2,#F6EEDC) 60%,var(--c3,#EBE0CE) 100%)}
+.giornata__intro{position:relative;z-index:2;text-align:center}
+.giornata__intro h2{font-size:clamp(1.5rem,3.6vw,2.6rem)}
+
+.orologio{position:relative;z-index:2;
+  width:min(78vh,min(560px,88vw));aspect-ratio:1;display:grid;place-items:center}
+.quadrante{position:absolute;inset:0;width:100%;height:100%}
+.quadrante .anello{fill:none;stroke:#2B231C;stroke-opacity:.12;stroke-width:1}
+.quadrante .tacca{stroke:#2B231C;stroke-opacity:.22;stroke-width:1}
+.quadrante .tacca--forte{stroke:#2B231C;stroke-opacity:.4;stroke-width:1.4}
+.quadrante .lancetta{transform-origin:250px 250px;transform:rotate(-150deg);
+  transition:transform .18s linear}
+.quadrante .lancetta line{stroke:#2B231C;stroke-opacity:.35;stroke-width:1.4}
+.quadrante .punta{fill:var(--rosso)}
+.quadrante .perno{fill:#2B231C;fill-opacity:.5}
+
+.ora-eti{position:absolute;transform:translate(-50%,-50%);
+  background:none;border:0;padding:.35rem .5rem;cursor:pointer;text-align:center;
+  font-family:'Jost',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.16em;
+  color:var(--bruno-35);transition:color .35s;line-height:1.25}
+.ora-eti em{display:block;font-style:normal;font-size:.6rem;letter-spacing:.18em;
+  text-transform:uppercase;margin-top:.2rem;opacity:0;transition:opacity .35s}
+.ora-eti:hover{color:var(--bruno-60)}
+.ora-eti.qui{color:var(--rosso)}
+.ora-eti.qui em{opacity:1}
+@media(max-width:560px){.ora-eti{font-size:.64rem;padding:.25rem}.ora-eti em{display:none}}
+
+.orologio__centro{position:relative;width:62%;text-align:center;display:grid;place-items:center}
+.fase{grid-area:1/1;opacity:0;transform:translateY(14px);pointer-events:none;
+  transition:opacity .5s ease,transform .5s ease}
+.fase.attiva{opacity:1;transform:none;pointer-events:auto}
+.fase__ora{display:block;font-family:'Fraunces',Georgia,serif;font-variation-settings:"SOFT" 90;
+  font-size:clamp(2rem,5.5vw,3.4rem);line-height:1;color:var(--rosso);margin-bottom:.5rem}
+.fase h3{font-size:clamp(1.3rem,3.2vw,2.1rem);margin-bottom:.6rem}
+.fase p{margin:0 auto;color:var(--bruno-60);font-size:clamp(.84rem,1.6vw,1rem);
+  max-width:32ch;line-height:1.6}
+@media(max-width:560px){.orologio__centro{width:70%}.fase p{font-size:.8rem;line-height:1.5}}
+
+/* RIGHE TIPOGRAFICHE */
+.righe{border-top:1px solid var(--bruno-14)}
+.riga{position:relative;display:grid;gap:.2rem 1.6rem;align-items:baseline;
+  grid-template-columns:3.2rem 1fr;padding:clamp(1.6rem,3.2vw,2.6rem) 0;
+  border-bottom:1px solid var(--bruno-14);overflow:hidden;
+  transition:color .45s ease,padding-inline .45s ease}
+@media(min-width:820px){.riga{grid-template-columns:3.2rem minmax(0,1fr) minmax(0,20rem) 9rem}}
+.riga::before{content:"";position:absolute;inset:0;z-index:0;background:rgba(43,35,28,.90);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  transform:scaleY(0);transform-origin:bottom;transition:transform .5s cubic-bezier(.2,.75,.25,1)}
+.riga:hover::before,.riga:focus-visible::before{transform:scaleY(1);transform-origin:top}
+.riga>*{position:relative;z-index:1}
+.riga .n{font-size:.66rem;letter-spacing:.2em;color:var(--rosso);transition:color .45s}
+.riga .t{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.5rem,3.4vw,2.6rem);line-height:1.06}
+.riga .d{color:var(--bruno-60);font-size:.95rem;transition:color .45s}
+.riga .v{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;justify-self:start;
+  display:inline-flex;gap:.5rem;align-items:center;transition:color .45s}
+@media(min-width:820px){.riga .v{justify-self:end}}
+.riga .v em{font-style:normal;transition:transform .4s}
+.riga:hover{color:#fff;padding-inline:clamp(.6rem,2vw,1.6rem)}
+.riga:hover .n{color:var(--rosso)}
+.riga:hover .d,.riga:hover .v{color:rgba(251,247,239,.82)}
+.riga:hover .v em{transform:translateX(.45rem)}
+
+/* DATI */
+.dati{display:grid;gap:2.5rem;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  padding-top:2.8rem;border-top:1px solid var(--bruno-14)}
+.dati h4{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--rosso);margin:0 0 .7rem;font-weight:600}
+.dati p{margin:0;color:var(--bruno-60);font-size:.98rem}
+.dati a{border-bottom:1px solid rgba(43,35,28,.22)}
+.dati a:hover{color:var(--rosso);border-color:var(--rosso)}
+
+/* CHIUSURA */
+.chiusura{position:relative;background:var(--beige);overflow:hidden;text-align:center}
+.chiusura .onda{position:absolute;left:-10%;right:-10%;bottom:0;height:50%;z-index:0}
+.chiusura .onda path{fill:none;stroke:#2B231C;stroke-width:1;opacity:.15}
+.chiusura .contenuto{position:relative;z-index:2}
+.chiusura h2{max-width:16ch;margin-inline:auto}
+.chiusura .guida{margin-inline:auto}
+.chiusura .azioni{justify-content:center;margin-top:2.2rem}
+
+footer{background:var(--bruno);color:rgba(251,247,239,.62);padding:3.5rem var(--g) 2.5rem;
+  display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;font-size:.76rem}
+footer a{color:rgba(251,247,239,.62)}
+footer a:hover{color:var(--rosso)}
+
+.barra{display:none}
+@media(max-width:760px){
+  .barra{display:grid;grid-template-columns:1fr 1fr;position:fixed;inset:auto 0 0 0;z-index:150}
+  .barra a{text-align:center;padding:1rem;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+  .barra a:first-child{background:var(--beige);color:var(--bruno);border-top:1px solid var(--bruno-14)}
+  .barra a:last-child{background:var(--bruno);color:var(--avorio)}
+  footer{padding-bottom:6rem}
+  .giornata{height:300vh}
+}
+
+.riv{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.3,1)}
+.riv.on{opacity:1;transform:none}
+.riv[data-rit="1"]{transition-delay:.1s}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:.01ms!important}
+  .hero h1 .p,.sottotitolo,.hero .azioni,.rassicura,.eti--chiara,.riv{opacity:1;transform:none}
+  .fase{position:relative;opacity:1;transform:none}
+  .giornata{height:auto}
+  .giornata__fisso{position:static;height:auto;padding-block:4rem}
+}
+
+
+/* ============ LA PIZZERIA LA SERA ============ */
+.pizzeria{position:relative;min-height:88svh;display:grid;align-items:center;overflow:hidden;color:#fff}
+.pizzeria__foto{position:absolute;inset:0;margin:0;overflow:hidden;z-index:0;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 16%,#000 84%,transparent 100%);
+  mask-image:linear-gradient(to bottom,transparent 0%,#000 16%,#000 84%,transparent 100%)}
+.pizzeria__foto img{position:absolute;inset:-5%;width:110%;height:110%;object-fit:cover;
+  animation:respiro 40s ease-in-out infinite alternate}
+.pizzeria::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(100deg,rgba(28,20,14,.62) 0%,rgba(28,20,14,.22) 52%,rgba(28,20,14,.10) 100%)}
+.pizzeria .wrap{position:relative;z-index:2;width:100%}
+
+/* lastra di vetro: il testo galleggia sopra la fotografia */
+.lastra{max-width:34rem;padding:clamp(1.8rem,3.4vw,2.8rem);
+  background:rgba(251,247,239,.16);backdrop-filter:blur(24px) saturate(170%);
+  -webkit-backdrop-filter:blur(24px) saturate(170%);border:1px solid rgba(255,255,255,.28)}
+.lastra .eti{color:rgba(255,255,255,.78)}
+.lastra h2{color:#fff}
+.lastra .guida{color:rgba(255,255,255,.86)}
+.btn.vetro{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.45);color:#fff;
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.btn.vetro:hover{background:#fff;color:var(--bruno);border-color:#fff}
+@media(max-width:760px){.pizzeria{min-height:78svh}.lastra{max-width:none}}
+
+
+/* ============ SELETTORE LINGUA ============ */
+.lingue{display:flex;gap:.55rem;align-items:center;font-size:.64rem;letter-spacing:.18em;
+  text-transform:uppercase;color:rgba(255,255,255,.7)}
+.nav.posata .lingue{color:var(--bruno-35)}
+.lingue b{font-weight:500;color:#fff}
+.nav.posata .lingue b{color:var(--bruno)}
+.lingue a:hover{color:var(--rosso)}
+
+/* ============ DA DOVE VIENI ============ */
+.aree__lista{list-style:none;margin:3rem 0 0;padding:0;
+  display:grid;gap:0;border-top:1px solid var(--bruno-14)}
+@media(min-width:760px){.aree__lista{grid-template-columns:1fr 1fr;column-gap:clamp(2rem,5vw,5rem)}}
+.aree__lista li{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1.2rem;
+  padding:1.05rem 0;border-bottom:1px solid var(--bruno-14)}
+.aree__da{font-family:'Fraunces',Georgia,serif;font-variation-settings:"SOFT" 85;font-size:1.15rem}
+.aree__t{margin-left:auto;font-size:.86rem;color:var(--bruno-60);text-align:right}
+.aree__nota{margin-top:1.8rem;font-size:.86rem;color:var(--bruno-60);max-width:60ch}
+
+/* ============ FAQ ============ */
+.faq-sez{background:rgba(235,224,206,.45);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.faq{max-width:52rem;margin-top:2.6rem;border-top:1px solid var(--bruno-14)}
+.faq details{border-bottom:1px solid var(--bruno-14)}
+.faq summary{cursor:pointer;list-style:none;padding:1.35rem 2.6rem 1.35rem 0;position:relative;
+  transition:color .3s}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary h3{font-size:clamp(1.02rem,2vw,1.3rem);display:inline;line-height:1.35;font-weight:400}
+.faq summary:hover{color:var(--rosso)}
+.faq summary::after{content:"";position:absolute;right:.4rem;top:50%;width:12px;height:12px;
+  border-right:1.5px solid var(--rosso);border-bottom:1.5px solid var(--rosso);
+  transform:translateY(-70%) rotate(45deg);transition:transform .3s}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(225deg)}
+.faq details p{padding:0 2.6rem 1.5rem 0;color:var(--bruno-60);max-width:64ch;margin:0}
+.faq details a{color:var(--rosso);border-bottom:1px solid currentColor}
+
+
+/* ============ PAGINE INTERNE ============ */
+/* su pagina interna la nav parte già posata: il testo dev'essere scuro */
+body:not(.con-hero) .nav{background:rgba(251,247,239,.74);
+  backdrop-filter:blur(24px) saturate(170%);-webkit-backdrop-filter:blur(24px) saturate(170%);
+  border-bottom-color:rgba(43,35,28,.1)}
+body:not(.con-hero) .nav .menu{color:var(--bruno-60)}
+body:not(.con-hero) .nav .lingue{color:var(--bruno-35)}
+body:not(.con-hero) .nav .lingue b{color:var(--bruno)}
+body:not(.con-hero) .nav .marchio .logo--bianco{opacity:0}
+body:not(.con-hero) .nav .marchio .logo--rosso{opacity:1}
+body:not(.con-hero) .nav .pren{background:var(--bruno);border-color:var(--bruno);color:var(--avorio)}
+
+/* ============ MENU ============ */
+
+/* testata con l'onda della chiusura: stessa firma del resto del sito */
+.testata{position:relative;overflow:hidden;
+  padding:calc(clamp(4.5rem,9vw,6.5rem) + 3.5rem) 0 clamp(2.5rem,5vw,4rem);
+  background:rgba(235,224,206,.42);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--bruno-14)}
+.testata .onda{position:absolute;left:-10%;right:-10%;bottom:-10%;height:70%;z-index:0}
+.testata .onda path{fill:none;stroke:#2B231C;stroke-width:1;opacity:.13}
+.testata__testo{position:relative;z-index:2}
+.testata h1{font-size:clamp(2.6rem,8vw,5.4rem);margin-bottom:1rem}
+.testata .guida{max-width:54ch}
+
+/* fascia degli orari: la giornata riassunta, pizzeria compresa */
+.orari{background:rgba(235,224,206,.45);border-bottom:1px solid var(--bruno-14);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  padding-block:clamp(2rem,4vw,3rem)}
+.orari .eti{margin-bottom:1.4rem}
+.orari__lista{list-style:none;margin:0;padding:0;display:grid;gap:0}
+@media(min-width:700px){.orari__lista{grid-template-columns:repeat(5,1fr);gap:0 clamp(1rem,2.5vw,2rem)}}
+.orari__lista li{display:flex;flex-direction:column;gap:.25rem;padding:.7rem 0;
+  border-top:1px solid var(--bruno-14)}
+@media(min-width:700px){.orari__lista li{padding:.9rem 0 0}}
+.o__h{font-family:'Fraunces',Georgia,serif;font-variation-settings:"SOFT" 85;
+  font-size:1.35rem;color:var(--rosso);line-height:1}
+.o__c{font-size:.8rem;color:var(--bruno-60);line-height:1.4}
+.orari__lista li:last-child .o__c{color:var(--bruno)}
+
+/* impaginazione: indice a sinistra, menu a destra */
+.menu-corpo{max-width:1240px;margin-inline:auto;padding:clamp(3.5rem,7vw,6rem) var(--g);
+  display:grid;gap:clamp(2rem,4vw,4rem)}
+@media(min-width:1000px){.menu-corpo{grid-template-columns:13rem minmax(0,1fr)}}
+
+.menu-colonna{min-width:0}
+.menu-indice{display:none}
+@media(min-width:1000px){
+  .menu-indice{display:flex;flex-direction:column;gap:.1rem;
+    position:sticky;top:6.5rem;align-self:start}
+  .menu-indice a{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--bruno-35);padding:.55rem 0 .55rem .9rem;border-left:1px solid var(--bruno-14);
+    transition:color .3s,border-color .3s,padding-left .3s}
+  .menu-indice a:hover{color:var(--bruno)}
+  .menu-indice a.qui{color:var(--rosso);border-left-color:var(--rosso);padding-left:1.2rem}
+}
+
+/* intestazione di sezione: stessa grammatica delle righe in home */
+.menu-testa{display:grid;grid-template-columns:3.2rem 1fr;align-items:baseline;
+  gap:.15rem 1rem;padding-bottom:.9rem;border-bottom:1px solid var(--bruno-14)}
+@media(min-width:700px){.menu-testa{grid-template-columns:3.2rem auto 1fr auto}}
+.menu-n{font-size:.66rem;letter-spacing:.2em;color:var(--rosso)}
+.menu-testa h2{font-size:clamp(1.55rem,3.2vw,2.3rem)}
+.menu-alt{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:300;
+  font-size:1rem;color:var(--bruno-35);grid-column:2}
+@media(min-width:700px){.menu-alt{grid-column:auto}}
+.menu-eti{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--bruno-35);
+  grid-column:2}
+@media(min-width:700px){.menu-eti{grid-column:auto;justify-self:end}}
+.menu-intro{margin:1rem 0 0;font-family:'Fraunces',Georgia,serif;font-variation-settings:"SOFT" 85;
+  font-style:italic;font-size:1.02rem;color:var(--bruno-60)}
+
+.menu-griglia{display:grid;gap:clamp(3rem,6vw,4.5rem);margin-top:clamp(3rem,6vw,4.5rem)}
+@media(min-width:820px){.menu-griglia{grid-template-columns:1fr 1fr;column-gap:clamp(3rem,6vw,5rem)}}
+
+/* le voci, col filetto puntinato del menu stampato */
+.voci{list-style:none;margin:1.5rem 0 0;padding:0}
+.voci li{padding:.85rem 0;border-bottom:1px solid var(--bruno-14)}
+.voci li:last-child{border-bottom:0}
+.v__riga{display:flex;align-items:baseline;gap:.55rem;margin:0}
+.v__n{font-family:'Fraunces',Georgia,serif;font-variation-settings:"SOFT" 85;
+  font-size:1.14rem;line-height:1.25;transition:color .3s}
+.v__l{flex:1 1 auto;min-width:1.5rem;border-bottom:1px dotted var(--bruno-35);
+  transform:translateY(-.3em);transition:border-color .3s}
+.v__p{white-space:nowrap;font-family:'Fraunces',Georgia,serif;font-variation-settings:"SOFT" 85;
+  font-size:1.08rem}
+.v__d{margin:.25rem 0 0;font-size:.88rem;color:var(--bruno-60);line-height:1.5;max-width:46ch}
+.v__a{margin:.3rem 0 0;font-size:.64rem;letter-spacing:.12em;color:var(--bruno-35)}
+.voci li:hover .v__l{border-bottom-color:var(--rosso)}
+.voci li:hover .v__n{color:var(--rosso)}
+.da-definire{color:var(--rosso);border-bottom:1px dashed currentColor}
+
+/* proposte del giorno: unico blocco in negativo, come sul menu stampato */
+.giorno{position:relative}
+.giorno .onda{position:absolute;left:0;right:0;bottom:0;height:60%;z-index:3;pointer-events:none}
+.giorno .onda path{fill:none;stroke:#FBF7EF;stroke-width:1;opacity:.10}
+.giorno__blocco{position:relative;z-index:2;background:var(--bruno);color:var(--avorio);
+  padding:clamp(1.8rem,4vw,3.2rem)}
+.giorno__blocco .menu-testa{border-bottom-color:rgba(251,247,239,.2)}
+.giorno__blocco h2{color:var(--avorio)}
+.giorno__blocco .menu-alt,.giorno__blocco .menu-eti{color:rgba(251,247,239,.42)}
+.voci--giorno li{border-bottom-color:rgba(251,247,239,.16)}
+.voci--giorno .v__l{border-bottom-color:rgba(251,247,239,.3)}
+.voci--giorno .v__d{color:rgba(251,247,239,.62)}
+.voci--giorno .v__a{color:rgba(251,247,239,.38)}
+.voci--giorno li:hover .v__n{color:#fff}
+.voci--giorno li:hover .v__l{border-bottom-color:rgba(251,247,239,.7)}
+@media(min-width:820px){.voci--giorno{display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(2rem,5vw,4rem)}}
+.giorno__nota{margin:1.6rem 0 0;font-family:'Fraunces',Georgia,serif;font-variation-settings:"SOFT" 85;
+  font-style:italic;font-size:.98rem;color:rgba(251,247,239,.6);max-width:66ch}
+
+.menu-legenda{margin-top:clamp(3rem,6vw,4.5rem);padding-top:2rem;
+  border-top:1px solid var(--bruno-14)}
+.menu-nota{font-size:.84rem;color:var(--bruno-60);max-width:70ch}
+.menu-nota strong{font-weight:500;color:var(--bruno)}
+
+
+/* ============ TARIFFA GIOVANI E STUDENTI ============ */
+.offerta{background:rgba(235,224,206,.45);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-block:1px solid var(--bruno-14)}
+.offerta__box{display:grid;gap:clamp(1.8rem,4vw,4rem);align-items:start}
+@media(min-width:860px){.offerta__box{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)}}
+.offerta h2{font-size:clamp(2.2rem,6vw,4.2rem)}
+.offerta .guida{max-width:52ch}
+.offerta strong{font-weight:400;color:var(--bruno);
+  box-shadow:inset 0 -.45em 0 rgba(237,38,46,.16)}
+.offerta .azioni{margin-top:1.8rem}
+
+/* ============ COMPLEANNI ED EVENTI ============ */
+.eventi__griglia{display:grid;gap:0;margin-top:3rem;border-top:1px solid var(--bruno-14)}
+@media(min-width:820px){.eventi__griglia{grid-template-columns:repeat(3,1fr);
+  column-gap:clamp(2rem,4vw,3.5rem)}}
+.eventi__griglia>div{padding:1.8rem 0;border-bottom:1px solid var(--bruno-14)}
+@media(min-width:820px){.eventi__griglia>div{border-bottom:0}}
+.eventi__n{display:block;font-family:'Fraunces',Georgia,serif;font-variation-settings:"SOFT" 90;
+  font-size:clamp(2rem,4.5vw,2.9rem);line-height:1;color:var(--rosso);margin-bottom:.6rem}
+.eventi__griglia h3{font-size:clamp(1.2rem,2.4vw,1.6rem);margin-bottom:.5rem}
+.eventi__griglia p{margin:0;font-size:.92rem;color:var(--bruno-60);line-height:1.6;max-width:34ch}
+.eventi__nota{margin-top:2rem;font-family:'Fraunces',Georgia,serif;font-variation-settings:"SOFT" 85;
+  font-style:italic;color:var(--bruno-60);max-width:56ch}
+.righe strong{font-weight:500}
+
+
+/* ============ MENU DELLA SERA ============ */
+@media(min-width:820px){.menu-blocco--largo{grid-column:1 / -1}}
+.sera__t{font-family:'Jost',sans-serif;font-size:.64rem;font-weight:600;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--rosso);margin:2.2rem 0 0}
+.menu-blocco--largo .voci{margin-top:.8rem}
+@media(min-width:820px){
+  .menu-blocco--largo .voci{display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(3rem,6vw,5rem)}
+  .menu-blocco--largo .voci li:nth-last-child(2):nth-child(odd){border-bottom:1px solid var(--bruno-14)}
+}
