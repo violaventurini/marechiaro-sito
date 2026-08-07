@@ -54,6 +54,30 @@
   var voci = [].slice.call(document.querySelectorAll('.menu-indice a'));
   var sezioni = voci.map(function(a){ return document.querySelector(a.getAttribute('href')); });
 
+  /* ---- menu mobile ---- */
+  var tog = document.querySelector('.nav__tog');
+  if (tog && nav){
+    tog.addEventListener('click', function(){
+      var aperto = nav.dataset.aperto === 'true';
+      nav.dataset.aperto = aperto ? 'false' : 'true';
+      tog.setAttribute('aria-expanded', aperto ? 'false' : 'true');
+      tog.setAttribute('aria-label', aperto ? 'Apri il menu' : 'Chiudi il menu');
+      document.body.style.overflow = aperto ? '' : 'hidden';
+    });
+    document.querySelectorAll('.menu a').forEach(function(a){
+      a.addEventListener('click', function(){
+        nav.dataset.aperto = 'false';
+        tog.setAttribute('aria-expanded','false');
+        document.body.style.overflow = '';
+      });
+    });
+    window.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && nav.dataset.aperto === 'true'){ tog.click(); }
+    });
+  }
+
+  var ctaev = document.querySelector('.ctaev');
+
   var pendente = false;
   function passo(){
     pendente = false;
@@ -74,6 +98,8 @@
       });
       voci.forEach(function(a,i){ a.classList.toggle('qui', i===qui); });
     }
+
+    if (ctaev){ ctaev.classList.toggle('vedi', y > window.innerHeight * 0.55); }
 
     rivela.forEach(function(el){
       if (el.classList.contains('on')) return;

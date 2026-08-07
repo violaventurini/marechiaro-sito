@@ -1,101 +1,92 @@
-# Elenco completo dei file — spunta dopo il caricamento
+# Marechiaro — tutti i file da mettere su GitHub
 
-Se manca anche uno solo di questi, qualcosa non funziona.
-
-## Radice del repository
-
-
-### Pagine italiane (8)
-
-- [ ] `404.html` — 3 KB
-- [ ] `aperitivi.html` — 11 KB
-- [ ] `contatti.html` — 11 KB
-- [ ] `feste-gruppi.html` — 13 KB
-- [ ] `index.html` — 36 KB
-- [ ] `menu.html` — 21 KB
-- [ ] `ristorante.html` — 15 KB
-- [ ] `spiaggia.html` — 16 KB
-
-### Pagine inglesi (7)
-
-- [ ] `en/aperitivo.html` — 10 KB
-- [ ] `en/beach.html` — 15 KB
-- [ ] `en/find-us.html` — 11 KB
-- [ ] `en/groups.html` — 13 KB
-- [ ] `en/index.html` — 36 KB
-- [ ] `en/menu.html` — 21 KB
-- [ ] `en/restaurant.html` — 13 KB
-
-### Stile, script e icone (4)
-
-- [ ] `apple-touch-icon.png` — 14 KB
-- [ ] `avorio.css` — 25 KB
-- [ ] `avorio.js` — 3 KB
-- [ ] `favicon.svg` — 14 KB
-
-### File per Google e Netlify (3)
-
-- [ ] `_redirects` — 0 KB
-- [ ] `robots.txt` — 0 KB
-- [ ] `sitemap.xml` — 4 KB
-
-### Immagini (17)
-
-- [ ] `img/aperitivo-tramonto-ostia.jpg` — 256 KB
-- [ ] `img/cabina-tramonto-ostia.jpg` — 238 KB
-- [ ] `img/chiusura-mare-calmo-ostia.jpg` — 43 KB
-- [ ] `img/hero-spiaggia-ombrelloni-ostia-mobile.jpg` — 185 KB
-- [ ] `img/hero-spiaggia-ombrelloni-ostia.jpg` — 221 KB
-- [ ] `img/lettini-sdraio-ombrelloni-ostia.jpg` — 230 KB
-- [ ] `img/logo-marechiaro-bianco.svg` — 14 KB
-- [ ] `img/logo-marechiaro-rosso.svg` — 14 KB
-- [ ] `img/og-marechiaro.jpg` — 92 KB
-- [ ] `img/ombrelloni-prima-fila-ostia.jpg` — 119 KB
-- [ ] `img/pizzeria-sera-ostia.jpg` — 220 KB
-- [ ] `img/pizzeria-vista-mare-ostia.jpg` — 236 KB
-- [ ] `img/pranzo-spiaggia-asporto-ostia.jpg` — 217 KB
-- [ ] `img/sabbia-texture-ostia.jpg` — 201 KB
-- [ ] `img/spiaggia-lettini-ombrelloni-ostia.jpg` — 246 KB
-- [ ] `img/tramonto-spiaggia-marechiaro-ostia.jpg` — 223 KB
-
-### Documenti di lavoro — nel repository ma non online (6)
-
-- [ ] `LEGGIMI-GITHUB.md` — 5 KB
-- [ ] `_strumenti/costruisci.py` — 2 KB
-- [ ] `_strumenti/genera-menu.py` — 11 KB
-- [ ] `_strumenti/menu-dati.py` — 5 KB
-- [ ] `_strumenti/pagine.py` — 4 KB
-- [ ] `_strumenti/piano-indicizzazione.md` — 15 KB
+**23 pagine, 12 italiane e 11 inglesi.** Verifica passata: zero errori, zero link rotti.
 
 ---
 
+## Radice del repository
 
-**Totale: 44 file, 3.2 MB.**
+### Pagine italiane (12)
+- [ ] `index.html` — home
+- [ ] `spiaggia.html` → `/spiaggia`
+- [ ] `ristorante.html` → `/ristorante`
+- [ ] `aperitivi.html` → `/aperitivi`
+- [ ] `feste-gruppi.html` → `/feste-gruppi`
+- [ ] `contatti.html` → `/contatti`
+- [ ] `menu.html` → `/menu` — **smistamento del QR, quattro pulsanti**
+- [ ] `menu-colazione.html` → `/menu-colazione`
+- [ ] `menu-pranzo.html` → `/menu-pranzo`
+- [ ] `menu-aperitivo.html` → `/menu-aperitivo`
+- [ ] `menu-cena.html` → `/menu-cena`
+- [ ] `404.html` — pagina di errore
 
+### Stile, script e icone (4)
+- [ ] `avorio.css`
+- [ ] `avorio.js`
+- [ ] `favicon.svg`
+- [ ] `apple-touch-icon.png`
 
-## Come verificare che sia andato tutto bene
+### File per Google e Netlify (3)
+- [ ] `robots.txt`
+- [ ] `sitemap.xml` — 22 URL
+- [ ] `_redirects` — tiene fuori dal sito pubblico il LEGGIMI e gli strumenti
 
-Dopo il deploy apri questi indirizzi, uno per uno. Devono aprirsi tutti:
+---
 
-- [ ] `marechiaroostia.it/`
-- [ ] `marechiaroostia.it/spiaggia`
-- [ ] `marechiaroostia.it/ristorante`
-- [ ] `marechiaroostia.it/menu`
-- [ ] `marechiaroostia.it/aperitivi`
-- [ ] `marechiaroostia.it/feste-gruppi`
-- [ ] `marechiaroostia.it/contatti`
-- [ ] `marechiaroostia.it/en/`
-- [ ] `marechiaroostia.it/en/beach`
-- [ ] `marechiaroostia.it/en/restaurant`
-- [ ] `marechiaroostia.it/en/menu`
-- [ ] `marechiaroostia.it/en/aperitivo`
-- [ ] `marechiaroostia.it/en/groups`
-- [ ] `marechiaroostia.it/en/find-us`
+## Cartella `en/` (11 pagine)
+- [ ] `en/index.html` → `/en/`
+- [ ] `en/beach.html` → `/en/beach`
+- [ ] `en/restaurant.html` → `/en/restaurant`
+- [ ] `en/aperitivo.html` → `/en/aperitivo`
+- [ ] `en/groups.html` → `/en/groups`
+- [ ] `en/find-us.html` → `/en/find-us`
+- [ ] `en/menu.html` → `/en/menu`
+- [ ] `en/menu-breakfast.html` → `/en/menu-breakfast`
+- [ ] `en/menu-lunch.html` → `/en/menu-lunch`
+- [ ] `en/menu-aperitivo.html` → `/en/menu-aperitivo`
+- [ ] `en/menu-dinner.html` → `/en/menu-dinner`
 
-Poi due che **devono dare 404**, ed è giusto così:
+## Cartella `img/` (17 file)
+Le 15 foto pi&ugrave; i due logo SVG, bianco e rosso. Senza questa cartella il sito si apre ma resta vuoto.
 
-- [ ] `marechiaroostia.it/LEGGIMI-GITHUB.md`
-- [ ] `marechiaroostia.it/_strumenti/piano-indicizzazione.md`
+## Cartella `_strumenti/`
+Non viene pubblicata (ci pensa `_redirects`). Contiene `carta.py` con tutti i piatti e i prezzi:
+cambi un prezzo l&igrave;, lanci `costruisci-carte.py` e le dieci carte si aggiornano in italiano e inglese insieme.
 
-E una prova finale: apri la home, tasto destro, *Visualizza sorgente*. Se dentro leggi
-«Il mare di Roma» e il testo delle FAQ, allora li legge anche Google.
+---
+
+## Come caricare
+
+Tre archivi separati, cos&igrave; puoi andare per gradi:
+
+1. **`marechiaro-sito-completo.zip`** — tutto insieme, da scompattare e copiare in radice
+2. **`cartella-en.zip`** — solo la cartella `en`
+3. **`cartella-img.zip`** — solo la cartella `img`
+
+Regola d&rsquo;oro: **trascina le cartelle, non il loro contenuto.** Prima di confermare, GitHub
+elenca i file: le righe devono iniziare con `en/` e `img/`. Se leggi `index.html` o `menu.html`
+senza prefisso, annulla &mdash; stai per sovrascrivere le pagine italiane.
+
+---
+
+## Dopo il deploy
+
+Prova questi indirizzi, devono aprirsi tutti:
+
+`/` &middot; `/spiaggia` &middot; `/ristorante` &middot; `/aperitivi` &middot; `/feste-gruppi` &middot; `/contatti`
+`/menu` &middot; `/menu-colazione` &middot; `/menu-pranzo` &middot; `/menu-aperitivo` &middot; `/menu-cena`
+`/en/` &middot; `/en/beach` &middot; `/en/restaurant` &middot; `/en/aperitivo` &middot; `/en/groups` &middot; `/en/find-us`
+`/en/menu` &middot; `/en/menu-breakfast` &middot; `/en/menu-lunch` &middot; `/en/menu-aperitivo` &middot; `/en/menu-dinner`
+
+Poi Search Console &rarr; Sitemap &rarr; rileggi `sitemap.xml`: da 14 URL deve passare a 22.
+
+**Il QR punta a `/menu`**: da l&igrave; si smista sulle quattro carte. Non serve rigenerarlo.
+
+---
+
+## Cosa manca ancora
+
+- Il **prezzo del tagliere** venduto da solo: unica voce senza cifra
+- Conferma sui **dolci della sera a 8&nbsp;&euro;** (a pranzo gli stessi sono 6 e 5)
+- Il **listino della spiaggia**: le righe rimandano a WhatsApp, ma i prezzi in chiaro varrebbero molto di pi&ugrave;
+- Dal **16 agosto** vanno tolti il richiamo Ferragosto in basso a destra e la sezione in home

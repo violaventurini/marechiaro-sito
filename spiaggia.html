@@ -182,7 +182,8 @@
     <img class="logo logo--bianco" src="/img/logo-marechiaro-bianco.svg" alt="Marechiaro Ostia" width="628" height="140">
     <img class="logo logo--rosso" src="/img/logo-marechiaro-rosso.svg" alt="" aria-hidden="true" width="628" height="140">
   </a>
-  <span class="menu">
+  <span class="menu" id="menu-principale">
+    <a href="/#ferragosto">Ferragosto</a>
     <a href="/spiaggia">Spiaggia</a>
     <a href="/ristorante">Ristorante</a>
     <a href="/menu">Menu</a>
@@ -192,6 +193,9 @@
   </span>
   <span class="lingue"><b>IT</b><a href="/en/" hreflang="en" lang="en">EN</a></span>
   <a class="pren" href="https://wa.me/393484059720">Prenota</a>
+  <button class="nav__tog" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="menu-principale">
+    <span></span><span></span>
+  </button>
 </nav>
 
 <header class="testata">
@@ -213,13 +217,13 @@
       <p class="guida">Postazioni pi&ugrave; larghe della media del litorale. Meno ombrelloni, pi&ugrave; spazio per ognuno: &egrave; la prima cosa che abbiamo cambiato.</p></div>
     <div class="righe">
       <a class="riga" href="https://wa.me/393484059720?text=Ciao%2C%20vorrei%20il%20listino%20della%20spiaggia"><span class="n">01</span><span class="t">Ombrellone e due lettini</span>
-        <span class="d">La postazione classica, distanziata dalle altre. Feriale o fine settimana.</span><span class="v">Chiedi il prezzo <em>&rarr;</em></span></a>
+        <span class="d">La postazione classica, distanziata dalle altre. Feriale o fine settimana.</span><span class="v">Vedi il listino <em>&rarr;</em></span></a>
       <a class="riga" href="https://wa.me/393484059720?text=Ciao%2C%20vorrei%20informazioni%20sul%20lettone%20matrimoniale"><span class="n">02</span><span class="t">Lettone matrimoniale</span>
-        <span class="d">Largo il doppio di un lettino, per due persone o per chi vuole stare comodo.</span><span class="v">Chiedi il prezzo <em>&rarr;</em></span></a>
+        <span class="d">Largo il doppio di un lettino, per due persone o per chi vuole stare comodo.</span><span class="v">Vedi il listino <em>&rarr;</em></span></a>
       <a class="riga" href="https://wa.me/393484059720?text=Ciao%2C%20vorrei%20il%20listino%20della%20spiaggia"><span class="n">03</span><span class="t">Sdraio</span>
-        <span class="d">Leggera e facile da spostare, per chi vuole seguire il sole.</span><span class="v">Chiedi il prezzo <em>&rarr;</em></span></a>
+        <span class="d">Leggera e facile da spostare, per chi vuole seguire il sole.</span><span class="v">Vedi il listino <em>&rarr;</em></span></a>
       <a class="riga" href="https://wa.me/393484059720?text=Ciao%2C%20vorrei%20informazioni%20sulle%20cabine"><span class="n">04</span><span class="t">Cabina</span>
-        <span class="d">Per cambiarsi e lasciare le tue cose. A giornata o per tutta la stagione.</span><span class="v">Chiedi il prezzo <em>&rarr;</em></span></a>
+        <span class="d">Per cambiarsi e lasciare le tue cose. A giornata o per tutta la stagione.</span><span class="v">Vedi il listino <em>&rarr;</em></span></a>
       <a class="riga" href="https://wa.me/393484059720?text=Ciao%2C%20vorrei%20informazioni%20sugli%20abbonamenti"><span class="n">05</span><span class="t">Abbonamento stagionale</span>
         <span class="d">La stessa postazione da giugno a settembre, con cabina se la vuoi. Posti limitati.</span><span class="v">Come funziona <em>&rarr;</em></span></a>
     </div>
@@ -259,8 +263,8 @@
         <p>S&igrave;, &egrave; una scelta della nuova gestione: le postazioni sono pi&ugrave; larghe della media del litorale, cos&igrave; non hai il vicino a trenta centimetri. Meno ombrelloni, pi&ugrave; spazio per ognuno.</p></details>
       <details><summary><h3>Che differenza c'&egrave; tra lettino, lettone e sdraio?</h3></summary>
         <p>Il lettino &egrave; il classico posto singolo reclinabile. Il lettone &egrave; matrimoniale, largo il doppio, per due persone o per chi vuole pi&ugrave; spazio. La sdraio &egrave; pi&ugrave; leggera e si sposta facilmente. Tutti e tre si noleggiano a giornata o con abbonamento.</p></details>
-      <details><summary><h3>Serve prenotare?</h3></summary>
-        <p>No, l'accesso alla spiaggia &egrave; libero e si pu&ograve; venire senza prenotare. Nei fine settimana e ad agosto conviene scrivere la sera prima: ti confermiamo la disponibilit&agrave; e ti teniamo il posto.</p></details>
+      <details><summary><h3>Si prenotano lettini e ombrelloni?</h3></summary>
+        <p>No, e non serve. Si arriva, si sceglie una postazione libera e si paga in cassa. L'accesso alla spiaggia &egrave; gratuito. Nei fine settimana di agosto conviene arrivare presto.</p></details>
       <details><summary><h3>Come funziona la tariffa per giovani e studenti?</h3></summary>
         <p>Ogni singolo pezzo costa 8&nbsp;&euro;: lettino, sdraio o ombrellone. Prendi solo quello che ti serve e paghi otto euro l'uno, tutti i giorni. Basta mostrare il tesserino alla cassa.</p></details>
       <details><summary><h3>Ci sono abbonamenti stagionali?</h3></summary>
@@ -276,10 +280,10 @@
 <section class="sez chiusura">
   <svg class="onda" viewBox="0 0 1200 200" preserveAspectRatio="none" aria-hidden="true"><path d="M0 100 Q150 60 300 100 T600 100 T900 100 T1200 100"></path><path d="M0 130 Q150 90 300 130 T600 130 T900 130 T1200 130"></path><path d="M0 160 Q150 120 300 160 T600 160 T900 160 T1200 160"></path></svg>
   <div class="wrap contenuto riv">
-    <span class="eti">Prenota</span><h2>Tieniti il posto</h2>
-    <p class="guida">Scrivici e ti confermiamo disponibilit&agrave; e prezzo in giornata.</p>
+    <span class="eti">Prenota</span><h2>Ti aspettiamo</h2>
+    <p class="guida">La spiaggia non si prenota: si arriva, si sceglie il posto libero e si paga in cassa. Per il listino, scrivici.</p>
     <div class="azioni">
-      <a class="btn" href="https://wa.me/393484059720?text=Ciao%2C%20vorrei%20prenotare%20lettini%20e%20ombrellone">Scrivi su WhatsApp</a>
+      <a class="btn" href="https://wa.me/393484059720?text=Ciao%2C%20vorrei%20informazioni%20sulla%20spiaggia">Scrivi su WhatsApp</a>
       <a class="btn scuro" href="/ristorante">Il ristorante</a>
     </div>
   </div>
@@ -288,6 +292,12 @@
   <span>Lungomare Paolo Toscanelli 27 &middot; Lido di Ostia &middot; Roma</span>
   <span>Sun Beach S.r.l. &middot; P.IVA 15970681001 &middot; &copy; 2026</span>
 </footer>
+
+
+<a class="ctaev" href="https://wa.me/393484059720?text=Salve%2C%20vorrei%20prenotare%20un%20tavolo%20per%20...%20la%20sera%20del%2014" aria-label="Prenota il tavolo per la cena di Ferragosto del 14 agosto">
+  <span class="ctaev__e">Ferragosto</span>
+  <span class="ctaev__t">14 agosto &middot; Prenota <em>&rarr;</em></span>
+</a>
 
 <div class="barra">
   <a href="tel:+393484059720">Chiama</a>

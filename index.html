@@ -420,7 +420,8 @@
     <img class="logo logo--bianco" src="/img/logo-marechiaro-bianco.svg" alt="Marechiaro Ostia" width="628" height="140">
     <img class="logo logo--rosso" src="/img/logo-marechiaro-rosso.svg" alt="" aria-hidden="true" width="628" height="140">
   </a>
-  <span class="menu">
+  <span class="menu" id="menu-principale">
+    <a href="/#ferragosto">Ferragosto</a>
     <a href="/spiaggia">Spiaggia</a>
     <a href="/ristorante">Ristorante</a>
     <a href="/menu">Menu</a>
@@ -430,6 +431,9 @@
   </span>
   <span class="lingue"><b>IT</b><a href="/en/" hreflang="en" lang="en">EN</a></span>
   <a class="pren" href="https://wa.me/393484059720">Prenota</a>
+  <button class="nav__tog" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="menu-principale">
+    <span></span><span></span>
+  </button>
 </nav>
 
 <!-- ============ HERO ============ -->
@@ -447,10 +451,10 @@
     <h1><span class="p" style="animation-delay:.18s">Il</span> <span class="p" style="animation-delay:.29s">mare</span> <span class="p" style="animation-delay:.40s">di</span> <span class="p" style="animation-delay:.51s">Roma</span></h1>
     <p class="sottotitolo">Spiaggia, ristorante e pizzeria vista mare</p>
     <div class="azioni">
-      <a class="btn" href="https://wa.me/393484059720">Prenota il tuo posto</a>
+      <a class="btn" href="https://wa.me/393484059720">Scopri la spiaggia</a>
       <a class="btn chiaro" href="/spiaggia">Lettini e prezzi</a>
     </div>
-    <p class="rassicura">Lettini e ombrelloni distanziati &middot; Accesso libero &middot; Tariffa giovani e studenti 8&nbsp;&euro;</p>
+    <p class="rassicura">Lettini e ombrelloni distanziati &middot; Accesso libero &middot; Nessuna prenotazione</p>
   </div>
   <span class="giu">Scorri</span>
 </header>
@@ -460,6 +464,43 @@
   <div class="nastro nastro--dx"><span>Lettini e ombrelloni distanziati<i>&mdash;</i>Lettoni matrimoniali<i>&mdash;</i>Sdraio<i>&mdash;</i>Cabine<i>&mdash;</i>Docce calde<i>&mdash;</i>Tariffa giovani 8&thinsp;&euro;<i>&mdash;</i>Lettini e ombrelloni distanziati<i>&mdash;</i>Lettoni matrimoniali<i>&mdash;</i>Sdraio<i>&mdash;</i>Cabine<i>&mdash;</i>Docce calde<i>&mdash;</i>Tariffa giovani 8&thinsp;&euro;<i>&mdash;</i></span></div>
   <div class="nastro nastro--sx"><span>Pranzo in spiaggia<i>&mdash;</i>Anche da asporto<i>&mdash;</i>Aperitivo al tramonto<i>&mdash;</i>Cena vista mare<i>&mdash;</i>Dopocena sulla sabbia<i>&mdash;</i>Compleanni ed eventi<i>&mdash;</i>Pranzo in spiaggia<i>&mdash;</i>Anche da asporto<i>&mdash;</i>Aperitivo al tramonto<i>&mdash;</i>Cena vista mare<i>&mdash;</i>Dopocena sulla sabbia<i>&mdash;</i>Compleanni ed eventi<i>&mdash;</i></span></div>
 </div>
+
+<!-- ============ FERRAGOSTO ============ -->
+<section class="serata" id="ferragosto">
+  <figure class="serata__foto">
+    <img src="/img/pizzeria-sera-ostia.jpg" loading="lazy" decoding="async" alt="Il ristorante del Marechiaro sulla spiaggia di Ostia la sera">
+  </figure>
+  <div class="wrap serata__in">
+
+    <div class="serata__testa riv">
+      <span class="serata__eti">La serata</span>
+      <h2>Ferragosto</h2>
+      <p class="serata__data">Gioved&igrave; 14 agosto</p>
+      <p class="serata__sotto">Cena sulla spiaggia con musica dal vivo</p>
+      <p class="serata__guida">Una sera sola, con il mare davanti e la sabbia sotto i tavoli. Due menu a scelta, servizio incluso.</p>
+    </div>
+
+    <div class="serata__menu riv" data-rit="1">
+      <article>
+        <header><h3>Menu pizza</h3><span class="serata__p">25&thinsp;&euro;</span></header>
+        <p>Drink di benvenuto &middot; fritti misti e bruschetta &middot; una pizza a scelta &middot; plateau di frutta di stagione</p>
+      </article>
+      <article>
+        <header><h3>Menu pesce</h3><span class="serata__p">50&thinsp;&euro;</span></header>
+        <p>Catalana di mazzancolle, tartare di tonno e insalata di mare &middot; risotto alla crema di scampi e chicche di patate con pachino e gamberi &middot; frittura di calamari e gamberi &middot; plateau di frutta di stagione</p>
+      </article>
+    </div>
+
+    <div class="serata__coda riv">
+      <p class="serata__nota">Prezzi a persona, servizio incluso. I posti sono limitati.</p>
+      <div class="azioni">
+        <a class="btn vetro" href="https://wa.me/393484059720?text=Salve%2C%20vorrei%20prenotare%20un%20tavolo%20per%20...%20la%20sera%20del%2014">Prenota il tuo tavolo</a>
+        <a class="btn vetro" href="tel:+393484059720">348 405 9720</a>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <!-- ============ LA GIORNATA ============ -->
 <section class="giornata" id="giornata">
@@ -647,6 +688,7 @@
 
 
 
+
 <!-- ============ TARIFFA GIOVANI E STUDENTI ============ -->
 <section class="sez offerta">
   <div class="wrap offerta__box riv">
@@ -672,12 +714,7 @@
       <h2>Festeggiare<br>sulla spiaggia</h2>
       <p class="guida">Compleanni, cene di gruppo, addii al nubilato, feste di laurea, cene aziendali. Riserviamo il tavolo sulla sabbia con la vista sul mare e mettiamo a punto il menu insieme a voi, dall&rsquo;aperitivo alla cena.</p>
     </div>
-    <div class="eventi__griglia riv" data-rit="1">
-      <div><span class="eventi__n">15&nbsp;&euro;</span><h3>Aperitivo</h3><p>Una consumazione, fritto misto mignon, chips e bruschetta. A persona, servizio incluso.</p></div>
-      <div><span class="eventi__n">20&nbsp;&euro;</span><h3>Pizza</h3><p>Suppl&igrave; o crocchetta, una pizza a scelta e birra, vino o Prosecco. A persona.</p></div>
-      <div><span class="eventi__n">28&nbsp;&euro;</span><h3>Cena</h3><p>Antipasti in condivisione, paccheri con pomodorini, tartare di tonno e stracciatella, con drink. A persona.</p></div>
-    </div>
-    <p class="eventi__nota riv">Le serate private si prenotano su richiesta. Raccontaci che festa avete in mente e vi mandiamo una proposta su misura.</p>
+
     <div class="azioni riv" style="margin-top:1.8rem">
       <a class="btn" href="https://wa.me/393484059720?text=Ciao%2C%20vorrei%20organizzare%20una%20festa%20al%20Marechiaro">Organizza la tua festa</a>
       <a class="btn scuro" href="/feste-gruppi">Feste e gruppi</a>
@@ -720,8 +757,8 @@
         <p>Il prezzo dipende da cosa scegli e dal giorno. <!-- TODO Viola: inserisci qui i prezzi reali di ombrellone con due lettini, feriale e weekend, e la tariffa studente. Questa &egrave; la domanda pi&ugrave; cercata del litorale: rispondere con cifre precise vale pi&ugrave; di qualsiasi altra ottimizzazione. --> Trovi il listino completo nella pagina <a href="/spiaggia">spiaggia e prezzi</a>.</p>
       </details>
       <details>
-        <summary><h3>Serve prenotare lettini e ombrelloni?</h3></summary>
-        <p>No. L'accesso alla spiaggia &egrave; libero e si pu&ograve; venire senza prenotare. Nei fine settimana e ad agosto conviene per&ograve; scrivere un messaggio la sera prima: ti confermiamo la disponibilit&agrave; e ti teniamo il posto.</p>
+        <summary><h3>Si prenotano lettini e ombrelloni?</h3></summary>
+        <p>No: si arriva, si sceglie una postazione libera e si paga in cassa. L'accesso alla spiaggia &egrave; gratuito. Nei fine settimana di agosto conviene arrivare presto, perch&eacute; i posti vanno a esaurimento.</p>
       </details>
       <details>
         <summary><h3>Che differenza c'&egrave; tra lettino, lettone e sdraio?</h3></summary>
@@ -793,6 +830,12 @@
   <span>Lungomare Paolo Toscanelli 27 &middot; Lido di Ostia &middot; Roma</span>
   <span>Sun Beach S.r.l. &middot; P.IVA 15970681001 &middot; &copy; 2026</span>
 </footer>
+
+
+<a class="ctaev" href="https://wa.me/393484059720?text=Salve%2C%20vorrei%20prenotare%20un%20tavolo%20per%20...%20la%20sera%20del%2014" aria-label="Prenota il tavolo per la cena di Ferragosto del 14 agosto">
+  <span class="ctaev__e">Ferragosto</span>
+  <span class="ctaev__t">14 agosto &middot; Prenota <em>&rarr;</em></span>
+</a>
 
 <div class="barra">
   <a href="tel:+393484059720">Chiama</a>
