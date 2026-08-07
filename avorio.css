@@ -486,12 +486,10 @@ body:not(.con-hero) .nav .pren{background:var(--bruno);border-color:var(--bruno)
    Un evento speciale si segnala col materiale, non col colore:
    unica sezione fotografica scura della pagina, niente rosso. */
 .serata{position:relative;overflow:hidden;color:var(--avorio);
-  padding-block:clamp(5rem,12vw,9rem)}
-.serata__foto{position:absolute;inset:0;margin:0;overflow:hidden;z-index:0}
-.serata__foto img{position:absolute;inset:-5%;width:110%;height:110%;object-fit:cover;
-  filter:saturate(.72) brightness(.62);animation:respiro 44s ease-in-out infinite alternate}
-.serata::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:linear-gradient(180deg,rgba(20,14,10,.62) 0%,rgba(20,14,10,.44) 45%,rgba(20,14,10,.72) 100%)}
+  padding-block:clamp(5rem,12vw,9rem);background:var(--bruno)}
+.serata{background:var(--bruno)}
+.serata>.onda{position:absolute;left:-8%;right:-8%;bottom:0;height:62%;z-index:0;pointer-events:none}
+.serata>.onda path{fill:none;stroke:#FBF7EF;stroke-width:1;opacity:.12}
 .serata__in{position:relative;z-index:2}
 
 .serata__eti{display:block;font-size:.6rem;font-weight:500;letter-spacing:.34em;
