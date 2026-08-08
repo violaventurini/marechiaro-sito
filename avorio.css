@@ -95,7 +95,7 @@ p{margin:0 0 1.05em;max-width:52ch}
 @keyframes pulsa{50%{opacity:.35;transform:translate(-50%,6px)}}
 
 /* NASTRO DOPPIO */
-.nastri{position:relative;background:rgba(235,224,206,.55);
+.nastri{position:relative;z-index:1;background:rgba(235,224,206,.55);
   backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);
   border-block:1px solid var(--bruno-14);overflow:hidden;padding-block:.5rem}
 .nastro{overflow:hidden;white-space:nowrap}
@@ -323,7 +323,9 @@ body:not(.con-hero) .nav .pren{background:var(--bruno);border-color:var(--bruno)
 /* impaginazione: indice a sinistra, menu a destra */
 .menu-corpo{max-width:1240px;margin-inline:auto;padding:clamp(3.5rem,7vw,6rem) var(--g);
   display:grid;gap:clamp(2rem,4vw,4rem)}
-@media(min-width:1000px){.menu-corpo{grid-template-columns:13rem minmax(0,1fr)}}
+@media(min-width:1000px){.menu-corpo{grid-template-columns:13rem minmax(0,1fr)}
+  /* se manca l'indice la colonna prende tutta la larghezza */
+  .menu-corpo>.menu-colonna:only-child{grid-column:1 / -1}}
 
 .menu-colonna{min-width:0}
 .menu-indice{display:none}

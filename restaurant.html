@@ -69,10 +69,10 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Can I have lunch on the beach itself?",
+      "name": "How does lunch work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. From 1pm we serve at the table facing the sea. If you'd rather stay under your umbrella, order takeaway and carry it back to your spot."
+        "text": "From 1pm we serve at the table facing the sea. Otherwise you can order takeaway and collect it at the counter."
       }
     },
     {
@@ -145,7 +145,8 @@
     <img class="logo logo--bianco" src="/img/logo-marechiaro-bianco.svg" alt="Marechiaro Ostia" width="628" height="140">
     <img class="logo logo--rosso" src="/img/logo-marechiaro-rosso.svg" alt="" aria-hidden="true" width="628" height="140">
   </a>
-  <span class="menu">
+  <span class="menu" id="menu-principale">
+    <a href="/en/#ferragosto">Ferragosto</a>
     <a href="/en/beach">Beach</a>
     <a href="/en/restaurant">Restaurant</a>
     <a href="/en/menu">Menu</a>
@@ -153,8 +154,11 @@
     <a href="/en/groups">Groups</a>
     <a href="/en/find-us">Find us</a>
   </span>
-  <span class="lingue"><a href="/" hreflang="it" lang="it">IT</a><b>EN</b></span>
+  <span class="lingue"><a href="/ristorante" hreflang="it" lang="it">IT</a><b>EN</b></span>
   <a class="pren" href="https://wa.me/393484059720">Book</a>
+  <button class="nav__tog" type="button" aria-label="Open the menu" aria-expanded="false" aria-controls="menu-principale">
+    <span></span><span></span>
+  </button>
 </nav>
 
 <header class="testata">
@@ -181,13 +185,13 @@
   <div class="riv"><span class="eti">At the table</span><h2>The sea in front,<br>the sand underneath</h2>
     <p class="guida">The kitchen works with the catch of the day, so the specials change. The rest of the menu &mdash; sandwiches, salads, fried bites, pizza &mdash; is always there.</p></div>
   <div class="righe">
-      <a class="riga" href="/en/menu"><span class="n">01</span><span class="t">Lunch on the beach</span>
-        <span class="d">Daily specials based on the catch, generous salads, sandwiches and fried bites. From 1pm.</span><span class="v">See the menu <em>&rarr;</em></span></a>
+      <a class="riga" href="/en/menu"><span class="n">01</span><span class="t">Lunch</span>
+        <span class="d">Seafood following the daily catch, generous salads, sandwiches and fried bites. From 1pm.</span><span class="v">See the menu <em>&rarr;</em></span></a>
       <a class="riga" href="https://wa.me/393484059720?text=Hello%2C%20I%27d%20like%20to%20order%20takeaway"><span class="n">02</span><span class="t">Takeaway</span>
-        <span class="d">Order and carry it back to your umbrella, without leaving your sunbed.</span><span class="v">Order on WhatsApp <em>&rarr;</em></span></a>
-      <a class="riga" href="/en/menu#sera"><span class="n">03</span><span class="t">Dinner by the sea</span>
+        <span class="d">Order at the bar or by message, and collect it when it&rsquo;s ready.</span><span class="v">Order on WhatsApp <em>&rarr;</em></span></a>
+      <a class="riga" href="/en/menu-dinner"><span class="n">03</span><span class="t">Dinner by the sea</span>
         <span class="d">Seafood starters, first and main courses. Or a pizza, if you prefer.</span><span class="v">The evening menu <em>&rarr;</em></span></a>
-      <a class="riga" href="/en/menu#pizze"><span class="n">04</span><span class="t">Thin Roman pizza</span>
+      <a class="riga" href="/en/menu-dinner#pizze"><span class="n">04</span><span class="t">Thin Roman pizza</span>
         <span class="d">Thin and crispy, true to tradition. From 5pm until late, takeaway too.</span><span class="v">The pizzas <em>&rarr;</em></span></a>
       <a class="riga" href="/en/aperitivo"><span class="n">05</span><span class="t">Sunset aperitivo</span>
         <span class="d">Cocktails on the sand from 6pm, with fried bites and sharing boards.</span><span class="v">Aperitivo <em>&rarr;</em></span></a>
@@ -195,8 +199,8 @@
 </div></section>
 
 <section class="sez" id="takeaway"><div class="wrap offerta__box riv">
-  <div><span class="eti">Takeaway</span><h2>Carry it back<br>to your umbrella</h2></div>
-  <div><p class="guida">Everything on the menu can be ordered to take away: lunch to eat at your spot, or the evening pizza to carry home.</p>
+  <div><span class="eti">Takeaway</span><h2>Order<br>and collect</h2></div>
+  <div><p class="guida">Everything on the menu can be ordered to take away: lunch at midday, pizza in the evening.</p>
    <p class="guida">Order at the bar or send us a message, and we'll tell you when it's ready.</p>
    <div class="azioni"><a class="btn" href="https://wa.me/393484059720?text=Hello%2C%20I%27d%20like%20to%20order%20takeaway">Order takeaway</a>
      <a class="btn scuro" href="/en/menu">See the menu</a></div></div>
@@ -205,8 +209,8 @@
 <section class="sez faq-sez"><div class="wrap">
   <div class="riv"><span class="eti">Before you come</span><h2>Frequently asked questions</h2></div>
   <div class="faq riv">
-      <details><summary><h3>Can I have lunch on the beach itself?</h3></summary>
-        <p>Yes. From 1pm we serve at the table facing the sea. If you'd rather stay under your umbrella, order takeaway and carry it back to your spot.</p></details>
+      <details><summary><h3>How does lunch work?</h3></summary>
+        <p>From 1pm we serve at the table facing the sea. Otherwise you can order takeaway and collect it at the counter.</p></details>
       <details><summary><h3>In the evening, are you a restaurant or a pizzeria?</h3></summary>
         <p>Both. You can have dinner &agrave; la carte &mdash; daily specials based on the catch, salads, seafood mains &mdash; or a thin Roman pizza, with the oven on until late.</p></details>
       <details><summary><h3>What are the kitchen hours?</h3></summary>
@@ -230,6 +234,12 @@
   <span>Lungomare Paolo Toscanelli 27 &middot; Lido di Ostia &middot; Roma</span>
   <span>Sun Beach S.r.l. &middot; P.IVA 15970681001 &middot; &copy; 2026</span>
 </footer>
+
+
+<a class="ctaev" href="https://wa.me/393484059720?text=Hello%2C%20I%27d%20like%20to%20book%20a%20table%20for%20...%20on%20the%20evening%20of%20the%2014th" aria-label="Book a table for the Ferragosto dinner on 14 August">
+  <span class="ctaev__e">Ferragosto</span>
+  <span class="ctaev__t">14 August &middot; Book <em>&rarr;</em></span>
+</a>
 
 <div class="barra">
   <a href="tel:+393484059720">Call</a>
