@@ -29,6 +29,7 @@ p{margin:0 0 1.05em;max-width:52ch}
 .guida{color:var(--bruno-60);max-width:46ch;font-size:1.06rem}
 .wrap{max-width:1240px;margin-inline:auto;padding-inline:var(--g)}
 .sez{padding-block:clamp(4.5rem,11vw,9rem);position:relative}
+.sez--stretta{padding-block:clamp(2.5rem,6vw,4.5rem);position:relative}
 
 .btn{display:inline-flex;align-items:center;padding:1.05rem 2rem;font-size:.66rem;letter-spacing:.2em;
   text-transform:uppercase;font-weight:500;border:1px solid var(--bruno);background:var(--bruno);
@@ -387,8 +388,7 @@ body:not(.con-hero) .nav .pren{background:var(--bruno);border-color:var(--bruno)
 .voci--giorno li:hover .v__n{color:#fff}
 .voci--giorno li:hover .v__l{border-bottom-color:rgba(251,247,239,.7)}
 @media(min-width:820px){.voci--giorno{display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(2rem,5vw,4rem)}}
-.giorno__nota{margin:1.6rem 0 0;font-family:'Fraunces',Georgia,serif;font-variation-settings:"SOFT" 85;
-  font-style:italic;font-size:.98rem;color:rgba(251,247,239,.6);max-width:66ch}
+
 
 .menu-legenda{margin-top:clamp(3rem,6vw,4.5rem);padding-top:2rem;
   border-top:1px solid var(--bruno-14)}
@@ -487,7 +487,6 @@ body:not(.con-hero) .nav .pren{background:var(--bruno);border-color:var(--bruno)
    unica sezione fotografica scura della pagina, niente rosso. */
 .serata{position:relative;overflow:hidden;color:var(--avorio);
   padding-block:clamp(5rem,12vw,9rem);background:var(--bruno)}
-.serata{background:var(--bruno)}
 .serata>.onda{position:absolute;left:-8%;right:-8%;bottom:0;height:62%;z-index:0;pointer-events:none}
 .serata>.onda path{fill:none;stroke:#FBF7EF;stroke-width:1;opacity:.12}
 .serata__in{position:relative;z-index:2}
@@ -554,7 +553,7 @@ body:not(.con-hero) .nav .pren{background:var(--bruno);border-color:var(--bruno)
 
 /* ============ SELETTORE DELLE CARTE ============
    Al tavolo si passa da una carta all'altra senza tornare indietro. */
-.carte{position:sticky;top:0;z-index:120;
+.carte{position:sticky;top:var(--nav-h,4rem);z-index:120;
   background:rgba(251,247,239,.86);backdrop-filter:blur(22px) saturate(170%);
   -webkit-backdrop-filter:blur(22px) saturate(170%);
   border-bottom:1px solid var(--bruno-14)}
@@ -570,7 +569,10 @@ body:not(.con-hero) .nav .pren{background:var(--bruno);border-color:var(--bruno)
 .carte a:hover{color:var(--bruno)}
 .carte a[aria-current="page"]{color:var(--bruno);font-weight:500}
 .carte a[aria-current="page"]::after{transform:scaleX(1)}
+@media(max-width:760px){:root{--nav-h:3.6rem}}
 @media(max-width:520px){.carte a{font-size:.62rem;letter-spacing:.16em}}
+/* l'indice laterale parte sotto la barra delle carte */
+@media(min-width:1000px){.menu-indice{top:calc(var(--nav-h) + 4.5rem)}}
 
 /* ============ STAMPA ============
    Il menu deve poter uscire da una stampante senza sembrare una pagina web. */
