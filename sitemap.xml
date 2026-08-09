@@ -1,91 +1,202 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://marechiaroostia.it/</loc><lastmod>2026-08-07</lastmod><priority>1.0</priority>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://marechiaroostia.it/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/"/></url>
-  <url><loc>https://marechiaroostia.it/en/</loc><lastmod>2026-08-07</lastmod><priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/"/>
+  </url>
+  <url>
+    <loc>https://marechiaroostia.it/en/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/"/></url>
-  <url><loc>https://marechiaroostia.it/spiaggia</loc><lastmod>2026-08-07</lastmod><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/"/>
+  </url>
+  <url>
+    <loc>https://marechiaroostia.it/spiaggia</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/spiaggia"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/beach"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/spiaggia"/></url>
-  <url><loc>https://marechiaroostia.it/en/beach</loc><lastmod>2026-08-07</lastmod><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/spiaggia"/>
+  </url>
+  <url>
+    <loc>https://marechiaroostia.it/en/beach</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/spiaggia"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/beach"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/spiaggia"/></url>
-  <url><loc>https://marechiaroostia.it/ristorante</loc><lastmod>2026-08-07</lastmod><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/spiaggia"/>
+  </url>
+  <url>
+    <loc>https://marechiaroostia.it/ristorante</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/ristorante"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/restaurant"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/ristorante"/></url>
-  <url><loc>https://marechiaroostia.it/en/restaurant</loc><lastmod>2026-08-07</lastmod><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/ristorante"/>
+  </url>
+  <url>
+    <loc>https://marechiaroostia.it/en/restaurant</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/ristorante"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/restaurant"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/ristorante"/></url>
-  <url><loc>https://marechiaroostia.it/menu</loc><lastmod>2026-08-07</lastmod><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/ristorante"/>
+  </url>
+  <url>
+    <loc>https://marechiaroostia.it/menu</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/menu"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/menu"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/menu"/></url>
-  <url><loc>https://marechiaroostia.it/en/menu</loc><lastmod>2026-08-07</lastmod><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/menu"/>
+  </url>
+  <url>
+    <loc>https://marechiaroostia.it/en/menu</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/menu"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/menu"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/menu"/></url>
-  <url><loc>https://marechiaroostia.it/menu-pranzo</loc><lastmod>2026-08-07</lastmod><priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/menu-pranzo"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/menu-lunch"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/menu-pranzo"/></url>
-  <url><loc>https://marechiaroostia.it/en/menu-lunch</loc><lastmod>2026-08-07</lastmod><priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/menu-pranzo"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/menu-lunch"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/menu-pranzo"/></url>
-  <url><loc>https://marechiaroostia.it/menu-cena</loc><lastmod>2026-08-07</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/menu"/>
+  </url>
+  <url>
+    <loc>https://marechiaroostia.it/menu-cena</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/menu-cena"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/menu-dinner"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/menu-cena"/></url>
-  <url><loc>https://marechiaroostia.it/en/menu-dinner</loc><lastmod>2026-08-07</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/menu-cena"/>
+  </url>
+  <url>
+    <loc>https://marechiaroostia.it/en/menu-dinner</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/menu-cena"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/menu-dinner"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/menu-cena"/></url>
-  <url><loc>https://marechiaroostia.it/menu-aperitivo</loc><lastmod>2026-08-07</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/menu-cena"/>
+  </url>
+  <url>
+    <loc>https://marechiaroostia.it/menu-pranzo</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/menu-pranzo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/menu-lunch"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/menu-pranzo"/>
+  </url>
+  <url>
+    <loc>https://marechiaroostia.it/en/menu-lunch</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/menu-pranzo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/menu-lunch"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/menu-pranzo"/>
+  </url>
+  <url>
+    <loc>https://marechiaroostia.it/menu-aperitivo</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/menu-aperitivo"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/menu-aperitivo"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/menu-aperitivo"/></url>
-  <url><loc>https://marechiaroostia.it/en/menu-aperitivo</loc><lastmod>2026-08-07</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/menu-aperitivo"/>
+  </url>
+  <url>
+    <loc>https://marechiaroostia.it/en/menu-aperitivo</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/menu-aperitivo"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/menu-aperitivo"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/menu-aperitivo"/></url>
-  <url><loc>https://marechiaroostia.it/menu-colazione</loc><lastmod>2026-08-07</lastmod><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/menu-aperitivo"/>
+  </url>
+  <url>
+    <loc>https://marechiaroostia.it/menu-colazione</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/menu-colazione"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/menu-breakfast"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/menu-colazione"/></url>
-  <url><loc>https://marechiaroostia.it/en/menu-breakfast</loc><lastmod>2026-08-07</lastmod><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/menu-colazione"/>
+  </url>
+  <url>
+    <loc>https://marechiaroostia.it/en/menu-breakfast</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/menu-colazione"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/menu-breakfast"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/menu-colazione"/></url>
-  <url><loc>https://marechiaroostia.it/aperitivi</loc><lastmod>2026-08-07</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/menu-colazione"/>
+  </url>
+  <url>
+    <loc>https://marechiaroostia.it/aperitivi</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/aperitivi"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/aperitivo"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/aperitivi"/></url>
-  <url><loc>https://marechiaroostia.it/en/aperitivo</loc><lastmod>2026-08-07</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/aperitivi"/>
+  </url>
+  <url>
+    <loc>https://marechiaroostia.it/en/aperitivo</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/aperitivi"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/aperitivo"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/aperitivi"/></url>
-  <url><loc>https://marechiaroostia.it/feste-gruppi</loc><lastmod>2026-08-07</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/aperitivi"/>
+  </url>
+  <url>
+    <loc>https://marechiaroostia.it/feste-gruppi</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/feste-gruppi"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/groups"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/feste-gruppi"/></url>
-  <url><loc>https://marechiaroostia.it/en/groups</loc><lastmod>2026-08-07</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/feste-gruppi"/>
+  </url>
+  <url>
+    <loc>https://marechiaroostia.it/en/groups</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/feste-gruppi"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/groups"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/feste-gruppi"/></url>
-  <url><loc>https://marechiaroostia.it/contatti</loc><lastmod>2026-08-07</lastmod><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/feste-gruppi"/>
+  </url>
+  <url>
+    <loc>https://marechiaroostia.it/contatti</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/contatti"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/find-us"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/contatti"/></url>
-  <url><loc>https://marechiaroostia.it/en/find-us</loc><lastmod>2026-08-07</lastmod><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/contatti"/>
+  </url>
+  <url>
+    <loc>https://marechiaroostia.it/en/find-us</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/contatti"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/find-us"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/contatti"/></url>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/contatti"/>
+  </url>
 </urlset>
