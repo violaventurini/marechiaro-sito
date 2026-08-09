@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /_strumenti/
-Disallow: /LEGGIMI-GITHUB.md
-
-Sitemap: https://marechiaroostia.it/sitemap.xml
