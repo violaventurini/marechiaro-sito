@@ -108,47 +108,35 @@ p{margin:0 0 1.05em;max-width:52ch}
 @keyframes verso-dx{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 
 /* ============ LA GIORNATA — quadrante circolare ============ */
-.giornata{position:relative;height:420vh}
-.giornata__fisso{position:sticky;top:0;height:100svh;overflow:hidden;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:clamp(1rem,3vh,2.5rem);padding:5rem 1.25rem 2rem}
-.cielo{position:absolute;inset:0;z-index:0;
-  background:linear-gradient(to bottom,var(--c1,#DCE9F0) 0%,var(--c2,#F6EEDC) 60%,var(--c3,#EBE0CE) 100%)}
-.giornata__intro{position:relative;z-index:2;text-align:center}
-.giornata__intro h2{font-size:clamp(1.5rem,3.6vw,2.6rem)}
 
-.orologio{position:relative;z-index:2;
-  width:min(78vh,min(560px,88vw));aspect-ratio:1;display:grid;place-items:center}
-.quadrante{position:absolute;inset:0;width:100%;height:100%}
-.quadrante .anello{fill:none;stroke:#2B231C;stroke-opacity:.12;stroke-width:1}
-.quadrante .tacca{stroke:#2B231C;stroke-opacity:.22;stroke-width:1}
-.quadrante .tacca--forte{stroke:#2B231C;stroke-opacity:.4;stroke-width:1.4}
-.quadrante .lancetta{transform-origin:250px 250px;transform:rotate(-150deg);
-  transition:transform .18s linear}
-.quadrante .lancetta line{stroke:#2B231C;stroke-opacity:.35;stroke-width:1.4}
-.quadrante .punta{fill:var(--rosso)}
-.quadrante .perno{fill:#2B231C;fill-opacity:.5}
 
-.ora-eti{position:absolute;transform:translate(-50%,-50%);
-  background:none;border:0;padding:.35rem .5rem;cursor:pointer;text-align:center;
-  font-family:'Jost',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.16em;
-  color:var(--bruno-35);transition:color .35s;line-height:1.25}
-.ora-eti em{display:block;font-style:normal;font-size:.6rem;letter-spacing:.18em;
-  text-transform:uppercase;margin-top:.2rem;opacity:0;transition:opacity .35s}
-.ora-eti:hover{color:var(--bruno-60)}
-.ora-eti.qui{color:var(--rosso)}
-.ora-eti.qui em{opacity:1}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media(max-width:560px){.ora-eti{font-size:.64rem;padding:.25rem}.ora-eti em{display:none}}
 
-.orologio__centro{position:relative;width:62%;text-align:center;display:grid;place-items:center}
-.fase{grid-area:1/1;opacity:0;transform:translateY(14px);pointer-events:none;
-  transition:opacity .5s ease,transform .5s ease}
-.fase.attiva{opacity:1;transform:none;pointer-events:auto}
-.fase__ora{display:block;font-family:'Fraunces',Georgia,serif;font-variation-settings:"SOFT" 90;
-  font-size:clamp(2rem,5.5vw,3.4rem);line-height:1;color:var(--rosso);margin-bottom:.5rem}
-.fase h3{font-size:clamp(1.3rem,3.2vw,2.1rem);margin-bottom:.6rem}
-.fase p{margin:0 auto;color:var(--bruno-60);font-size:clamp(.84rem,1.6vw,1rem);
-  max-width:32ch;line-height:1.6}
+
+
+
+
+
+
 @media(max-width:560px){.orologio__centro{width:70%}.fase p{font-size:.8rem;line-height:1.5}}
 
 /* RIGHE TIPOGRAFICHE */
@@ -609,3 +597,47 @@ picture img{display:block;width:100%;height:100%;object-fit:cover}
 .btn.vetro{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.45);color:#fff;
   backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
 .btn.vetro:hover{background:#fff;color:var(--bruno);border-color:#fff}
+
+
+/* ============ LA GIORNATA — quadrante circolare ============ */
+.giornata{position:relative;height:420vh}
+.giornata__fisso{position:sticky;top:0;height:100svh;overflow:hidden;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:clamp(1rem,3vh,2.5rem);padding:5rem 1.25rem 4rem}
+.cielo{position:absolute;inset:0;z-index:0;
+  background:linear-gradient(to bottom,var(--c1,#DCE9F0) 0%,var(--c2,#F6EEDC) 60%,var(--c3,#EBE0CE) 100%)}
+.giornata__intro{position:relative;z-index:2;text-align:center}
+.giornata__intro h2{font-size:clamp(1.5rem,3.6vw,2.6rem)}
+.orologio{position:relative;z-index:2;width:min(74vh,min(540px,88vw));aspect-ratio:1;display:grid;place-items:center}
+.quadrante{position:absolute;inset:0;width:100%;height:100%}
+.quadrante .anello{fill:none;stroke:#2B231C;stroke-opacity:.12;stroke-width:1}
+.quadrante .tacca{stroke:#2B231C;stroke-opacity:.22;stroke-width:1}
+.quadrante .tacca--forte{stroke:#2B231C;stroke-opacity:.4;stroke-width:1.4}
+.quadrante .lancetta{transform-origin:250px 250px;transform:rotate(-150deg);transition:transform .18s linear}
+.quadrante .lancetta line{stroke:#2B231C;stroke-opacity:.35;stroke-width:1.4}
+.quadrante .punta{fill:var(--rosso)}
+.quadrante .perno{fill:#2B231C;fill-opacity:.5}
+.ora-eti{position:absolute;transform:translate(-50%,-50%);background:none;border:0;padding:.35rem .5rem;
+  cursor:pointer;text-align:center;font-family:'Jost',sans-serif;font-size:.72rem;font-weight:500;
+  letter-spacing:.16em;color:var(--bruno-35);transition:color .35s;line-height:1.25}
+.ora-eti em{display:block;font-style:normal;font-size:.6rem;letter-spacing:.18em;
+  text-transform:uppercase;margin-top:.2rem;opacity:0;transition:opacity .35s}
+.ora-eti:hover{color:var(--bruno-60)}
+.ora-eti.qui{color:var(--rosso)}
+.ora-eti.qui em{opacity:1}
+@media(max-width:560px){.ora-eti{font-size:.62rem;padding:.25rem}.ora-eti em{display:none}}
+.orologio__centro{position:relative;width:62%;text-align:center;display:grid;place-items:center}
+.fase{grid-area:1/1;opacity:0;transform:translateY(14px);pointer-events:none;
+  transition:opacity .5s ease,transform .5s ease}
+.fase.attiva{opacity:1;transform:none;pointer-events:auto}
+.fase__ora{display:block;font-family:'Fraunces',Georgia,serif;font-variation-settings:"SOFT" 90;
+  font-size:clamp(2rem,5.5vw,3.4rem);line-height:1;color:var(--rosso);margin-bottom:.5rem}
+.fase h3{font-size:clamp(1.3rem,3.2vw,2.1rem);margin-bottom:.6rem}
+.fase p{margin:0 auto;color:var(--bruno-60);font-size:clamp(.84rem,1.6vw,1rem);max-width:32ch;line-height:1.6}
+@media(max-width:560px){.orologio__centro{width:70%}.fase p{font-size:.8rem;line-height:1.5}}
+.giornata__indice{position:absolute;bottom:2.2rem;left:50%;transform:translateX(-50%);z-index:4;display:flex;gap:.5rem}
+.giornata__indice b{display:block;width:34px;height:2px;background:var(--bruno-35);transition:background .4s}
+.giornata__indice b.on{background:var(--rosso)}
+@media (prefers-reduced-motion:reduce){
+  .giornata{height:auto}.giornata__fisso{position:static;height:auto;padding-block:4rem}
+  .fase{position:relative;opacity:1;transform:none}}
