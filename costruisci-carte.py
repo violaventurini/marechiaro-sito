@@ -143,12 +143,12 @@ def colazione(lang):
   '', indice(idx,lang), ONDA,
   'Si comincia dal bancone' if it else 'It starts at the counter',
   'Breakfast' if it else 'Colazione',
-  'Dalla mattina' if it else 'From the morning',
-  ('Il cornetto appena sfornato e il cappuccino, il caff&egrave; come lo fanno a Roma. Si prende in piedi al banco '
-   'guardando il mare, oppure seduti con calma prima di scendere sulla sabbia: qui nessuno ha fretta.'
+  'Dalle 9' if it else 'From 9',
+  ('Dalle 9 il bancone &egrave; aperto: cornetto appena sfornato, cappuccino, il caff&egrave; come lo fanno a Roma. '
+   'Si prende in piedi al banco guardando il mare, oppure seduti con calma prima di scendere sulla sabbia.'
    if it else
-   'A cornetto straight from the oven and a cappuccino, coffee the Roman way. Take it standing at the bar looking at '
-   'the sea, or sit down before heading to the sand &mdash; nobody is in a hurry here.'),
+   'From 9 the counter is open: a cornetto straight from the oven, a cappuccino, coffee the Roman way. Take it standing '
+   'at the bar looking at the sea, or sit down before heading to the sand.'),
   'Il caff&egrave;' if it else 'Coffee', 'Coffee' if it else 'Il caff&egrave;',
   ('Espresso, cappuccino, macchiato, caff&egrave; freddo. Fatti come vanno fatti, senza scorciatoie.'
    if it else 'Espresso, cappuccino, macchiato, iced coffee. Made properly, no shortcuts.'),
@@ -176,8 +176,8 @@ def colazione(lang):
       '/menu-colazione' if it else '/en/menu-breakfast', '/menu-colazione', '/en/menu-breakfast',
       ('Colazione' if it else 'Breakfast',
        'Colazione' if it else 'Breakfast',
-       ('Cornetto appena sfornato, cappuccino e spremuta fatta al momento, con il mare davanti.' if it
-        else 'Cornetto straight from the oven, cappuccino and juice squeezed to order, with the sea in front of you.')), corpo)
+       ('Dalle 9, cornetto appena sfornato, cappuccino e spremuta fatta al momento, con il mare davanti.' if it
+        else 'From 9, cornetto straight from the oven, cappuccino and juice squeezed to order, with the sea in front of you.')), corpo)
 
 # ═══════════════════════ PRANZO ═══════════════════════
 def pranzo(lang):
@@ -223,9 +223,9 @@ def pranzo(lang):
        'La cucina' if it else 'The kitchen',
        voci(D.PROPOSTE, lang),
        ('La carta segue il mare e pu&ograve; cambiare di giorno in giorno, secondo il pescato. '
-        'Per le proposte fuori carta chiedete pure al cameriere: sono quelle arrivate stamattina.' if it
+        'Per le proposte fuori carta chiedete pure al cameriere.' if it
         else 'The menu follows the sea and may change from day to day with the catch. '
-             'For the dishes not listed here, just ask your waiter &mdash; they came in this morning.'),
+             'For the dishes not listed here, just ask your waiter.'),
        '\n'.join([
          blocco(2,'sfizi','Sfizi e fritti' if it else 'Bites &amp; fried','Bites &amp; fried' if it else 'Sfizi e fritti','Tutto il giorno' if it else 'All day', D.SFIZI, lang),
          blocco(3,'insalate','Insalate' if it else 'Salads','Salads' if it else 'Insalate','Fresche e abbondanti' if it else 'Fresh and generous', D.INSALATE, lang),
@@ -257,8 +257,8 @@ def pranzo(lang):
 # ═══════════════════════ APERITIVO ═══════════════════════
 def aperitivo(lang):
     it = lang=='it'
-    idx = [('formule','Le formule' if it else 'Set menus'),('cocktail','Cocktail'),
-           ('vini','Vini' if it else 'Wines'),('condividere','Da condividere' if it else 'To share')]
+    idx = [('formule','I menu aperitivo' if it else 'Aperitivo set menus'),('cocktail','Cocktail'),
+           ('vini','Vini' if it else 'Wines')]
     corpo = '''
 <div class="nastri"><div class="nastro nastro--dx"><span>%s%s</span></div></div>
 
@@ -288,20 +288,16 @@ def aperitivo(lang):
 ''' % (('Cocktail e fritti 15&thinsp;&euro;<i>&mdash;</i>Cocktail, tagliere e fritti 18&thinsp;&euro;<i>&mdash;</i>Cocktail alla carta 10&thinsp;&euro;<i>&mdash;</i>Vini e bollicine<i>&mdash;</i>' if it
         else 'Cocktail and fried bites &euro;15<i>&mdash;</i>Cocktail, board and fried bites &euro;18<i>&mdash;</i>Cocktails &agrave; la carte &euro;10<i>&mdash;</i>Wines and sparkling<i>&mdash;</i>')*2,
        '', indice(idx,lang), ONDA,
-       'Le formule' if it else 'Set menus',
-       'Set menus' if it else 'Le formule',
+       'I menu aperitivo' if it else 'Aperitivo set menus',
+       'Aperitivo set menus' if it else 'I menu aperitivo',
        'A persona' if it else 'Per person',
        voci(D.FORMULE_APERITIVO, lang),
        ('Prezzi a persona, pi&ugrave; 2&nbsp;&euro; di coperto. Il cocktail si sceglie dalla carta qui sotto.' if it
         else 'Prices per person, plus a &euro;2 cover charge. The cocktail is chosen from the list below.'),
        '\n'.join([
-         blocco(2,'cocktail','Cocktail','Cocktails' if it else 'Cocktail','Tutti 10&thinsp;&euro;' if it else 'All &euro;10', D.COCKTAIL, lang,
-                ('Ogni cocktail costa 10&nbsp;&euro;. Nessuna sorpresa al conto: scegli quello che ti va.' if it
-                 else 'Every cocktail is &euro;10. No surprises on the bill &mdash; just pick the one you fancy.'), unico=True),
+         blocco(2,'cocktail','Cocktail','Cocktails' if it else 'Cocktail','Tutti 10,00&nbsp;&euro;' if it else 'All &euro;10.00', D.COCKTAIL, lang, unico=True),
          blocco(3,'vini','Vini' if it else 'Wines','Wines' if it else 'Vini','Alla bottiglia' if it else 'By the bottle', D.VINI, lang,
-                'Bianchi e bollicine, serviti freddi.' if it else 'Whites and sparkling, served chilled.'),
-         blocco(4,'condividere','Da condividere' if it else 'To share','Bites &amp; boards' if it else 'Sfizi e taglieri','In mezzo al tavolo' if it else 'For the middle of the table', D.CONDIVIDERE, lang,
-                largo=True),
+                'Bianchi e bollicine, serviti freddi.' if it else 'Whites and sparkling, served chilled.', largo=True),
        ]))
     corpo += legenda(lang)
     corpo += chius('Al tramonto' if it else 'At sunset',
@@ -325,8 +321,8 @@ def aperitivo(lang):
 def cena(lang):
     it = lang=='it'
     idx = [('antipasti','Antipasti' if it else 'Starters'),('primi','Primi' if it else 'First courses'),
-           ('secondi','Secondi' if it else 'Main courses'),('pizze','Pizzeria'),
-           ('fritti','Fritti' if it else 'Fried bites'),('formula','Menu pizza' if it else 'Pizza menu'),
+           ('secondi','Secondi' if it else 'Main courses'),('pizzeria','Pizzeria'),
+           ('fritti','Fritti' if it else 'Fried'),
            ('dolci','Dolci' if it else 'Desserts'),('vini','Vini' if it else 'Wines')]
     corpo = '''
 <div class="nastri"><div class="nastro nastro--dx"><span>%s%s</span></div></div>
@@ -354,8 +350,8 @@ def cena(lang):
     </div>
   </div>
 </div>
-''' % (('Antipasti di mare<i>&mdash;</i>Primi<i>&mdash;</i>Secondi<i>&mdash;</i>Quattordici pizze bassa romana<i>&mdash;</i>Menu pizza 16&thinsp;&euro;<i>&mdash;</i>Vini<i>&mdash;</i>' if it
-        else 'Seafood starters<i>&mdash;</i>First courses<i>&mdash;</i>Main courses<i>&mdash;</i>Fourteen thin Roman pizzas<i>&mdash;</i>Pizza menu &euro;16<i>&mdash;</i>Wines<i>&mdash;</i>')*2,
+''' % (('Antipasti di mare<i>&mdash;</i>Primi<i>&mdash;</i>Secondi<i>&mdash;</i>Quattordici pizze bassa romana<i>&mdash;</i>Fritti dal banco<i>&mdash;</i>Vini<i>&mdash;</i>' if it
+        else 'Seafood starters<i>&mdash;</i>First courses<i>&mdash;</i>Main courses<i>&mdash;</i>Fourteen thin Roman pizzas<i>&mdash;</i>Fried bites<i>&mdash;</i>Wines<i>&mdash;</i>')*2,
        '', indice(idx,lang), ONDA,
        'Antipasti' if it else 'Starters',
        'Starters' if it else 'Antipasti',
@@ -366,13 +362,12 @@ def cena(lang):
        '\n'.join([
          blocco(2,'primi','Primi' if it else 'First courses','First courses' if it else 'Primi','Fatti al momento' if it else 'Made to order', D.CENA_PRIMI, lang),
          blocco(3,'secondi','Secondi' if it else 'Main courses','Main courses' if it else 'Secondi','Dal mare alla griglia' if it else 'From the sea to the grill', D.CENA_SECONDI, lang),
-         blocco(4,'pizze','Pizzeria','Pizza','Bassa romana' if it else 'Thin Roman style', D.PIZZE_SERA, lang,
+         blocco(4,'pizzeria','Pizzeria','Pizza','Bassa romana' if it else 'Thin Roman style', D.PIZZE_SERA, lang,
                 ('Bassa e croccante, come vuole la tradizione romana. Il forno resta acceso fino a tardi.' if it
                  else 'Thin and crispy, true to Roman tradition. The oven stays on until late.'), largo=True),
-         blocco(5,'fritti','Fritti' if it else 'Fried bites','Fried bites' if it else 'Fritti','Dal banco' if it else 'From the counter', D.FRITTI, lang),
-         blocco(6,'formula','Menu pizza' if it else 'Pizza menu','Pizza menu' if it else 'Menu pizza','A persona' if it else 'Per person', D.FORMULA_PIZZA, lang),
-         blocco(7,'dolci','Dolci' if it else 'Desserts','Desserts' if it else 'Dolci','Fatti in casa' if it else 'Made in house', D.DOLCI_CENA, lang),
-         blocco(8,'vini','Vini' if it else 'Wines','Wines' if it else 'Vini','Alla bottiglia' if it else 'By the bottle', D.VINI, lang,
+         blocco(5,'fritti','Fritti' if it else 'Fried','Fried' if it else 'Fritti','Della pizzeria' if it else 'From the pizzeria', D.FRITTI, lang),
+         blocco(6,'dolci','Dolci' if it else 'Desserts','Desserts' if it else 'Dolci','Fatti in casa' if it else 'Made in house', D.DOLCI_CENA, lang),
+         blocco(7,'vini','Vini' if it else 'Wines','Wines' if it else 'Vini','Alla bottiglia' if it else 'By the bottle', D.VINI, lang,
                 'Bianchi e bollicine, serviti freddi.' if it else 'Whites and sparkling, served chilled.', largo=True),
        ]))
     corpo += legenda(lang)

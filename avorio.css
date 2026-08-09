@@ -219,30 +219,6 @@ footer a:hover{color:var(--rosso)}
 }
 
 
-/* ============ LA PIZZERIA LA SERA ============ */
-.pizzeria{position:relative;min-height:88svh;display:grid;align-items:center;overflow:hidden;color:#fff}
-.pizzeria__foto{position:absolute;inset:0;margin:0;overflow:hidden;z-index:0;
-  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 16%,#000 84%,transparent 100%);
-  mask-image:linear-gradient(to bottom,transparent 0%,#000 16%,#000 84%,transparent 100%)}
-.pizzeria__foto img{position:absolute;inset:-5%;width:110%;height:110%;object-fit:cover;
-  animation:respiro 40s ease-in-out infinite alternate}
-.pizzeria::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:linear-gradient(100deg,rgba(28,20,14,.62) 0%,rgba(28,20,14,.22) 52%,rgba(28,20,14,.10) 100%)}
-.pizzeria .wrap{position:relative;z-index:2;width:100%}
-
-/* lastra di vetro: il testo galleggia sopra la fotografia */
-.lastra{max-width:34rem;padding:clamp(1.8rem,3.4vw,2.8rem);
-  background:rgba(251,247,239,.16);backdrop-filter:blur(24px) saturate(170%);
-  -webkit-backdrop-filter:blur(24px) saturate(170%);border:1px solid rgba(255,255,255,.28)}
-.lastra .eti{color:rgba(255,255,255,.78)}
-.lastra h2{color:#fff}
-.lastra .guida{color:rgba(255,255,255,.86)}
-.btn.vetro{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.45);color:#fff;
-  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
-.btn.vetro:hover{background:#fff;color:var(--bruno);border-color:#fff}
-@media(max-width:760px){.pizzeria{min-height:78svh}.lastra{max-width:none}}
-
-
 /* ============ SELETTORE LINGUA ============ */
 .lingue{display:flex;gap:.55rem;align-items:center;font-size:.64rem;letter-spacing:.18em;
   text-transform:uppercase;color:rgba(255,255,255,.7)}
@@ -484,50 +460,6 @@ body:not(.con-hero) .nav .pren{background:var(--bruno);border-color:var(--bruno)
 
 
 
-/* ============ SERATA ============
-   Un evento speciale si segnala col materiale, non col colore:
-   unica sezione fotografica scura della pagina, niente rosso. */
-.serata{position:relative;overflow:hidden;color:var(--avorio);
-  padding-block:clamp(5rem,12vw,9rem);background:var(--bruno)}
-.serata>.onda{position:absolute;left:-8%;right:-8%;bottom:0;height:62%;z-index:0;pointer-events:none}
-.serata>.onda path{fill:none;stroke:#FBF7EF;stroke-width:1;opacity:.12}
-.serata__in{position:relative;z-index:2}
-
-.serata__eti{display:block;font-size:.6rem;font-weight:500;letter-spacing:.34em;
-  text-transform:uppercase;color:rgba(251,247,239,.5);margin-bottom:1.6rem}
-.serata h2{font-size:clamp(3rem,10vw,7rem);color:var(--avorio);line-height:.98;
-  font-variation-settings:"SOFT" 90,"opsz" 144;font-weight:300}
-.serata__data{margin:1.1rem 0 0;font-size:.68rem;font-weight:400;letter-spacing:.3em;
-  text-transform:uppercase;color:rgba(251,247,239,.72)}
-.serata__sotto{margin:1.6rem 0 0;font-family:'Fraunces',Georgia,serif;
-  font-variation-settings:"SOFT" 90;font-style:italic;font-weight:300;
-  font-size:clamp(1.15rem,2.6vw,1.8rem);color:rgba(251,247,239,.9);max-width:26ch}
-.serata__guida{margin:1.2rem 0 0;font-size:.98rem;font-weight:300;line-height:1.7;
-  color:rgba(251,247,239,.6);max-width:46ch}
-
-.serata__menu{display:grid;gap:0;margin-top:clamp(3rem,7vw,5rem);
-  border-top:1px solid rgba(251,247,239,.22)}
-@media(min-width:860px){.serata__menu{grid-template-columns:1fr 1fr;column-gap:clamp(3rem,7vw,6rem)}}
-.serata__menu article{padding:1.9rem 0;border-bottom:1px solid rgba(251,247,239,.22)}
-@media(min-width:860px){.serata__menu article{border-bottom:0}}
-.serata__menu header{display:flex;align-items:baseline;gap:1rem;margin-bottom:.9rem}
-.serata__menu h3{font-family:'Fraunces',Georgia,serif;font-variation-settings:"SOFT" 88;
-  font-weight:300;font-size:clamp(1.3rem,2.6vw,1.75rem);color:var(--avorio)}
-.serata__p{margin-left:auto;font-size:.72rem;font-weight:400;letter-spacing:.22em;
-  color:rgba(251,247,239,.55)}
-.serata__menu p{margin:0;font-size:.94rem;font-weight:300;line-height:1.75;
-  color:rgba(251,247,239,.66);max-width:44ch}
-
-.serata__coda{margin-top:clamp(2.5rem,5vw,3.5rem);
-  display:flex;flex-wrap:wrap;align-items:center;gap:1.4rem 2.5rem;
-  padding-top:2rem;border-top:1px solid rgba(251,247,239,.22)}
-.serata__nota{margin:0;font-size:.8rem;font-weight:300;letter-spacing:.02em;
-  color:rgba(251,247,239,.5);max-width:38ch}
-.serata__coda .azioni{margin-left:auto}
-@media(max-width:640px){.serata__coda .azioni{margin-left:0;width:100%}
-  .serata__coda .azioni .btn{flex:1 1 auto;justify-content:center}}
-
-
 /* ============ CALL TO ACTION SERATA ============
    Piccola, fissa, di vetro. Compare dopo l'hero per non disturbare l'apertura. */
 .ctaev{position:fixed;right:clamp(1rem,2.5vw,2rem);bottom:clamp(1rem,2.5vw,2rem);z-index:180;
@@ -605,3 +537,75 @@ body:not(.con-hero) .nav .pren{background:var(--bruno);border-color:var(--bruno)
   font-style:italic;font-weight:300;font-size:1.02rem;line-height:1.7;
   color:rgba(251,247,239,.62);max-width:62ch}
 @media(min-width:820px){.giorno__nota{font-size:1.06rem}}
+
+
+/* ============ IMMAGINI: nessun salto di layout ============ */
+picture{display:block}
+picture img{display:block;width:100%;height:100%;object-fit:cover}
+
+/* ============ HERO ============ */
+.hero__cosa{margin:.9rem auto 1.8rem;max-width:40ch;font-size:.74rem;font-weight:400;
+  letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.78);
+  opacity:0;animation:sale .9s 1.05s cubic-bezier(.2,.75,.25,1) forwards}
+.hero__foto picture,.hero__foto img{position:absolute;inset:0;width:100%;height:100%}
+
+/* ============ BLOCCHI ALTERNATI FOTO/TESTO ============ */
+.duo__in{display:grid;gap:clamp(2rem,5vw,4.5rem);align-items:center;grid-template-columns:1fr}
+@media(min-width:900px){
+  .duo__in{grid-template-columns:1fr 1fr}
+  .duo--invertito .duo__foto{order:2}
+}
+.duo__foto{position:relative;overflow:hidden;aspect-ratio:3/4;max-height:76vh;
+  -webkit-mask-image:radial-gradient(ellipse 92% 90% at 50% 50%,#000 62%,rgba(0,0,0,.8) 82%,transparent 100%);
+  mask-image:radial-gradient(ellipse 92% 90% at 50% 50%,#000 62%,rgba(0,0,0,.8) 82%,transparent 100%)}
+.duo__foto img{transition:transform .8s cubic-bezier(.2,.7,.3,1)}
+.duo__foto:hover img{transform:scale(1.03)}
+.duo__testo .azioni{margin-top:2rem}
+.duo__testo h2{margin-bottom:1.2rem}
+
+/* ============ LA SERA ============ */
+.serata{position:relative;overflow:hidden;color:var(--avorio);background:var(--bruno);
+  padding-block:clamp(5rem,12vw,9rem)}
+.serata>.onda{position:absolute;left:-8%;right:-8%;bottom:0;height:62%;z-index:0;pointer-events:none}
+.serata>.onda path{fill:none;stroke:#FBF7EF;stroke-width:1;opacity:.12}
+.serata__in{position:relative;z-index:2}
+.serata__eti{display:block;font-size:.6rem;font-weight:500;letter-spacing:.34em;
+  text-transform:uppercase;color:rgba(251,247,239,.5);margin-bottom:1.6rem}
+.serata h2{font-size:clamp(2.4rem,7vw,5rem);color:var(--avorio);line-height:1;font-weight:300}
+.serata__sotto{margin:1.4rem 0 0;font-family:'Fraunces',Georgia,serif;font-variation-settings:"SOFT" 90;
+  font-style:italic;font-weight:300;font-size:clamp(1.1rem,2.4vw,1.65rem);
+  color:rgba(251,247,239,.9);max-width:30ch}
+.serata__guida{margin:1.2rem 0 0;font-size:.98rem;font-weight:300;line-height:1.75;
+  color:rgba(251,247,239,.62);max-width:52ch}
+.serata__menu{display:grid;gap:0;margin-top:clamp(3rem,7vw,4.5rem);
+  border-top:1px solid rgba(251,247,239,.22)}
+@media(min-width:860px){.serata__menu{grid-template-columns:1fr 1fr;column-gap:clamp(3rem,7vw,6rem)}}
+.serata__menu article{padding:1.9rem 0;border-bottom:1px solid rgba(251,247,239,.22)}
+@media(min-width:860px){.serata__menu article{border-bottom:0}}
+.serata__menu header{display:flex;align-items:baseline;gap:1rem;margin-bottom:.9rem}
+.serata__menu h3{font-family:'Fraunces',Georgia,serif;font-variation-settings:"SOFT" 88;
+  font-weight:300;font-size:clamp(1.35rem,2.8vw,1.9rem);color:var(--avorio)}
+.serata__p{margin-left:auto;font-size:.68rem;font-weight:400;letter-spacing:.22em;
+  text-transform:uppercase;color:rgba(251,247,239,.55)}
+.serata__menu p{margin:0;font-size:.94rem;font-weight:300;line-height:1.75;
+  color:rgba(251,247,239,.66);max-width:44ch}
+.serata__coda{margin-top:clamp(2.5rem,5vw,3.5rem);display:flex;flex-wrap:wrap;align-items:center;
+  gap:1.4rem 2.5rem;padding-top:2rem;border-top:1px solid rgba(251,247,239,.22)}
+.serata__nota{margin:0;font-size:.8rem;font-weight:300;color:rgba(251,247,239,.5);max-width:38ch}
+.serata__coda .azioni{margin-left:auto}
+@media(max-width:640px){.serata__coda .azioni{margin-left:0;width:100%}
+  .serata__coda .azioni .btn{flex:1 1 auto;justify-content:center}}
+
+/* ============ EVENTO ============ */
+.evento{background:rgba(235,224,206,.5);border-block:1px solid var(--bruno-14);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.evento__box{display:grid;gap:clamp(1.8rem,4vw,4rem);align-items:start}
+@media(min-width:860px){.evento__box{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}}
+.evento h2{font-size:clamp(2rem,5.2vw,3.4rem)}
+.evento__sotto{margin:.9rem 0 0;font-family:'Fraunces',Georgia,serif;font-variation-settings:"SOFT" 88;
+  font-style:italic;font-weight:300;font-size:1.1rem;color:var(--bruno-60)}
+.evento .azioni{margin-top:1.8rem}
+
+.btn.vetro{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.45);color:#fff;
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.btn.vetro:hover{background:#fff;color:var(--bruno);border-color:#fff}

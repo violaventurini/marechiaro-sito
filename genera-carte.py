@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 import io, os, re, json, importlib.util
 BASE = '/home/claude/sito'
+_e = importlib.util.spec_from_file_location('e', '/home/claude/sito/_strumenti/evento.py')
+EV = importlib.util.module_from_spec(_e); _e.loader.exec_module(EV)
 s = importlib.util.spec_from_file_location('c', '/home/claude/sito/_strumenti/carta.py')
 D = importlib.util.module_from_spec(s); s.loader.exec_module(D)
 
@@ -11,8 +13,8 @@ def pezzo(src, apri, chiudi):
     return src[i:j+len(chiudi)]
 NAV_IT = pezzo(home,'<nav class="nav">','</nav>')
 NAV_EN = pezzo(homeen,'<nav class="nav">','</nav>')
-FOOT_IT= pezzo(home,'<footer>','</div>\n\n<script') .replace('\n\n<script','')
-FOOT_EN= pezzo(homeen,'<footer>','</div>\n\n<script').replace('\n\n<script','')
+FOOT_IT= pezzo(home,'<footer>','</footer>')
+FOOT_EN= pezzo(homeen,'<footer>','</footer>')
 CTA_IT = pezzo(home,'<a class="ctaev"','</a>')
 CTA_EN = pezzo(homeen,'<a class="ctaev"','</a>')
 BARRA_IT = pezzo(home,'<div class="barra">','</div>')
@@ -27,7 +29,7 @@ def voci(lista, lang, prezzo_unico=False):
     for it_n,en_n,it_d,en_d,p,al in lista:
         nome  = it_n if lang=='it' else en_n
         descr = it_d if lang=='it' else en_d
-        pr = '' if (prezzo_unico or not p) else '%s&thinsp;&euro;' % p
+        pr = '' if (prezzo_unico or not p) else '%s&nbsp;&euro;' % p
         out.append('        <li>\n'
           '          <p class="v__riga"><span class="v__n">%s</span><span class="v__l" aria-hidden="true"></span>'
           '<span class="v__p">%s</span></p>%s%s\n        </li>' % (
@@ -117,7 +119,15 @@ def scrivi(file, lang, t, d, path, ait, aen, testata, corpo, schemi=()):
         h += selettore(lang, path) + '\n'
     h += corpo + '\n'
     h += (FOOT_IT if lang=='it' else FOOT_EN) + '\n'
-    h += (CTA_IT if lang=='it' else CTA_EN) + '\n\n'
+    if EV.ATTIVO:
+        h += ('<a class="ctaev" href="%s" aria-label="%s">\n'
+              '  <span class="ctaev__e">%s</span>\n'
+              '  <span class="ctaev__t">%s <em>&rarr;</em></span>\n</a>\n\n') % (
+              EV.WA_IT if lang=='it' else EV.WA_EN,
+              'Prenota la cena con musica dal vivo di venerd&igrave; 14 agosto' if lang=='it'
+              else 'Book the dinner with live music on Friday 14 August',
+              EV.DATA_IT if lang=='it' else EV.DATA_EN,
+              ('Prenota la cena' if lang=='it' else 'Book the dinner'))
     h += (BARRA_IT if lang=='it' else BARRA_EN) + '\n'
     h += '<script src="/avorio.js"></script>\n</body>\n</html>\n'
     p = os.path.join(BASE, file)
