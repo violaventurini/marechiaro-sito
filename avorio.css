@@ -641,3 +641,12 @@ picture img{display:block;width:100%;height:100%;object-fit:cover}
 @media (prefers-reduced-motion:reduce){
   .giornata{height:auto}.giornata__fisso{position:static;height:auto;padding-block:4rem}
   .fase{position:relative;opacity:1;transform:none}}
+
+
+/* ============ MAPPA ============ */
+.mappa{position:relative;overflow:hidden;border:1px solid var(--bruno-14);
+  filter:saturate(.85) contrast(.96)}
+.mappa iframe{display:block;width:100%;aspect-ratio:16/7;height:auto;min-height:320px}
+@media(max-width:640px){.mappa iframe{aspect-ratio:4/3;min-height:0}}
+.mappa__azioni{margin-top:1.4rem}
+@media(max-width:560px){.mappa__azioni .btn{width:100%;justify-content:center}}
