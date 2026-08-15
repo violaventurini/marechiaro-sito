@@ -76,8 +76,6 @@
     });
   }
 
-  var ctaev = document.querySelector('.ctaev');
-
   var pendente = false;
   function passo(){
     pendente = false;
@@ -98,8 +96,6 @@
       });
       voci.forEach(function(a,i){ a.classList.toggle('qui', i===qui); });
     }
-
-    if (ctaev){ ctaev.classList.toggle('vedi', y > window.innerHeight * 0.55); }
 
     rivela.forEach(function(el){
       if (el.classList.contains('on')) return;
