@@ -63,12 +63,18 @@
       tog.setAttribute('aria-expanded', aperto ? 'false' : 'true');
       tog.setAttribute('aria-label', aperto ? 'Apri il menu' : 'Chiudi il menu');
       document.body.style.overflow = aperto ? '' : 'hidden';
+      var sotto = document.querySelectorAll('.barra, .ctaev');
+      for (var i = 0; i < sotto.length; i++){
+        sotto[i].style.visibility = aperto ? '' : 'hidden';
+      }
     });
     document.querySelectorAll('.menu a').forEach(function(a){
       a.addEventListener('click', function(){
         nav.dataset.aperto = 'false';
         tog.setAttribute('aria-expanded','false');
         document.body.style.overflow = '';
+        var giu = document.querySelectorAll('.barra, .ctaev');
+        for (var k = 0; k < giu.length; k++){ giu[k].style.visibility = ''; }
       });
     });
     window.addEventListener('keydown', function(e){
