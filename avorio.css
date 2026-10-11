@@ -690,7 +690,7 @@ picture img{display:block;width:100%;height:100%;object-fit:cover}
 /* riquadro fisso */
 .stg__apri{font:inherit;text-align:left;cursor:pointer;color:var(--bruno);
   padding:.95rem 1.35rem 1rem 1.25rem!important;gap:.3rem!important;overflow:hidden;
-  background:linear-gradient(135deg,rgba(255,255,255,.5),rgba(251,247,239,.22))!important;
+  background:linear-gradient(135deg,rgba(255,255,255,.82),rgba(251,247,239,.66))!important;
   backdrop-filter:blur(26px) saturate(190%)!important;-webkit-backdrop-filter:blur(26px) saturate(190%)!important;
   border:1px solid var(--filo)!important;
   box-shadow:inset 0 1px 0 rgba(255,255,255,.75),0 14px 40px rgba(43,35,28,.16)!important}
