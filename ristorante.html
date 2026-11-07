@@ -9,9 +9,9 @@
 <link rel="alternate" hreflang="it" href="https://marechiaroostia.it/ristorante">
 <link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/restaurant">
 <link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/ristorante">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="theme-color" content="#FBF7EF">
+<link rel="icon" href="/favicon-corallo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon-corallo.png">
+<meta name="theme-color" content="#FBF9F5">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
@@ -21,10 +21,10 @@
 <meta property="og:url" content="https://marechiaroostia.it/ristorante">
 <meta property="og:image" content="https://marechiaroostia.it/img/og-marechiaro-ostia.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..600,60..100&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/avorio.css">
+<meta name="twitter:image" content="https://marechiaroostia.it/img/og-marechiaro-ostia.jpg">
+<link rel="preload" href="/fonts/cormorant-garamond-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jost-300-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/corallo.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -143,7 +143,7 @@
       "name": "Come funziona il pranzo?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dalle 13 si pranza al tavolo del ristorante, con la vista sul mare. In alternativa si ordina da asporto e si ritira al bancone."
+        "text": "Dalle 12 si pranza al tavolo del ristorante, con la vista sul mare. In alternativa si ordina da asporto e si ritira al bancone."
       }
     },
     {
@@ -218,28 +218,46 @@
 }
 </script>
 </head>
-<body>
-<nav class="nav">
-  <a class="marchio" href="/" aria-label="Marechiaro Ostia">
-    <img class="logo logo--bianco" src="/img/logo-marechiaro-bianco.svg" alt="Marechiaro Ostia" width="628" height="140">
-    <img class="logo logo--rosso" src="/img/logo-marechiaro-rosso.svg" alt="" aria-hidden="true" width="628" height="140">
-  </a>
-  <span class="menu" id="menu-principale">
-    <a href="/spiaggia">Spiaggia</a>
-    <a href="/ristorante">Ristorante</a>
-    <a href="/menu">Men&ugrave;</a>
-    <a href="/feste-gruppi">Eventi</a>
-    <a href="/contatti">Dove siamo</a>
-  </span>
-  <span class="lingue"><b>IT</b><a href="/en/restaurant" hreflang="en" lang="en">EN</a></span>
-  <a class="pren" href="https://wa.me/393484059720?text=Ciao%2C%20vorrei%20prenotare%20un%20tavolo%20al%20Marechiaro.">Prenota</a>
-  <button class="nav__tog" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="menu-principale">
-    <span></span><span></span>
-  </button>
+<body class="interna">
+<nav class="nav" aria-label="Principale">
+  <div class="wrap nav__in">
+    <button class="nav__tog" type="button" aria-label="Apri il menu" data-apri="Apri il menu" data-chiudi="Chiudi il menu" aria-expanded="false" aria-controls="menu-principale">
+      <i aria-hidden="true"></i><span>Menu</span>
+    </button>
+    <a class="marchio" href="/" aria-label="Marechiaro Ostia, pagina iniziale">
+      <img class="chiaro-logo" src="/img/logo-marechiaro-originale-conchiglia.svg" alt="" aria-hidden="true" width="628" height="140" loading="lazy">
+      <img class="scuro-logo" src="/img/logo-marechiaro-originale-corallo.svg" alt="Marechiaro" width="628" height="140">
+    </a>
+    <div class="nav__dx">
+      <span class="lingue"><b>IT</b><a href="/en/restaurant" hreflang="en" lang="en">EN</a></span>
+      <a class="btn pren" href="https://wa.me/393484059720?text=Ciao%2C%20vorrei%20prenotare%20un%20tavolo%20al%20Marechiaro.">Prenota</a>
+    </div>
+  </div>
 </nav>
 
+<div class="sipario" id="menu-principale" aria-hidden="true">
+  <div class="wrap sipario__in">
+    <ol>
+      <li><a href="/spiaggia">Spiaggia</a></li>
+      <li><a href="/ristorante" aria-current="page">Ristorante</a></li>
+      <li><a href="/aperitivi">Aperitivi</a></li>
+      <li><a href="/menu">Men&ugrave;</a></li>
+      <li><a href="/feste-gruppi">Feste ed eventi</a></li>
+      <li><a href="/contatti">Dove siamo</a></li>
+      <li><a href="/en/restaurant" hreflang="en" lang="en">English</a></li>
+    </ol>
+    <div class="sipario__info">
+      <div><h4>Indirizzo</h4><p>Lungomare Paolo Toscanelli 27<br>Lido di Ostia &middot; Roma</p></div>
+      <div><h4>Per chi viaggia</h4><p><a href="/#deposito-bagagli">Deposito bagagli</a> &middot; Fiumicino a 20 minuti</p></div>
+      <div><h4>Prenotazioni</h4><p><a href="tel:+393484059720">348 405 9720</a> &middot; <a href="https://wa.me/393484059720">WhatsApp</a></p></div>
+      <div><h4>Seguici</h4><p><a href="https://www.instagram.com/marechiaro_ostia/" rel="noopener">@marechiaro_ostia</a></p></div>
+    </div>
+  </div>
+</div>
+
+<main>
+
 <header class="testata">
-  <svg class="onda" viewBox="0 0 1200 200" preserveAspectRatio="none" aria-hidden="true"><path d="M0 100 Q150 60 300 100 T600 100 T900 100 T1200 100"></path><path d="M0 130 Q150 90 300 130 T600 130 T900 130 T1200 130"></path><path d="M0 160 Q150 120 300 160 T600 160 T900 160 T1200 160"></path></svg>
   <div class="wrap testata__testo">
     <span class="eti">La cucina</span>
     <h1>Ristorante sul mare<br>a Lido di Ostia</h1>
@@ -247,9 +265,6 @@
   </div>
 </header>
 
-<div class="nastri">
-  <div class="nastro nastro--dx"><span>Pranzo dalle 12<i>&mdash;</i>Anche da asporto<i>&mdash;</i>Pizzeria la sera<i>&mdash;</i>Aperitivo dalle 18<i>&mdash;</i>Cena vista mare<i>&mdash;</i>Pranzo dalle 12<i>&mdash;</i>Anche da asporto<i>&mdash;</i>Pizzeria la sera<i>&mdash;</i>Aperitivo dalle 18<i>&mdash;</i>Cena vista mare<i>&mdash;</i></span></div>
-</div>
 
 <section class="orari">
   <div class="wrap"><span class="eti">Gli orari del servizio</span>
@@ -267,8 +282,8 @@
 <section class="duo sez">
   <div class="wrap duo__in">
     <div class="duo__foto riv"><picture>
-      <source type="image/webp" srcset="/img/tartare-tonno-ristorante-ostia-1400.webp 1400w, /img/tartare-tonno-ristorante-ostia-1000.webp 1000w, /img/tartare-tonno-ristorante-ostia-700.webp 700w" sizes="(min-width:900px) 50vw, 100vw">
-      <img src="/img/tartare-tonno-ristorante-ostia-1400.jpg" srcset="/img/tartare-tonno-ristorante-ostia-1400.jpg 1400w, /img/tartare-tonno-ristorante-ostia-1000.jpg 1000w, /img/tartare-tonno-ristorante-ostia-700.jpg 700w" sizes="(min-width:900px) 50vw, 100vw" alt="Tartare di tonno servita a cena al ristorante sul mare del Marechiaro a Ostia" width="1400" height="1867" loading="lazy" decoding="async">
+      <source type="image/webp" srcset="/img/tartare-tonno-ristorante-ostia-1400.webp 1400w, /img/tartare-tonno-ristorante-ostia-1000.webp 1000w, /img/tartare-tonno-ristorante-ostia-700.webp 700w" sizes="(min-width:900px) 40vw, 100vw">
+      <img src="/img/tartare-tonno-ristorante-ostia-1400.jpg" srcset="/img/tartare-tonno-ristorante-ostia-1400.jpg 1400w, /img/tartare-tonno-ristorante-ostia-1000.jpg 1000w, /img/tartare-tonno-ristorante-ostia-700.jpg 700w" sizes="(min-width:900px) 40vw, 100vw" alt="Tartare di tonno servita a cena al ristorante sul mare del Marechiaro a Ostia" width="1400" height="1867" loading="lazy" decoding="async">
     </picture></div>
     <div class="duo__testo riv" data-rit="1">
       <span class="eti">La cena</span>
@@ -283,12 +298,12 @@
 <section class="duo duo--invertito sez">
   <div class="wrap duo__in">
     <div class="duo__foto riv"><picture>
-      <source type="image/webp" srcset="/img/insalata-riviera-pranzo-ostia-1400.webp 1400w, /img/insalata-riviera-pranzo-ostia-1000.webp 1000w, /img/insalata-riviera-pranzo-ostia-700.webp 700w" sizes="(min-width:900px) 50vw, 100vw">
-      <img src="/img/insalata-riviera-pranzo-ostia-1400.jpg" srcset="/img/insalata-riviera-pranzo-ostia-1400.jpg 1400w, /img/insalata-riviera-pranzo-ostia-1000.jpg 1000w, /img/insalata-riviera-pranzo-ostia-700.jpg 700w" sizes="(min-width:900px) 50vw, 100vw" alt="Insalata Riviera con tonno, uovo e fagiolini servita a pranzo al Marechiaro di Ostia" width="1400" height="1867" loading="lazy" decoding="async">
+      <source type="image/webp" srcset="/img/insalata-riviera-pranzo-ostia-1400.webp 1400w, /img/insalata-riviera-pranzo-ostia-1000.webp 1000w, /img/insalata-riviera-pranzo-ostia-700.webp 700w" sizes="(min-width:900px) 40vw, 100vw">
+      <img src="/img/insalata-riviera-pranzo-ostia-1400.jpg" srcset="/img/insalata-riviera-pranzo-ostia-1400.jpg 1400w, /img/insalata-riviera-pranzo-ostia-1000.jpg 1000w, /img/insalata-riviera-pranzo-ostia-700.jpg 700w" sizes="(min-width:900px) 40vw, 100vw" alt="Insalata Riviera con tonno, uovo e fagiolini servita a pranzo al Marechiaro di Ostia" width="1400" height="1867" loading="lazy" decoding="async">
     </picture></div>
     <div class="duo__testo riv" data-rit="1">
       <span class="eti">Il pranzo</span>
-      <h2>Dalle 13,<br>leggero e di mare</h2>
+      <h2>Dalle 12,<br>leggero e di mare</h2>
       <p class="guida">Piatti di mare del giorno, insalate abbondanti, panini e fritti. Si mangia al tavolo del ristorante con la vista, oppure si ordina da asporto e si ritira al bancone.</p>
       <div class="azioni"><a class="btn scuro" href="/menu-pranzo">La carta del pranzo</a></div>
     </div>
@@ -301,7 +316,7 @@
       <p class="guida">La cucina lavora sul pescato del giorno: le proposte cambiano con quello che arriva. Il resto della carta &mdash; panini, insalate, fritti, pizza &mdash; c'&egrave; sempre.</p></div>
     <div class="righe">
       <a class="riga" href="/menu"><span class="n">01</span><span class="t">Il pranzo</span>
-        <span class="d">Piatti di mare secondo il pescato, insalate abbondanti, panini e fritti. Dalle 13.</span><span class="v">Guarda il menu <em>&rarr;</em></span></a>
+        <span class="d">Piatti di mare secondo il pescato, insalate abbondanti, panini e fritti. Dalle 12.</span><span class="v">Guarda il menu <em>&rarr;</em></span></a>
       <a class="riga" href="https://wa.me/393484059720?text=Ciao%2C%20vorrei%20ordinare%20da%20asporto"><span class="n">02</span><span class="t">Da asporto</span>
         <span class="d">Ordini al bancone o con un messaggio, e passi a ritirare quando &egrave; pronto.</span><span class="v">Ordina su WhatsApp <em>&rarr;</em></span></a>
       <a class="riga" href="/menu-cena"><span class="n">03</span><span class="t">Cena vista mare</span>
@@ -330,7 +345,7 @@
   <div class="wrap"><div class="riv"><span class="eti">Prima di venire</span><h2>Domande frequenti</h2></div>
     <div class="faq riv">
       <details><summary><h3>Come funziona il pranzo?</h3></summary>
-        <p>Dalle 13 si pranza al tavolo del ristorante, con la vista sul mare. In alternativa si ordina da asporto e si ritira al bancone.</p></details>
+        <p>Dalle 12 si pranza al tavolo del ristorante, con la vista sul mare. In alternativa si ordina da asporto e si ritira al bancone.</p></details>
       <details><summary><h3>La sera siete ristorante o pizzeria?</h3></summary>
         <p>Tutti e due. Si cena alla carta &mdash; proposte del giorno secondo il pescato, insalate, secondi di mare &mdash; oppure si prende una pizza bassa romana, con il forno acceso fino a tardi.</p></details>
       <details><summary><h3>Che orari fa la cucina?</h3></summary>
@@ -348,14 +363,30 @@
 </section>
 
 <section class="sez chiusura">
-  <svg class="onda" viewBox="0 0 1200 200" preserveAspectRatio="none" aria-hidden="true"><path d="M0 100 Q150 60 300 100 T600 100 T900 100 T1200 100"></path><path d="M0 130 Q150 90 300 130 T600 130 T900 130 T1200 130"></path><path d="M0 160 Q150 120 300 160 T600 160 T900 160 T1200 160"></path></svg>
   <div class="wrap contenuto riv"><span class="eti">Prenota</span><h2>Un tavolo con il mare davanti</h2>
     <p class="guida">Un messaggio su WhatsApp e ti confermiamo tutto in giornata.</p>
     <div class="azioni"><a class="btn" href="https://wa.me/393484059720?text=Ciao%2C%20vorrei%20prenotare%20un%20tavolo%20al%20Marechiaro.">Prenota un tavolo</a>
       <a class="btn scuro" href="/menu">Il menu completo</a></div></div></section>
+
+</main>
+
 <footer>
-  <span>Lungomare Paolo Toscanelli 27 &middot; Lido di Ostia &middot; Roma</span>
-  <span>Sun Beach S.r.l. &middot; P.IVA 15970681001 &middot; &copy; 2026</span>
+  <div class="wrap piede">
+    <a href="/" aria-label="Marechiaro, pagina iniziale"><img src="/img/logo-marechiaro-originale-corallo.svg" alt="Marechiaro" width="628" height="140" loading="lazy"></a>
+    <nav aria-label="Piè di pagina">
+      <a href="/spiaggia">Spiaggia</a>
+      <a href="/ristorante">Ristorante</a>
+      <a href="/aperitivi">Aperitivi</a>
+      <a href="/menu">Men&ugrave;</a>
+      <a href="/feste-gruppi">Feste ed eventi</a>
+      <a href="/#deposito-bagagli">Deposito bagagli</a>
+      <a href="/contatti">Dove siamo</a>
+      <a href="/allergeni">Allergeni</a>
+      <a href="https://www.instagram.com/marechiaro_ostia/" rel="noopener">Instagram</a>
+      <a href="/en/" hreflang="en" lang="en">English</a>
+    </nav>
+    <small>Lungomare Paolo Toscanelli 27 &middot; 00122 Lido di Ostia (RM) &middot; Sun Beach S.r.l. &middot; P.IVA 15970681001 &middot; &copy; 2027</small>
+  </div>
 </footer>
 
 
@@ -365,7 +396,7 @@
   <a href="tel:+393484059720">Chiama</a>
   <a href="https://wa.me/393484059720">WhatsApp</a>
 </div>
-<script src="/avorio.js"></script>
+<script src="/corallo.js" defer></script>
 <script src="/stagione.js" defer></script>
 </body>
 </html>

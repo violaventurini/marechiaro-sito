@@ -20,11 +20,15 @@
 - [ ] `menu-cena.html`
 - [ ] `404.html`
 
-### Stile, script e icone (4)
-- [ ] `avorio.css`
-- [ ] `avorio.js`
-- [ ] `favicon.svg`
-- [ ] `apple-touch-icon.png`
+### Stile, script e icone
+- [ ] `corallo.css` — lo stile di tutte le pagine (dal 2027)
+- [ ] `corallo.js` — apertura col granchio, menu, indice delle carte
+- [ ] `stagione.js` — avviso di stagione e richieste per le feste
+- [ ] `favicon-corallo.svg` e `apple-touch-icon-corallo.png`
+- [ ] cartella `fonts/` — i caratteri del sito
+- [ ] `_headers` — cache per Netlify
+
+`avorio.css` e `avorio.js` sono la grafica 2026: non li usa piu' nessuna pagina.
 
 ### Google e Netlify (3)
 - [ ] `robots.txt`

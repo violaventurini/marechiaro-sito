@@ -9,9 +9,9 @@
 <link rel="alternate" hreflang="it" href="https://marechiaroostia.it/aperitivi">
 <link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/aperitivo">
 <link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/aperitivi">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="theme-color" content="#FBF7EF">
+<link rel="icon" href="/favicon-corallo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon-corallo.png">
+<meta name="theme-color" content="#FBF9F5">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_GB">
@@ -21,10 +21,10 @@
 <meta property="og:url" content="https://marechiaroostia.it/en/aperitivo">
 <meta property="og:image" content="https://marechiaroostia.it/img/og-marechiaro-ostia.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..600,60..100&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/avorio.css">
+<meta name="twitter:image" content="https://marechiaroostia.it/img/og-marechiaro-ostia.jpg">
+<link rel="preload" href="/fonts/cormorant-garamond-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jost-300-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/corallo.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -103,28 +103,46 @@
 }
 </script>
 </head>
-<body>
-<nav class="nav">
-  <a class="marchio" href="/" aria-label="Marechiaro Ostia">
-    <img class="logo logo--bianco" src="/img/logo-marechiaro-bianco.svg" alt="Marechiaro Ostia" width="628" height="140">
-    <img class="logo logo--rosso" src="/img/logo-marechiaro-rosso.svg" alt="" aria-hidden="true" width="628" height="140">
-  </a>
-  <span class="menu" id="menu-principale">
-    <a href="/en/beach">Beach</a>
-    <a href="/en/restaurant">Restaurant</a>
-    <a href="/en/menu">Menu</a>
-    <a href="/en/groups">Events</a>
-    <a href="/en/find-us">Find us</a>
-  </span>
-  <span class="lingue"><a href="/aperitivi" hreflang="it" lang="it">IT</a><b>EN</b></span>
-  <a class="pren" href="https://wa.me/393484059720?text=Ciao%2C%20vorrei%20prenotare%20a%20table%20at%20Marechiaro.">Book</a>
-  <button class="nav__tog" type="button" aria-label="Open the menu" aria-expanded="false" aria-controls="menu-principale">
-    <span></span><span></span>
-  </button>
+<body class="interna">
+<nav class="nav" aria-label="Main">
+  <div class="wrap nav__in">
+    <button class="nav__tog" type="button" aria-label="Open the menu" data-apri="Open the menu" data-chiudi="Close the menu" aria-expanded="false" aria-controls="main-menu">
+      <i aria-hidden="true"></i><span>Menu</span>
+    </button>
+    <a class="marchio" href="/en/" aria-label="Marechiaro Ostia, home page">
+      <img class="chiaro-logo" src="/img/logo-marechiaro-originale-conchiglia.svg" alt="" aria-hidden="true" width="628" height="140" loading="lazy">
+      <img class="scuro-logo" src="/img/logo-marechiaro-originale-corallo.svg" alt="Marechiaro" width="628" height="140">
+    </a>
+    <div class="nav__dx">
+      <span class="lingue"><a href="/aperitivi" hreflang="it" lang="it">IT</a><b>EN</b></span>
+      <a class="btn pren" href="https://wa.me/393484059720?text=Hello%2C%20I%27d%20like%20to%20book%20a%20table%20at%20Marechiaro.">Book</a>
+    </div>
+  </div>
 </nav>
 
+<div class="sipario" id="main-menu" aria-hidden="true">
+  <div class="wrap sipario__in">
+    <ol>
+      <li><a href="/en/beach">Beach</a></li>
+      <li><a href="/en/restaurant">Restaurant</a></li>
+      <li><a href="/en/aperitivo" aria-current="page">Aperitivo</a></li>
+      <li><a href="/en/menu">Menu</a></li>
+      <li><a href="/en/groups">Parties and events</a></li>
+      <li><a href="/en/find-us">Find us</a></li>
+      <li><a href="/aperitivi" hreflang="it" lang="it">Italiano</a></li>
+    </ol>
+    <div class="sipario__info">
+      <div><h4>Address</h4><p>Lungomare Paolo Toscanelli 27<br>Lido di Ostia &middot; Rome</p></div>
+      <div><h4>For travellers</h4><p><a href="/en/#luggage-storage">Luggage storage</a> &middot; Fiumicino 20 minutes</p></div>
+      <div><h4>Bookings</h4><p><a href="tel:+393484059720">+39 348 405 9720</a> &middot; <a href="https://wa.me/393484059720">WhatsApp</a></p></div>
+      <div><h4>Follow us</h4><p><a href="https://www.instagram.com/marechiaro_ostia/" rel="noopener">@marechiaro_ostia</a></p></div>
+    </div>
+  </div>
+</div>
+
+<main>
+
 <header class="testata">
-  <svg class="onda" viewBox="0 0 1200 200" preserveAspectRatio="none" aria-hidden="true"><path d="M0 100 Q150 60 300 100 T600 100 T900 100 T1200 100"></path><path d="M0 130 Q150 90 300 130 T600 130 T900 130 T1200 130"></path><path d="M0 160 Q150 120 300 160 T600 160 T900 160 T1200 160"></path></svg>
   <div class="wrap testata__testo">
     <span class="eti">Evenings</span>
     <h1>Sunset aperitivo<br>on Ostia beach</h1>
@@ -132,7 +150,6 @@
   </div>
 </header>
 
-<div class="nastri"><div class="nastro nastro--dx"><span>Aperitivo from 6pm<i>&mdash;</i>Sunset cocktails<i>&mdash;</i>Fried bites and boards<i>&mdash;</i>After dinner on the sand<i>&mdash;</i>Open to everyone<i>&mdash;</i>Aperitivo from 6pm<i>&mdash;</i>Sunset cocktails<i>&mdash;</i>Fried bites and boards<i>&mdash;</i>After dinner on the sand<i>&mdash;</i>Open to everyone<i>&mdash;</i></span></div></div>
 
 <section class="sez"><div class="wrap">
   <div class="riv"><span class="eti">From 6pm</span><h2>The right hour</h2>
@@ -175,14 +192,30 @@
 </div></section>
 
 <section class="sez chiusura">
-  <svg class="onda" viewBox="0 0 1200 200" preserveAspectRatio="none" aria-hidden="true"><path d="M0 100 Q150 60 300 100 T600 100 T900 100 T1200 100"></path><path d="M0 130 Q150 90 300 130 T600 130 T900 130 T1200 130"></path><path d="M0 160 Q150 120 300 160 T600 160 T900 160 T1200 160"></path></svg>
   <div class="wrap contenuto riv"><span class="eti">Tonight</span><h2>See you at sunset</h2>
     <p class="guida">For a table or a private evening, message us: we answer the same day.</p>
     <div class="azioni"><a class="btn" href="https://wa.me/393484059720?text=Hello%2C%20I%27d%20like%20a%20table%20for%20aperitivo">Message us on WhatsApp</a>
       <a class="btn scuro" href="/en/groups">Parties and groups</a></div></div></section>
+
+</main>
+
 <footer>
-  <span>Lungomare Paolo Toscanelli 27 &middot; Lido di Ostia &middot; Roma</span>
-  <span>Sun Beach S.r.l. &middot; P.IVA 15970681001 &middot; &copy; 2026</span>
+  <div class="wrap piede">
+    <a href="/en/" aria-label="Marechiaro, home page"><img src="/img/logo-marechiaro-originale-corallo.svg" alt="Marechiaro" width="628" height="140" loading="lazy"></a>
+    <nav aria-label="Footer">
+      <a href="/en/beach">Beach</a>
+      <a href="/en/restaurant">Restaurant</a>
+      <a href="/en/aperitivo">Aperitivo</a>
+      <a href="/en/menu">Menu</a>
+      <a href="/en/groups">Parties and events</a>
+      <a href="/en/#luggage-storage">Luggage storage</a>
+      <a href="/en/find-us">Find us</a>
+      <a href="/en/allergens">Allergens</a>
+      <a href="https://www.instagram.com/marechiaro_ostia/" rel="noopener">Instagram</a>
+      <a href="/" hreflang="it" lang="it">Italiano</a>
+    </nav>
+    <small>Lungomare Paolo Toscanelli 27 &middot; 00122 Lido di Ostia (Rome) &middot; Sun Beach S.r.l. &middot; VAT 15970681001 &middot; &copy; 2027</small>
+  </div>
 </footer>
 
 
@@ -192,7 +225,7 @@
   <a href="tel:+393484059720">Call</a>
   <a href="https://wa.me/393484059720">WhatsApp</a>
 </div>
-<script src="/avorio.js"></script>
+<script src="/corallo.js" defer></script>
 <script src="/stagione.js" defer></script>
 </body>
 </html>

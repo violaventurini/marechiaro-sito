@@ -59,12 +59,25 @@
     pendente = false;
     if (!nav) return;
     var soglia = hero ? hero.offsetHeight - 90 : 10;
-    nav.classList.toggle('posata', window.scrollY > soglia);
+    nav.classList.toggle('posata', !hero || window.scrollY > soglia);
     html.classList.toggle('oltre-hero', !hero || window.scrollY > hero.offsetHeight * 0.6);
   }
   window.addEventListener('scroll', function(){
     if (!pendente){ pendente = true; requestAnimationFrame(passo); }
   }, { passive: true });
+
+  /* ---- indice delle carte del menu: evidenzia la sezione che stai leggendo ---- */
+  var voci = [].slice.call(document.querySelectorAll('.menu-indice a'));
+  var sezioni = voci.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  function indice(){
+    if (!voci.length) return;
+    var qui = 0;
+    sezioni.forEach(function(s, i){ if (s && s.getBoundingClientRect().top < window.innerHeight * 0.34) qui = i; });
+    voci.forEach(function(a, i){ a.classList.toggle('qui', i === qui); });
+  }
+  window.addEventListener('scroll', indice, { passive: true });
+  indice();
+
   window.addEventListener('resize', passo);
   passo();
 })();

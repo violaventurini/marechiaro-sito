@@ -9,9 +9,9 @@
 <link rel="alternate" hreflang="it" href="https://marechiaroostia.it/contatti">
 <link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/find-us">
 <link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/contatti">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="theme-color" content="#FBF7EF">
+<link rel="icon" href="/favicon-corallo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon-corallo.png">
+<meta name="theme-color" content="#FBF9F5">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
@@ -21,10 +21,10 @@
 <meta property="og:url" content="https://marechiaroostia.it/contatti">
 <meta property="og:image" content="https://marechiaroostia.it/img/og-marechiaro-ostia.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..600,60..100&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/avorio.css">
+<meta name="twitter:image" content="https://marechiaroostia.it/img/og-marechiaro-ostia.jpg">
+<link rel="preload" href="/fonts/cormorant-garamond-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jost-300-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/corallo.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -95,28 +95,46 @@
 }
 </script>
 </head>
-<body>
-<nav class="nav">
-  <a class="marchio" href="/" aria-label="Marechiaro Ostia">
-    <img class="logo logo--bianco" src="/img/logo-marechiaro-bianco.svg" alt="Marechiaro Ostia" width="628" height="140">
-    <img class="logo logo--rosso" src="/img/logo-marechiaro-rosso.svg" alt="" aria-hidden="true" width="628" height="140">
-  </a>
-  <span class="menu" id="menu-principale">
-    <a href="/spiaggia">Spiaggia</a>
-    <a href="/ristorante">Ristorante</a>
-    <a href="/menu">Men&ugrave;</a>
-    <a href="/feste-gruppi">Eventi</a>
-    <a href="/contatti">Dove siamo</a>
-  </span>
-  <span class="lingue"><b>IT</b><a href="/en/find-us" hreflang="en" lang="en">EN</a></span>
-  <a class="pren" href="https://wa.me/393484059720?text=Ciao%2C%20vorrei%20prenotare%20un%20tavolo%20al%20Marechiaro.">Prenota</a>
-  <button class="nav__tog" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="menu-principale">
-    <span></span><span></span>
-  </button>
+<body class="interna">
+<nav class="nav" aria-label="Principale">
+  <div class="wrap nav__in">
+    <button class="nav__tog" type="button" aria-label="Apri il menu" data-apri="Apri il menu" data-chiudi="Chiudi il menu" aria-expanded="false" aria-controls="menu-principale">
+      <i aria-hidden="true"></i><span>Menu</span>
+    </button>
+    <a class="marchio" href="/" aria-label="Marechiaro Ostia, pagina iniziale">
+      <img class="chiaro-logo" src="/img/logo-marechiaro-originale-conchiglia.svg" alt="" aria-hidden="true" width="628" height="140" loading="lazy">
+      <img class="scuro-logo" src="/img/logo-marechiaro-originale-corallo.svg" alt="Marechiaro" width="628" height="140">
+    </a>
+    <div class="nav__dx">
+      <span class="lingue"><b>IT</b><a href="/en/find-us" hreflang="en" lang="en">EN</a></span>
+      <a class="btn pren" href="https://wa.me/393484059720?text=Ciao%2C%20vorrei%20prenotare%20un%20tavolo%20al%20Marechiaro.">Prenota</a>
+    </div>
+  </div>
 </nav>
 
+<div class="sipario" id="menu-principale" aria-hidden="true">
+  <div class="wrap sipario__in">
+    <ol>
+      <li><a href="/spiaggia">Spiaggia</a></li>
+      <li><a href="/ristorante">Ristorante</a></li>
+      <li><a href="/aperitivi">Aperitivi</a></li>
+      <li><a href="/menu">Men&ugrave;</a></li>
+      <li><a href="/feste-gruppi">Feste ed eventi</a></li>
+      <li><a href="/contatti" aria-current="page">Dove siamo</a></li>
+      <li><a href="/en/find-us" hreflang="en" lang="en">English</a></li>
+    </ol>
+    <div class="sipario__info">
+      <div><h4>Indirizzo</h4><p>Lungomare Paolo Toscanelli 27<br>Lido di Ostia &middot; Roma</p></div>
+      <div><h4>Per chi viaggia</h4><p><a href="/#deposito-bagagli">Deposito bagagli</a> &middot; Fiumicino a 20 minuti</p></div>
+      <div><h4>Prenotazioni</h4><p><a href="tel:+393484059720">348 405 9720</a> &middot; <a href="https://wa.me/393484059720">WhatsApp</a></p></div>
+      <div><h4>Seguici</h4><p><a href="https://www.instagram.com/marechiaro_ostia/" rel="noopener">@marechiaro_ostia</a></p></div>
+    </div>
+  </div>
+</div>
+
+<main>
+
 <header class="testata">
-  <svg class="onda" viewBox="0 0 1200 200" preserveAspectRatio="none" aria-hidden="true"><path d="M0 100 Q150 60 300 100 T600 100 T900 100 T1200 100"></path><path d="M0 130 Q150 90 300 130 T600 130 T900 130 T1200 130"></path><path d="M0 160 Q150 120 300 160 T600 160 T900 160 T1200 160"></path></svg>
   <div class="wrap testata__testo">
     <span class="eti">Come arrivare</span>
     <h1>Dove siamo</h1>
@@ -124,17 +142,14 @@
   </div>
 </header>
 
-<div class="nastri">
-  <div class="nastro nastro--dx"><span>Lungomare Toscanelli 27<i>&mdash;</i>Lido di Ostia<i>&mdash;</i>Tutti i giorni dalle 9<i>&mdash;</i>348 405 9720<i>&mdash;</i>Lungomare Toscanelli 27<i>&mdash;</i>Lido di Ostia<i>&mdash;</i>Tutti i giorni dalle 9<i>&mdash;</i>348 405 9720<i>&mdash;</i></span></div>
-</div>
 
 <section class="sez">
   <div class="wrap riv">
     <div class="dati" style="border-top:0;padding-top:0">
-      <div><h4>Indirizzo</h4><p><a href="https://maps.app.goo.gl/asrakqT8hMrixHYA9" target="_blank" rel="noopener noreferrer">Lungomare Paolo Toscanelli 27<br>00122 Lido di Ostia &middot; Roma</a></p></div>
-      <div><h4>Orari</h4><p>Tutti i giorni dalle 9<br>Aperitivo dalle 18</p></div>
-      <div><h4>Telefono e WhatsApp</h4><p><a href="tel:+393484059720">348 405 9720</a><br><a href="https://wa.me/393484059720">Scrivici su WhatsApp</a></p></div>
-      <div><h4>Email</h4><p><a href="mailto:info@marechiaroostia.it">info@marechiaroostia.it</a></p></div>
+      <div><h3 class="dati__t">Indirizzo</h3><p><a href="https://maps.app.goo.gl/asrakqT8hMrixHYA9" target="_blank" rel="noopener noreferrer">Lungomare Paolo Toscanelli 27<br>00122 Lido di Ostia &middot; Roma</a></p></div>
+      <div><h3 class="dati__t">Orari</h3><p>Tutti i giorni dalle 9<br>Aperitivo dalle 18</p></div>
+      <div><h3 class="dati__t">Telefono e WhatsApp</h3><p><a href="tel:+393484059720">348 405 9720</a><br><a href="https://wa.me/393484059720">Scrivici su WhatsApp</a></p></div>
+      <div><h3 class="dati__t">Email</h3><p><a href="mailto:info@marechiaroostia.it">info@marechiaroostia.it</a></p></div>
     </div>
   </div>
 </section>
@@ -148,7 +163,7 @@
         title="Mappa dello Stabilimento Marechiaro a Lido di Ostia"></iframe>
     </div>
       <div class="azioni mappa__azioni">
-        <a class="btn scuro" href="https://maps.app.goo.gl/asrakqT8hMrixHYA9" target="_blank" rel="noopener noreferrer" aria-label="Apri la scheda del Marechiaro su Google Maps, si apre in una nuova scheda">Apri su Google Maps</a>
+        <a class="btn scuro" href="https://maps.app.goo.gl/asrakqT8hMrixHYA9" target="_blank" rel="noopener noreferrer" aria-label="Apri su Google Maps (si apre in una nuova scheda)">Apri su Google Maps</a>
       </div>
   </div>
 </section>
@@ -190,14 +205,30 @@
 </section>
 
 <section class="sez chiusura">
-  <svg class="onda" viewBox="0 0 1200 200" preserveAspectRatio="none" aria-hidden="true"><path d="M0 100 Q150 60 300 100 T600 100 T900 100 T1200 100"></path><path d="M0 130 Q150 90 300 130 T600 130 T900 130 T1200 130"></path><path d="M0 160 Q150 120 300 160 T600 160 T900 160 T1200 160"></path></svg>
   <div class="wrap contenuto riv"><span class="eti">Scrivici</span><h2>Ci sentiamo</h2>
     <p class="guida">Per prenotazioni, disponibilit&agrave; e informazioni scrivici: rispondiamo in giornata.</p>
     <div class="azioni"><a class="btn" href="https://wa.me/393484059720?text=Ciao%2C%20vorrei%20informazioni">Scrivi su WhatsApp</a>
       <a class="btn scuro" href="tel:+393484059720">Chiama 348 405 9720</a></div></div></section>
+
+</main>
+
 <footer>
-  <span>Lungomare Paolo Toscanelli 27 &middot; Lido di Ostia &middot; Roma</span>
-  <span>Sun Beach S.r.l. &middot; P.IVA 15970681001 &middot; &copy; 2026</span>
+  <div class="wrap piede">
+    <a href="/" aria-label="Marechiaro, pagina iniziale"><img src="/img/logo-marechiaro-originale-corallo.svg" alt="Marechiaro" width="628" height="140" loading="lazy"></a>
+    <nav aria-label="Piè di pagina">
+      <a href="/spiaggia">Spiaggia</a>
+      <a href="/ristorante">Ristorante</a>
+      <a href="/aperitivi">Aperitivi</a>
+      <a href="/menu">Men&ugrave;</a>
+      <a href="/feste-gruppi">Feste ed eventi</a>
+      <a href="/#deposito-bagagli">Deposito bagagli</a>
+      <a href="/contatti">Dove siamo</a>
+      <a href="/allergeni">Allergeni</a>
+      <a href="https://www.instagram.com/marechiaro_ostia/" rel="noopener">Instagram</a>
+      <a href="/en/" hreflang="en" lang="en">English</a>
+    </nav>
+    <small>Lungomare Paolo Toscanelli 27 &middot; 00122 Lido di Ostia (RM) &middot; Sun Beach S.r.l. &middot; P.IVA 15970681001 &middot; &copy; 2027</small>
+  </div>
 </footer>
 
 
@@ -207,7 +238,7 @@
   <a href="tel:+393484059720">Chiama</a>
   <a href="https://wa.me/393484059720">WhatsApp</a>
 </div>
-<script src="/avorio.js"></script>
+<script src="/corallo.js" defer></script>
 <script src="/stagione.js" defer></script>
 </body>
 </html>

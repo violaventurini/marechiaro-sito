@@ -321,6 +321,175 @@ footer{background:var(--ch-sabbia);color:var(--ch-tenue);border-top:1px solid va
 .ch-faq summary h3{margin:0;font-family:var(--sans);font-weight:400;font-size:1.05rem;line-height:1.5;letter-spacing:0;color:inherit}
 .ch-scheda picture{display:block}
 
+
+/* ============ PAGINE INTERNE: stesso stile chiaro della home ============ */
+.interna{background:var(--ch-fondo);color:var(--ch-inchiostro)}
+.interna main{display:block}
+.interna h1,.interna h2,.interna h3{font-family:var(--serif);font-style:normal;font-weight:500;letter-spacing:-.012em;color:var(--ch-inchiostro);text-wrap:balance}
+.interna h2{font-size:clamp(2rem,3.6vw,3.2rem);line-height:1.06}
+.interna h3{font-size:clamp(1.3rem,1.8vw,1.55rem);line-height:1.2}
+.interna h4{font-family:var(--sans);font-weight:500;font-size:1rem;margin:0 0 .4rem}
+.interna .eti{display:block;margin-bottom:.7rem;font-family:var(--sans);font-size:.9rem;font-weight:400;letter-spacing:.01em;text-transform:none;color:var(--ch-tenue)}
+.interna .eti::before{content:none}
+.interna .guida{margin-top:1.1rem;max-width:40em;font-size:1.05rem;line-height:1.75;color:var(--ch-tenue);text-wrap:pretty}
+.interna strong{font-weight:500;color:var(--ch-inchiostro)}
+.interna a{color:inherit}
+.interna .azioni{margin-top:1.8rem;gap:.8rem 1.2rem}
+.interna .btn:not(.pren){min-height:3rem;padding:0 1.8rem;border-radius:2px;font-size:.95rem;font-weight:400;letter-spacing:0;text-transform:none;
+  background:var(--ch-inchiostro);color:#fff;border:1px solid var(--ch-inchiostro);transition:background .3s,color .3s}
+.interna .btn:not(.pren):hover{background:#000;border-color:#000;color:#fff}
+.interna .btn.scuro{background:transparent;color:var(--ch-inchiostro)}
+.interna .btn.scuro:hover{background:var(--ch-inchiostro);color:#fff}
+
+/* testata della pagina, sotto la barra */
+.testata{padding:calc(var(--navh,88px) + clamp(3.5rem,8vw,6.5rem)) 0 clamp(2.8rem,6vw,4.5rem);border-bottom:1px solid var(--ch-filo)}
+.testata h1{font-size:clamp(2.7rem,6vw,5rem);line-height:1.02;max-width:13em}
+.testata .guida{font-size:clamp(1.05rem,1.4vw,1.2rem);max-width:38em}
+
+/* sezioni */
+.interna .sez{padding-block:clamp(4rem,9vw,7rem)}
+.interna .sez+.sez{border-top:1px solid var(--ch-filo)}
+.interna .sez--stretta{padding-top:clamp(2.5rem,5vw,4rem)}
+
+/* righe di collegamento (spiaggia, menu, 404) */
+.righe{margin-top:2.4rem;border-top:1px solid var(--ch-filo)}
+.riga{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr) auto;gap:.3rem 2.4rem;align-items:baseline;padding:1.5rem 0;
+  border-bottom:1px solid var(--ch-filo);text-decoration:none;transition:background .3s}
+.riga .n,.riga .v em{display:none}
+.riga .t{font-family:var(--serif);font-weight:500;font-size:clamp(1.4rem,2vw,1.75rem);line-height:1.15;transition:color .3s}
+.riga .d{color:var(--ch-tenue);font-size:.98rem;line-height:1.6}
+.riga .v{font-size:.92rem;white-space:nowrap;padding-bottom:.2rem;border-bottom:1px solid var(--ch-inchiostro)}
+.riga:hover .t{color:var(--ch-corallo)}
+@media(max-width:760px){.riga{grid-template-columns:1fr}.riga .v{justify-self:start;margin-top:.4rem}}
+
+/* foto e testo affiancati */
+.duo__in{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(2rem,6vw,6rem);align-items:center}
+.duo__foto picture,.duo__foto img{display:block;width:100%}
+.duo__foto img{aspect-ratio:4/5;max-height:38rem;object-fit:cover;border-radius:4px}
+.duo--invertito .duo__foto{order:2}
+@media(max-width:860px){.duo__in{grid-template-columns:1fr}.duo--invertito .duo__foto{order:0}.duo__foto img{aspect-ratio:4/3}}
+
+/* riquadro offerta (tariffa studenti, formule) */
+.interna .offerta{background:var(--ch-fondo)}
+.offerta__box{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:2rem clamp(2rem,6vw,5rem);align-items:start;
+  background:var(--ch-sabbia);border-radius:4px;padding:clamp(2rem,5vw,3.6rem)}
+.offerta__box .guida{margin-top:0}
+.offerta__box .guida+.guida{margin-top:.8rem}
+@media(max-width:760px){.offerta__box{grid-template-columns:1fr}}
+
+/* servizi e dati in schede */
+.dati{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:clamp(.8rem,1.6vw,1.4rem)}
+.dati>div{background:var(--ch-carta);border:1px solid var(--ch-filo);border-radius:4px;padding:1.4rem 1.5rem}
+.dati p{color:var(--ch-tenue);font-size:.95rem;line-height:1.65;margin:0}
+.interna .dati__t{font-family:var(--sans);font-weight:500;font-size:1rem;line-height:1.4;letter-spacing:0;margin:0 0 .4rem}
+
+/* domande frequenti */
+.faq-sez .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:2rem clamp(2rem,6vw,6rem);align-items:start}
+.interna .faq{border-top:1px solid var(--ch-filo)}
+.interna .faq details{border-bottom:1px solid var(--ch-filo)}
+.interna .faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;padding:1.25rem 0}
+.interna .faq summary::-webkit-details-marker{display:none}
+.interna .faq summary h3{margin:0;font-family:var(--sans);font-weight:400;font-size:1.05rem;line-height:1.5;letter-spacing:0}
+.interna .faq summary::after{content:"";flex:none;width:12px;height:12px;
+  background:linear-gradient(var(--ch-inchiostro),var(--ch-inchiostro)) center/100% 1px no-repeat,linear-gradient(var(--ch-inchiostro),var(--ch-inchiostro)) center/1px 100% no-repeat;transition:transform .3s}
+.interna .faq details[open] summary::after{transform:rotate(45deg)}
+.interna .faq details p{margin:0;padding:0 0 1.4rem;color:var(--ch-tenue);max-width:42em;line-height:1.75}
+.interna .faq details a{text-underline-offset:3px}
+@media(max-width:900px){.faq-sez .wrap{grid-template-columns:1fr}}
+
+/* chiusura con invito a prenotare */
+.interna .chiusura{background:var(--ch-sabbia);border-top:0;text-align:center}
+.chiusura .contenuto{display:flex;flex-direction:column;align-items:center}
+.chiusura .contenuto .guida{margin-inline:auto}
+.chiusura .azioni{justify-content:center}
+
+/* orari del servizio */
+.orari{padding-block:clamp(3rem,6vw,5rem);border-bottom:1px solid var(--ch-filo)}
+.orari__lista{list-style:none;padding:0;margin:1rem 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:clamp(.8rem,1.6vw,1.4rem)}
+.orari__lista li{background:var(--ch-carta);border:1px solid var(--ch-filo);border-radius:4px;padding:1.3rem 1.4rem;display:flex;flex-direction:column;gap:.2rem}
+.o__h{font-family:var(--serif);font-weight:500;font-size:1.7rem;line-height:1.1;font-variant-numeric:lining-nums}
+.o__c{color:var(--ch-tenue);font-size:.95rem}
+
+/* tempi di arrivo dai quartieri */
+.aree__lista{list-style:none;padding:0;margin:2.4rem 0 0;border-top:1px solid var(--ch-filo);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(2rem,5vw,4rem)}
+.aree__lista li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--ch-filo);align-items:baseline}
+.aree__da{font-family:var(--serif);font-weight:500;font-size:1.3rem;line-height:1.2}
+.aree__t{color:var(--ch-tenue);font-size:.95rem}
+.aree__nota{margin-top:1.4rem;color:var(--ch-tenue);font-size:.95rem}
+@media(max-width:760px){.aree__lista{grid-template-columns:1fr}}
+
+/* mappa */
+.mappa{border:1px solid var(--ch-filo);border-radius:4px;overflow:hidden;background:var(--ch-sabbia)}
+.mappa iframe{display:block;width:100%}
+.mappa__azioni{margin-top:1.2rem}
+
+/* allergeni */
+.allergeni{list-style:none;padding:0;margin:1.6rem 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(.8rem,1.6vw,1.2rem)}
+.allergeni li{display:flex;gap:1.1rem;align-items:flex-start;background:var(--ch-carta);border:1px solid var(--ch-filo);border-radius:4px;padding:1.2rem 1.3rem;scroll-margin-top:7rem}
+.all__n{flex:none;width:2.2rem;height:2.2rem;border-radius:50%;display:grid;place-items:center;border:1px solid var(--ch-corallo);color:var(--ch-corallo);font-size:.9rem;font-weight:500}
+.all__t h3{font-size:1.3rem;margin:0 0 .2rem}
+.all__t p{margin:0;color:var(--ch-tenue);font-size:.93rem;line-height:1.6}
+.all__nota{margin-top:1.6rem;color:var(--ch-tenue);font-size:.95rem;max-width:44em}
+@media(max-width:760px){.allergeni{grid-template-columns:1fr}}
+
+/* ---------- carte del menu ---------- */
+.carte{position:sticky;top:var(--navh,88px);z-index:40;background:rgba(251,249,245,.94);border-bottom:1px solid var(--ch-filo);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.carte__in{display:flex;gap:.5rem;overflow-x:auto;padding-block:.75rem;scrollbar-width:none}
+.carte__in::-webkit-scrollbar{display:none}
+.carte a{flex:none;font-size:.95rem;text-decoration:none;padding:.5rem 1.1rem;border:1px solid var(--ch-filo);border-radius:999px;background:var(--ch-carta);transition:border-color .3s}
+.carte a:hover{border-color:var(--ch-inchiostro)}
+.carte a[aria-current="page"]{background:var(--ch-inchiostro);border-color:var(--ch-inchiostro);color:#fff}
+.menu-corpo{width:100%;max-width:var(--max);margin-inline:auto;padding:clamp(2.5rem,5vw,4rem) max(var(--g),env(safe-area-inset-left,0px)) clamp(4rem,8vw,6rem);
+  display:grid;grid-template-columns:12rem minmax(0,1fr);gap:clamp(2rem,4vw,4rem);align-items:start}
+.menu-indice{position:sticky;top:calc(var(--navh,88px) + 5rem);display:flex;flex-direction:column;border-left:1px solid var(--ch-filo)}
+.menu-indice a{padding:.45rem 0 .45rem 1rem;margin-left:-1px;border-left:1px solid transparent;text-decoration:none;color:var(--ch-tenue);font-size:.95rem;transition:color .3s,border-color .3s}
+.menu-indice a:hover{color:var(--ch-inchiostro)}
+.menu-indice a.qui{color:var(--ch-inchiostro);border-left-color:var(--ch-corallo)}
+.menu-colonna{display:flex;flex-direction:column;gap:clamp(1rem,2vw,1.6rem);min-width:0}
+.menu-griglia{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1rem,2vw,1.6rem);align-items:start}
+.giorno,.menu-blocco{background:var(--ch-carta);border:1px solid var(--ch-filo);border-radius:4px;padding:clamp(1.5rem,3vw,2.4rem);scroll-margin-top:calc(var(--navh,88px) + 5rem)}
+.menu-blocco--largo{grid-column:1/-1}
+.menu-testa{display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem 1rem;margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--ch-filo)}
+.menu-testa .menu-n{display:none}
+.menu-testa h2{font-size:clamp(1.7rem,2.6vw,2.2rem);margin:0}
+.menu-alt{font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--ch-tenue)}
+.menu-eti{margin-left:auto;font-size:.85rem;color:var(--ch-tenue)}
+.menu-intro{color:var(--ch-tenue);margin:0 0 .8rem;line-height:1.7}
+.voci{list-style:none;padding:0;margin:0}
+.voci li{padding:.75rem 0;border-bottom:1px solid var(--ch-filo)}
+.voci li:last-child{border-bottom:0}
+.v__riga{display:flex;align-items:baseline;gap:.6rem;margin:0}
+.v__n{font-size:1.02rem;font-weight:400;color:var(--ch-inchiostro)}
+.v__l{flex:1;min-width:1.5rem;border-bottom:1px dotted rgba(36,33,31,.3);transform:translateY(-.25rem)}
+.v__p{font-size:1rem;font-weight:400;white-space:nowrap;font-variant-numeric:tabular-nums lining-nums}
+.v__d{margin:.25rem 0 0;color:var(--ch-tenue);font-size:.92rem;line-height:1.55}
+.v__a{margin:.2rem 0 0;color:var(--ch-tenue);font-size:.78rem;letter-spacing:.04em}
+.v__a::before{content:"Allergeni ";}
+html[lang="en"] .v__a::before{content:"Allergens ";}
+.giorno__nota{margin:1rem 0 0;color:var(--ch-tenue);font-size:.92rem;font-style:italic;line-height:1.6}
+.menu-legenda{background:var(--ch-sabbia);border-radius:4px;padding:1.4rem 1.6rem}
+.menu-nota{margin:0;color:var(--ch-tenue);font-size:.93rem;line-height:1.7}
+.menu-nota+.menu-nota{margin-top:.5rem}
+.menu-nota a{text-underline-offset:3px}
+@media(max-width:900px){
+  .menu-corpo{grid-template-columns:1fr}
+  .menu-indice{position:sticky;top:calc(var(--navh,72px) + 3.6rem);z-index:30;flex-direction:row;overflow-x:auto;border-left:0;border-bottom:1px solid var(--ch-filo);
+    background:rgba(251,249,245,.96);margin-inline:calc(-1 * var(--g));padding-inline:var(--g);scrollbar-width:none}
+  .menu-indice::-webkit-scrollbar{display:none}
+  .menu-indice a{flex:none;padding:.7rem .9rem;margin:0 0 -1px;border-left:0;border-bottom:2px solid transparent}
+  .menu-indice a.qui{border-bottom-color:var(--ch-corallo)}
+  .menu-griglia{grid-template-columns:1fr}
+}
+/* la barra resta chiara sulle pagine senza foto in apertura */
+.interna .nav{background:rgba(251,249,245,.92);color:var(--seppia);border-bottom:1px solid var(--ch-filo);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.interna .nav .chiaro-logo{display:none}
+.interna .nav .marchio .scuro-logo{display:block}
+.interna .sipario a[aria-current="page"]{color:var(--corallo)}
+.aperto .interna .nav{background:transparent;color:var(--conchiglia);border-color:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}
+.aperto .interna .nav .chiaro-logo{display:block}
+.aperto .interna .nav .marchio .scuro-logo{display:none}
+
 /* ============ STAGIONE E RICHIESTE EVENTI (stagione.js) ============ */
 .ctaev{position:fixed;right:clamp(1rem,2.5vw,2rem);bottom:clamp(1rem,2.5vw,2rem);z-index:180;
   display:flex;flex-direction:column;gap:.2rem;padding:.9rem 1.3rem 1rem 1.2rem;font:inherit;text-align:left;cursor:pointer;
