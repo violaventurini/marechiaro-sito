@@ -82,7 +82,7 @@ def hub(lang):
       'Un tavolo con il mare davanti' if it else 'A table facing the sea',
       'Un messaggio su WhatsApp e ti confermiamo tutto in giornata.' if it else "Send a WhatsApp message and we'll confirm the same day.",
       'Prenota un tavolo' if it else 'Book a table',
-      'Ciao%2C%20vorrei%20prenotare%20un%20tavolo' if it else 'Hello%2C%20I%27d%20like%20to%20book%20a%20table',
+      'Ciao%2C%20vi%20contatto%20dal%20sito%20web%20e%20vorrei%20prenotare%20un%20tavolo%20al%20ristorante.%0ANumero%20di%20persone%3A%20%0AData%3A%20%0AOrario%3A%20' if it else 'Hello%2C%20I%27m%20contacting%20you%20from%20the%20website%20and%20I%27d%20like%20to%20book%20a%20table%20at%20the%20restaurant.%0ANumber%20of%20people%3A%20%0ADate%3A%20%0ATime%3A%20',
       'Il ristorante' if it else 'The restaurant', '/ristorante' if it else '/en/restaurant')
     scrivi('menu.html' if it else 'en/menu.html', lang,
       'Menu | Marechiaro Ostia, Ristorante sulla Spiaggia' if it else 'Menu | Marechiaro Ostia, Restaurant on the Beach',
@@ -167,7 +167,7 @@ def colazione(lang):
       ('Dopo colazione si scende in spiaggia. Lettini e ombrelloni si scelgono all&rsquo;arrivo, senza prenotare.'
        if it else 'After breakfast, down to the beach. Sunbeds and umbrellas are chosen on arrival, no booking.'),
       'Scrivici su WhatsApp' if it else 'Message us on WhatsApp',
-      'Ciao%2C%20vorrei%20informazioni' if it else 'Hello%2C%20I%27d%20like%20some%20information',
+      'Ciao%2C%20vi%20contatto%20dal%20sito%20web%20e%20vorrei%20avere%20informazioni.' if it else 'Hello%2C%20I%27m%20contacting%20you%20from%20the%20website%20and%20I%27d%20like%20some%20information.',
       'La spiaggia' if it else 'The beach', '/spiaggia' if it else '/en/beach')
     scrivi('menu-colazione.html' if it else 'en/menu-breakfast.html', lang,
       'Colazione sulla Spiaggia | Marechiaro Ostia' if it else 'Breakfast on the Beach | Marechiaro Ostia',
@@ -242,7 +242,7 @@ def pranzo(lang):
       ('Si mangia al ristorante con la vista sul mare, oppure si ordina da asporto e si torna in postazione.' if it
        else 'Eat at the restaurant facing the sea, or order takeaway and head back to your spot.'),
       'Ordina da asporto' if it else 'Order takeaway',
-      'Ciao%2C%20vorrei%20ordinare%20da%20asporto' if it else 'Hello%2C%20I%27d%20like%20to%20order%20takeaway',
+      'Ciao%2C%20vi%20contatto%20dal%20sito%20web%20e%20vorrei%20prenotare%20un%20ordine%20da%20asporto.%0AData%3A%20%0AOrario%20di%20ritiro%3A%20' if it else 'Hello%2C%20I%27m%20contacting%20you%20from%20the%20website%20and%20I%27d%20like%20to%20place%20a%20takeaway%20order.%0ADate%3A%20%0APickup%20time%3A%20',
       'Tutte le carte' if it else 'All the menus', '/menu' if it else '/en/menu')
     scrivi('menu-pranzo.html' if it else 'en/menu-lunch.html', lang,
       'Menu Pranzo sulla Spiaggia | Marechiaro Ostia' if it else 'Lunch Menu on the Beach | Marechiaro Ostia',
@@ -305,7 +305,7 @@ def aperitivo(lang):
       ('Aperitivo aperto a tutti, anche a chi in spiaggia non c&rsquo;&egrave; stato. Non serve prenotare.' if it
        else "Aperitivo is open to everyone, whether or not you spent the day here. No booking needed."),
       'Scrivici su WhatsApp' if it else 'Message us on WhatsApp',
-      'Ciao%2C%20vorrei%20un%20tavolo%20per%20l%27aperitivo' if it else 'Hello%2C%20I%27d%20like%20a%20table%20for%20aperitivo',
+      'Ciao%2C%20vi%20contatto%20dal%20sito%20web%20e%20vorrei%20prenotare%20un%20tavolo%20per%20l%27aperitivo.%0ANumero%20di%20persone%3A%20%0AData%3A%20%0AOrario%3A%20' if it else 'Hello%2C%20I%27m%20contacting%20you%20from%20the%20website%20and%20I%27d%20like%20to%20book%20a%20table%20for%20aperitivo.%0ANumber%20of%20people%3A%20%0ADate%3A%20%0ATime%3A%20',
       'Le serate' if it else 'The evenings', '/aperitivi' if it else '/en/aperitivo')
     scrivi('menu-aperitivo.html' if it else 'en/menu-aperitivo.html', lang,
       'Aperitivo sul Mare: Formule e Cocktail | Marechiaro' if it else 'Aperitivo by the Sea: Set Menus and Cocktails | Marechiaro',
@@ -376,7 +376,7 @@ def cena(lang):
       ('Nei fine settimana e ad agosto conviene prenotare: bastano un messaggio e un&rsquo;ora.' if it
        else 'At weekends and in August it&rsquo;s worth booking &mdash; a message and a time is all we need.'),
       'Prenota un tavolo' if it else 'Book a table',
-      'Ciao%2C%20vorrei%20prenotare%20un%20tavolo%20per%20cena' if it else 'Hello%2C%20I%27d%20like%20to%20book%20a%20table%20for%20dinner',
+      'Ciao%2C%20vi%20contatto%20dal%20sito%20web%20e%20vorrei%20prenotare%20un%20tavolo%20per%20cena.%0ANumero%20di%20persone%3A%20%0AData%3A%20%0AOrario%3A%20' if it else 'Hello%2C%20I%27m%20contacting%20you%20from%20the%20website%20and%20I%27d%20like%20to%20book%20a%20table%20for%20dinner.%0ANumber%20of%20people%3A%20%0ADate%3A%20%0ATime%3A%20',
       'Il ristorante' if it else 'The restaurant', '/ristorante' if it else '/en/restaurant')
     scrivi('menu-cena.html' if it else 'en/menu-dinner.html', lang,
       'Menu Cena di Pesce Vista Mare | Marechiaro Ostia' if it else 'Seafood Dinner Menu by the Sea | Marechiaro Ostia',

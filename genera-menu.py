@@ -81,7 +81,7 @@ T = {
    cta_eti='Prenota', cta_h2='Un tavolo con il mare davanti',
    cta_p='Un messaggio su WhatsApp e ti confermiamo tutto in giornata.',
    cta1='Prenota un tavolo', cta2='Il ristorante e la pizzeria', href2='/ristorante',
-   wa='Ciao%2C%20vorrei%20prenotare%20un%20tavolo'),
+   wa='Ciao%2C%20vi%20contatto%20dal%20sito%20web%20e%20vorrei%20prenotare%20un%20tavolo%20al%20ristorante.%0ANumero%20di%20persone%3A%20%0AData%3A%20%0AOrario%3A%20'),
  'en': dict(
    titolo='Menu | Seafront Restaurant and Pizzeria in Ostia, Rome',
    descr="The Marechiaro menu at Ostia beach near Rome: daily specials based on the catch, fried bites, sandwiches, salads, Roman thin pizza and desserts. Takeaway too.",
@@ -108,7 +108,7 @@ T = {
    cta_eti='Book', cta_h2='A table facing the sea',
    cta_p='Send a WhatsApp message and we&rsquo;ll confirm the same day. We answer in English.',
    cta1='Book a table', cta2='The restaurant and pizzeria', href2='/en/restaurant',
-   wa='Hello%2C%20I%20would%20like%20to%20book%20a%20table'),
+   wa='Hello%2C%20I%27m%20contacting%20you%20from%20the%20website%20and%20I%27d%20like%20to%20book%20a%20table%20at%20the%20restaurant.%0ANumber%20of%20people%3A%20%0ADate%3A%20%0ATime%3A%20'),
 }
 
 for lingua, t in T.items():

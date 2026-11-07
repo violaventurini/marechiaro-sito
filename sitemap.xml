@@ -27,11 +27,13 @@
   <url><loc>https://marechiaroostia.it/spiaggia</loc><lastmod>2026-11-07</lastmod><changefreq>weekly</changefreq><priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/spiaggia"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/beach"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/spiaggia"/></url>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/spiaggia"/>
+    <image:image><image:loc>https://marechiaroostia.it/img/spiaggia-cabina-marechiaro-ostia-1400.jpg</image:loc></image:image></url>
   <url><loc>https://marechiaroostia.it/en/beach</loc><lastmod>2026-11-07</lastmod><changefreq>weekly</changefreq><priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/spiaggia"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/beach"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/spiaggia"/></url>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/spiaggia"/>
+    <image:image><image:loc>https://marechiaroostia.it/img/spiaggia-cabina-marechiaro-ostia-1400.jpg</image:loc></image:image></url>
   <url><loc>https://marechiaroostia.it/menu</loc><lastmod>2026-11-07</lastmod><changefreq>weekly</changefreq><priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/menu"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/menu"/>

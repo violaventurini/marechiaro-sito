@@ -24,7 +24,7 @@ var EVENTI = [];
     tipo: 'Occasion', tipi: ['Birthday','Private party','Group aperitivo','Dinner','Company event','Other'],
     quando: 'Preferred date', persone: 'Guests', nome: 'Name',
     invia: 'Send on WhatsApp', chiudi: 'Close',
-    msg: function(d){ return 'Hello, I\'d like to organise an event at Marechiaro.\n' +
+    msg: function(d){ return 'Hello, I\'m contacting you from the website and I\'d like some information about organising an event at Marechiaro.\n' +
       'Occasion: ' + d.tipo + '\nDate: ' + (d.data || 'to be decided') + '\nGuests: ' + (d.persone || '-') + (d.nome ? '\nName: ' + d.nome : ''); },
     fmt: 'en-GB'
   } : {
@@ -38,7 +38,7 @@ var EVENTI = [];
     tipo: 'Occasione', tipi: ['Compleanno','Festa privata','Aperitivo di gruppo','Cena','Evento aziendale','Altro'],
     quando: 'Data che preferisci', persone: 'Persone', nome: 'Nome',
     invia: 'Invia su WhatsApp', chiudi: 'Chiudi',
-    msg: function(d){ return 'Ciao, vorrei organizzare un evento al Marechiaro.\n' +
+    msg: function(d){ return 'Ciao, vi contatto dal sito web e vorrei avere informazioni per organizzare un evento al Marechiaro.\n' +
       'Occasione: ' + d.tipo + '\nData: ' + (d.data || 'da decidere') + '\nPersone: ' + (d.persone || '-') + (d.nome ? '\nNome: ' + d.nome : ''); },
     fmt: 'it-IT'
   };
