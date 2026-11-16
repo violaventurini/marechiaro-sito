@@ -106,4 +106,14 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/allergeni"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/allergens"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/allergeni"/></url>
+  <url><loc>https://marechiaroostia.it/storia</loc><lastmod>2026-11-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/storia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/story"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/storia"/>
+    <image:image><image:loc>https://marechiaroostia.it/img/insegna-marechiaro-ostia-1400.jpg</image:loc></image:image></url>
+  <url><loc>https://marechiaroostia.it/en/story</loc><lastmod>2026-11-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/storia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/story"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/storia"/>
+    <image:image><image:loc>https://marechiaroostia.it/img/insegna-marechiaro-ostia-1400.jpg</image:loc></image:image></url>
 </urlset>
