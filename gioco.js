@@ -1,7 +1,7 @@
 /* ============================================================
    MARECHIARO — "Che tipo da Marechiaro sei?"
    Quiz con il granchietto: niente risposte giuste o sbagliate,
-   alla fine il profilo e la giornata ideale al Marechiaro.
+   alla fine il profilo e un consiglio su come vivere il Marechiaro.
    All'inizio si raccolgono nome ed email (newsletter): ogni iscrizione va
    nella lista Brevo (netlify/functions/iscrizione.mjs) e, come copia,
    in Netlify → Forms → "newsletter-gioco".
@@ -68,7 +68,7 @@
 
   var T = en ? {
     domanda: function(i, n){ return 'Question ' + i + ' of ' + n; },
-    sei: 'You are', giornata: 'Your day at Marechiaro', aspetta: 'We\u2019ll be waiting for you', aspetta_p: 'See you next summer at Lungomare Paolo Toscanelli 27, Lido di Ostia.', scrivi: 'Message us on WhatsApp', spiaggia: 'Discover the beach', rifai: 'Play again', condividi: 'Share', copiato: 'Link copied',
+    sei: 'You are', giornata: 'Our tip for you', aspetta: 'We\u2019ll be waiting for you', aspetta_p: 'See you next summer at Lungomare Paolo Toscanelli 27, Lido di Ostia.', scrivi: 'Message us on WhatsApp', spiaggia: 'Discover the beach', rifai: 'Play again', condividi: 'Share', copiato: 'Link copied',
     ciao: 'Hi! I’m the little crab. Shall we find out what kind of beachgoer you are?',
     via: function(n){ return n ? 'Let’s go, ' + n + '!' : 'Let’s go!'; },
     commenti: ['Interesting…', 'I like it!', 'Noted.', 'Good choice.', 'I see, I see…', 'I would too!'],
@@ -77,7 +77,7 @@
     share: function(t){ return 'At Marechiaro I’m “' + t + '”. What kind of beachgoer are you?'; }
   } : {
     domanda: function(i, n){ return 'Domanda ' + i + ' di ' + n; },
-    sei: 'Sei', giornata: 'La tua giornata al Marechiaro', aspetta: 'Ti aspettiamo al Marechiaro', aspetta_p: 'Ci vediamo la prossima estate al Lungomare Paolo Toscanelli 27, Lido di Ostia.', scrivi: 'Scrivici su WhatsApp', spiaggia: 'Scopri la spiaggia', rifai: 'Gioca di nuovo', condividi: 'Condividi', copiato: 'Link copiato',
+    sei: 'Sei', giornata: 'Il nostro consiglio per te', aspetta: 'Ti aspettiamo al Marechiaro', aspetta_p: 'Ci vediamo la prossima estate al Lungomare Paolo Toscanelli 27, Lido di Ostia.', scrivi: 'Scrivici su WhatsApp', spiaggia: 'Scopri la spiaggia', rifai: 'Gioca di nuovo', condividi: 'Condividi', copiato: 'Link copiato',
     ciao: 'Ciao! Io sono il granchietto. Scopriamo che tipo da Marechiaro sei?',
     via: function(n){ return n ? 'Cominciamo, ' + n + '!' : 'Cominciamo!'; },
     commenti: ['Interessante…', 'Mi piace!', 'Segnato.', 'Ottima scelta.', 'Capisco, capisco…', 'Anche io!'],
