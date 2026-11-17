@@ -14,7 +14,7 @@ export default async (req) => {
     return new Response('', { status: 400 });
   }
   const key = process.env.BREVO_API_KEY, lista = Number(process.env.BREVO_LIST_ID);
-  if (!key || !lista) return new Response('', { status: 503 });
+  if (!key || !lista) { console.error('Mancano BREVO_API_KEY o BREVO_LIST_ID'); return new Response('', { status: 503 }); }
 
   const invia = (attributi) => fetch('https://api.brevo.com/v3/contacts', {
     method: 'POST',
@@ -23,5 +23,8 @@ export default async (req) => {
   });
   let r = await invia(nome ? { FIRSTNAME: nome } : null);
   if (r.status === 400 && nome) r = await invia(null);   // se l'attributo del nome ha un altro nome nell'account
-  return new Response('', { status: r.ok || r.status === 204 ? 200 : 502 });
+  if (r.ok || r.status === 204) { console.log('Iscritto a Brevo, lista', lista); return new Response('', { status: 200 }); }
+  const motivo = await r.text().catch(() => '');
+  console.error('Brevo ha risposto', r.status, motivo);   // si legge in Netlify → Logs → Functions → iscrizione
+  return new Response('', { status: 502 });
 };
