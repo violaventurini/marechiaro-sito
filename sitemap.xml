@@ -116,4 +116,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/story"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/storia"/>
     <image:image><image:loc>https://marechiaroostia.it/img/insegna-marechiaro-ostia-1400.jpg</image:loc></image:image></url>
+  <url><loc>https://marechiaroostia.it/gioco</loc><lastmod>2026-11-17</lastmod><changefreq>monthly</changefreq><priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/gioco"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/game"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/gioco"/></url>
+  <url><loc>https://marechiaroostia.it/en/game</loc><lastmod>2026-11-17</lastmod><changefreq>monthly</changefreq><priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://marechiaroostia.it/gioco"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marechiaroostia.it/en/game"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marechiaroostia.it/gioco"/></url>
 </urlset>
