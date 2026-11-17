@@ -18,14 +18,14 @@
   var DOMANDE = en ? [
     { q: 'You arrive at the beach. What’s the first thing you do?', a: [['I lie down and don’t move again', 'L'], ['I check what’s for lunch', 'P'], ['I look for the spot with the best view', 'T'], ['I drop my suitcase and run into the sea', 'V']] },
     { q: 'Your ideal company for a day by the sea?', a: [['A good book', 'L'], ['My closest friends: the more the merrier', 'F'], ['Someone who loves good food as much as I do', 'P'], ['Whoever I meet along the way', 'V']] },
-    { q: 'It’s midday. For you, lunch is…', a: [['Something fresh to take away, eaten in the shade', 'L'], ['A table facing the sea and the catch of the day', 'P'], ['An early aperitivo, why not', 'T'], ['Quick, I have a plane to catch', 'V']] },
+    { q: 'It’s midday. For you, lunch is…', a: [['At the restaurant, unhurried, then back under the umbrella', 'L'], ['The catch of the day, with the sea in front of me', 'P'], ['An early aperitivo, why not', 'T'], ['Quick, I have a plane to catch', 'V']] },
     { q: 'Sunset finds you…', a: [['With a cocktail in hand', 'T'], ['Still on the sunbed, eyes closed', 'L'], ['Raising a glass with the whole group', 'F'], ['Choosing the wine for dinner', 'P']] },
     { q: 'Your souvenir of the summer?', a: [['A photo at sunset', 'T'], ['The perfect tan', 'L'], ['The memory of a dish', 'P'], ['A birthday nobody will forget', 'F']] },
     { q: 'What’s always in your suitcase?', a: [['My passport', 'V'], ['Something elegant for the evening', 'T'], ['A book I never finish', 'L'], ['Everything we need for the party', 'F']] }
   ] : [
     { q: 'Arrivi al mare. Qual è la prima cosa che fai?', a: [['Mi stendo e non mi muovo più', 'L'], ['Guardo cosa c’è per pranzo', 'P'], ['Cerco il punto con la vista più bella', 'T'], ['Lascio la valigia e corro in acqua', 'V']] },
     { q: 'La compagnia ideale per una giornata al mare?', a: [['Un buon libro', 'L'], ['Gli amici di sempre: più siamo, meglio è', 'F'], ['Chi ama la buona tavola quanto me', 'P'], ['Chi incontro strada facendo', 'V']] },
-    { q: 'È mezzogiorno. Il pranzo, per te, è…', a: [['Qualcosa di fresco da asporto, da gustare all’ombra', 'L'], ['Un tavolo vista mare e il pesce del giorno', 'P'], ['Un aperitivo in anticipo, perché no', 'T'], ['Veloce, ho un aereo da prendere', 'V']] },
+    { q: 'È mezzogiorno. Il pranzo, per te, è…', a: [['Al ristorante, con calma, e poi di nuovo sotto l’ombrellone', 'L'], ['Il pesce del giorno, con il mare davanti', 'P'], ['Un aperitivo in anticipo, perché no', 'T'], ['Veloce, ho un aereo da prendere', 'V']] },
     { q: 'Il tramonto ti trova…', a: [['Con un cocktail in mano', 'T'], ['Ancora sul lettino, a occhi chiusi', 'L'], ['A brindare con tutto il gruppo', 'F'], ['A scegliere il vino per la cena', 'P']] },
     { q: 'Il tuo ricordo dell’estate?', a: [['Una foto al tramonto', 'T'], ['L’abbronzatura perfetta', 'L'], ['Il sapore di un piatto', 'P'], ['Un compleanno che nessuno dimenticherà', 'F']] },
     { q: 'In valigia non manca mai…', a: [['Il passaporto', 'V'], ['Qualcosa di elegante per la sera', 'T'], ['Un libro che non finisco mai', 'L'], ['Tutto il necessario per la festa', 'F']] }
@@ -34,7 +34,7 @@
   /* i profili: la giornata usa solo quello che il Marechiaro offre davvero */
   var PROFILI = en ? {
     L: { t: 'Sunbed and silence', d: 'For you, the sea is a pause: the sound of the waves, a good book, no hurry at all.',
-         g: [['Morning', 'A double sunbed under a well-spaced umbrella.'], ['Lunch', 'Something fresh to take away, enjoyed in the shade.'], ['Evening', 'A shower in the beach hut and a glass of Falanghina facing the sea.']],
+         g: [['Morning', 'A double sunbed under a well-spaced umbrella.'], ['Lunch', 'At our restaurant, unhurried, with the sea in front of you.'], ['Evening', 'A shower in the beach hut and a glass of Falanghina facing the sea.']],
          c: ['Ask us on WhatsApp', WA + 'Hello%2C%20I%27m%20contacting%20you%20from%20your%20website%20and%20I%27d%20like%20some%20information%20about%20the%20beach.'] },
     T: { t: 'Spirit of the sunset', d: 'Your moment is when the sun goes down and the light turns gold.',
          g: [['Afternoon', 'One last swim, then a shower in the beach hut.'], ['Sunset', 'Cocktail and fried bites on the sand, from 6pm.'], ['Night', 'After dinner on the sand, with the music low.']],
@@ -50,7 +50,7 @@
          c: ['Parties and events', '/en/groups'] }
   } : {
     L: { t: 'Lettino e silenzio', d: 'Per te il mare è una pausa: il rumore delle onde, un buon libro, nessuna fretta.',
-         g: [['Mattina', 'Un lettone sotto l’ombrellone, ben distanziato dai vicini.'], ['Pranzo', 'Qualcosa di fresco da asporto, da gustare all’ombra.'], ['Sera', 'Una doccia in cabina e un calice di Falanghina guardando il mare.']],
+         g: [['Mattina', 'Un lettone sotto l’ombrellone, ben distanziato dai vicini.'], ['Pranzo', 'Al nostro ristorante, con calma, con il mare davanti.'], ['Sera', 'Una doccia in cabina e un calice di Falanghina guardando il mare.']],
          c: ['Scrivici su WhatsApp', WA + 'Ciao%2C%20vi%20contatto%20dal%20sito%20web%20e%20vorrei%20avere%20informazioni%20sulla%20spiaggia.'] },
     T: { t: 'Spirito del tramonto', d: 'Il tuo momento è quando il sole scende e la luce diventa oro.',
          g: [['Pomeriggio', 'L’ultimo bagno, poi la doccia in cabina.'], ['Tramonto', 'Cocktail e fritti sulla sabbia, dalle 18.'], ['Notte', 'Il dopocena sulla sabbia, con la musica bassa.']],
