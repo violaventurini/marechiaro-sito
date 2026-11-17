@@ -1,6 +1,6 @@
 /* ============================================================
    MARECHIARO — "Che tipo da Marechiaro sei?"
-   Test con il granchietto: niente risposte giuste o sbagliate,
+   Quiz con il granchietto: niente risposte giuste o sbagliate,
    alla fine il profilo e la giornata ideale al Marechiaro.
    All'inizio si raccolgono nome ed email (newsletter): ogni iscrizione va
    nella lista Brevo (netlify/functions/iscrizione.mjs) e, come copia,
@@ -68,7 +68,7 @@
 
   var T = en ? {
     domanda: function(i, n){ return 'Question ' + i + ' of ' + n; },
-    sei: 'You are', giornata: 'Your day at Marechiaro', rifai: 'Take the test again', condividi: 'Share', copiato: 'Link copied',
+    sei: 'You are', giornata: 'Your day at Marechiaro', aspetta: 'We\u2019ll be waiting for you', aspetta_p: 'See you next summer at Lungomare Paolo Toscanelli 27, Lido di Ostia.', scrivi: 'Message us on WhatsApp', spiaggia: 'Discover the beach', rifai: 'Play again', condividi: 'Share', copiato: 'Link copied',
     ciao: 'Hi! I’m the little crab. Shall we find out what kind of beachgoer you are?',
     via: function(n){ return n ? 'Let’s go, ' + n + '!' : 'Let’s go!'; },
     commenti: ['Interesting…', 'I like it!', 'Noted.', 'Good choice.', 'I see, I see…', 'I would too!'],
@@ -77,7 +77,7 @@
     share: function(t){ return 'At Marechiaro I’m “' + t + '”. What kind of beachgoer are you?'; }
   } : {
     domanda: function(i, n){ return 'Domanda ' + i + ' di ' + n; },
-    sei: 'Sei', giornata: 'La tua giornata al Marechiaro', rifai: 'Rifai il test', condividi: 'Condividi', copiato: 'Link copiato',
+    sei: 'Sei', giornata: 'La tua giornata al Marechiaro', aspetta: 'Ti aspettiamo al Marechiaro', aspetta_p: 'Ci vediamo la prossima estate al Lungomare Paolo Toscanelli 27, Lido di Ostia.', scrivi: 'Scrivici su WhatsApp', spiaggia: 'Scopri la spiaggia', rifai: 'Gioca di nuovo', condividi: 'Condividi', copiato: 'Link copiato',
     ciao: 'Ciao! Io sono il granchietto. Scopriamo che tipo da Marechiaro sei?',
     via: function(n){ return n ? 'Cominciamo, ' + n + '!' : 'Cominciamo!'; },
     commenti: ['Interessante…', 'Mi piace!', 'Segnato.', 'Ottima scelta.', 'Capisco, capisco…', 'Anche io!'],
@@ -148,7 +148,7 @@
     });
   }
 
-  /* ---------- test ---------- */
+  /* ---------- quiz ---------- */
   function inizia(){
     i = 0; conti = { L: 0, T: 0, P: 0, V: 0, F: 0 };
     box.classList.add('in-gioco');
@@ -197,9 +197,13 @@
       '<div class="gq-giornata"><span class="eti">' + T.giornata + '</span><ol>' + p.g.map(function(r, k){
         return '<li class="entra" style="animation-delay:' + (.35 + k * .15) + 's"><b>' + esc(r[0]) + '</b><span>' + esc(r[1]) + '</span></li>';
       }).join('') + '</ol></div>' +
+      '<div class="gq-cta entra" style="animation-delay:.9s"><p class="gq-cta__t">' + T.aspetta + '</p><p class="gq-cta__p">' + T.aspetta_p + '</p>' +
       '<div class="azioni gq-azioni"><a class="btn" href="' + p.c[1] + '"' + (p.c[1].indexOf('http') === 0 ? ' rel="noopener"' : '') + '>' + esc(p.c[0]) + '</a>' +
-      '<button type="button" class="btn scuro gq-condividi">' + T.condividi + '</button></div>' +
-      '<button type="button" class="gq-salta gq-rifai">' + T.rifai + '</button>';
+      (p.c[1].indexOf('wa.me') > -1
+        ? '<a class="btn scuro" href="' + (en ? '/en/beach' : '/spiaggia') + '">' + T.spiaggia + '</a>'
+        : '<a class="btn scuro" href="' + WA + (en ? 'Hello%2C%20I%27m%20contacting%20you%20from%20your%20website%20and%20I%27d%20like%20some%20information.' : 'Ciao%2C%20vi%20contatto%20dal%20sito%20web%20e%20vorrei%20avere%20informazioni.') + '" rel="noopener">' + T.scrivi + '</a>') +
+      '</div></div>' +
+      '<p class="gq-dopo"><button type="button" class="gq-salta gq-condividi">' + T.condividi + '</button><span aria-hidden="true">&middot;</span><button type="button" class="gq-salta gq-rifai">' + T.rifai + '</button></p>';
     schermo.querySelector('.gq-titolo').focus({ preventScroll: true });
     box.dataset.titolo = p.t;
   }

@@ -568,140 +568,210 @@ html[lang="en"] .v__a::before{content:"Allergens ";}
 .racconto .righe{margin-top:2rem}
 .racconto__fonti{margin-top:2rem;font-size:.85rem;color:var(--seppia-tenue)}
 
-/* ============ IL GIOCO DEL GRANCHIETTO (/gioco) ============ */
-.gq{position:relative;max-width:42rem;margin:0 auto;padding:0 clamp(1.2rem,5vw,3rem) clamp(2rem,5vw,3rem);
-  background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.85);border-radius:8px;text-align:center;overflow:hidden;
-  box-shadow:inset 0 1px 0 #fff,0 24px 60px rgba(43,33,29,.09);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
-.gq.scossa{animation:gq-scossa .45s ease}
-@keyframes gq-scossa{20%{transform:translateX(-7px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(2px)}}
+/* ============ IL GIOCO DEL GRANCHIETTO (/gioco) — stile del sito ============ */
+.gq-sez{background:var(--ch-fondo,#FBF9F5)!important;border-top:1px solid var(--ch-filo,#E7E1D8)}
+.gq{position:relative;max-width:46rem;margin:0;color:var(--ch-inchiostro,#24211F);text-align:left}
+.gq.scossa{animation:gq-scossa .4s ease}
+@keyframes gq-scossa{30%{transform:translateX(-5px)}60%{transform:translateX(4px)}}
 
-/* palco: cielo, sabbia, granchio che cammina e parla */
-.gq-palco{position:relative;height:clamp(170px,30vw,200px);margin:0 calc(-1 * clamp(1.2rem,5vw,3rem)) 1.4rem;
-  background:linear-gradient(180deg,#DCE9EE 0%,#C7DCE4 52%,#F2E9DB 52.5%,#EFE6D8 100%);overflow:hidden}
-.gq-palco::before{content:"";position:absolute;left:-10%;right:-10%;top:47%;height:12px;
-  background:radial-gradient(ellipse 22px 6px at 50% 100%,rgba(255,255,255,.95) 60%,transparent 62%) 0 0/44px 12px repeat-x;
-  animation:gq-onda 5s linear infinite;opacity:.9}
-@keyframes gq-onda{to{transform:translateX(44px)}}
-.gq-sabbia{position:absolute;left:0;right:0;bottom:0;height:46%;
-  background:radial-gradient(circle,rgba(184,154,94,.35) 1px,transparent 1.6px) 0 0/18px 14px}
-.gq-cammina{position:absolute;left:50%;bottom:10%;width:clamp(92px,20vw,118px);margin-left:calc(clamp(92px,20vw,118px) / -2);z-index:2}
-.gq-cammina.va{animation:gq-passeggia 7s ease-in-out infinite}
-@keyframes gq-passeggia{0%,100%{transform:translateX(-120%)}50%{transform:translateX(120%)}}
+/* il granchietto cammina su una linea di sabbia, e parla in corsivo */
+.gq-palco{position:relative;height:118px;margin:0 0 2.4rem;border-bottom:1px solid var(--ch-filo,#E7E1D8)}
+.gq-palco::before,.gq-sabbia{display:none}
+.gq-cammina{position:absolute;left:50%;bottom:-2px;width:72px;margin-left:-36px}
+.gq-cammina.va{animation:gq-passeggia 9s ease-in-out infinite}
+@keyframes gq-passeggia{0%,100%{transform:translateX(-200%)}50%{transform:translateX(200%)}}
 .gq-granchio{display:block;width:100%;height:auto;overflow:visible;transform-origin:50% 90%}
 .gq-granchio .chela,.gq-granchio .zampe{transform-box:view-box;transform-origin:0 0}
-.gq-cammina.va .gq-granchio{animation:gq-dondola .32s ease-in-out infinite alternate}
-.gq-cammina.va .gq-granchio .zampe{animation:zampetta .16s ease-in-out infinite alternate}
-.gq-cammina.va .gq-granchio .chela{animation:gq-pinza 1.4s ease-in-out infinite}
-@keyframes gq-dondola{from{transform:translateY(0) rotate(-2deg)}to{transform:translateY(-3px) rotate(2deg)}}
-@keyframes gq-pinza{0%,60%,100%{transform:rotate(0)}70%{transform:rotate(-22deg)}80%{transform:rotate(6deg)}}
-.gq-granchio.festa{animation:gq-salto .55s cubic-bezier(.3,.7,.3,1) 2}
-@keyframes gq-salto{0%,100%{transform:translateY(0) scale(1,1)}15%{transform:translateY(4px) scale(1.12,.88)}50%{transform:translateY(-46px) scale(.94,1.08) rotate(-6deg)}85%{transform:translateY(0) scale(1.08,.92)}}
-.gq-granchio.festa .chela,.gq-granchio.gira .chela{animation:gq-applaude .14s ease-in-out 10 alternate}
-@keyframes gq-applaude{to{transform:rotate(-42deg)}}
-.gq-granchio.gira{animation:gq-capriola .95s cubic-bezier(.3,.7,.3,1)}
-@keyframes gq-capriola{0%{transform:none}25%{transform:translateY(6px) scale(1.12,.88)}60%{transform:translateY(-62px) rotate(200deg)}100%{transform:translateY(0) rotate(360deg)}}
-.gq-granchio.giu{animation:gq-sotto 1.2s cubic-bezier(.4,0,.2,1) forwards}
-@keyframes gq-sotto{0%{transform:none}20%{transform:rotate(-10deg)}35%{transform:rotate(10deg)}50%{transform:rotate(-6deg)}75%{transform:translateY(26px) scaleY(.7)}100%{transform:translateY(12px) scaleY(.9)}}
-.gq-granchio.guarda{animation:gq-guarda 1.4s ease-in-out}
-@keyframes gq-guarda{0%,100%{transform:none}25%{transform:translateX(-16px) rotate(-8deg)}50%{transform:translateX(16px) rotate(8deg)}75%{transform:translateX(-6px)}}
-.gq-fumetto{position:absolute;left:50%;top:10%;z-index:3;max-width:min(88%,22rem);margin:0;padding:.55rem 1rem .6rem;
-  background:#fff;border-radius:14px;box-shadow:0 8px 24px rgba(43,33,29,.12);font-size:.9rem;font-weight:400;line-height:1.35;color:var(--seppia);
-  transform:translate(-50%,8px) scale(.9);opacity:0;pointer-events:none}
-.gq-fumetto::after{content:"";position:absolute;left:50%;bottom:-7px;width:14px;height:14px;background:#fff;transform:translateX(-50%) rotate(45deg);border-radius:2px}
-.gq-fumetto.su{animation:gq-fumetto 3.2s cubic-bezier(.2,.8,.2,1) forwards}
-@keyframes gq-fumetto{0%{opacity:0;transform:translate(-50%,8px) scale(.85)}10%{opacity:1;transform:translate(-50%,0) scale(1.04)}16%{transform:translate(-50%,0) scale(1)}85%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-50%,-6px)}}
-.gq-coccio{position:absolute;bottom:22%;width:16px;height:14px;z-index:1;border-radius:50% 50% 30% 30%;
-  background:radial-gradient(circle at 50% 120%,#E9D2B5 30%,#F8EAD6 31%);border:1px solid #C9A77E;
-  animation:gq-coccio 1.2s cubic-bezier(.2,.7,.3,1) forwards}
-.gq-coccio:nth-child(3n){background:#B5322A;border-color:#8E2620;width:10px;height:10px;border-radius:50%}
-.gq-coccio:nth-child(3n+1){width:12px;height:12px}
-@keyframes gq-coccio{0%{transform:translate(0,0) rotate(0);opacity:1}70%{opacity:1}100%{transform:translate(var(--dx),var(--dy)) rotate(var(--r));opacity:0}}
+.gq-cammina.va .gq-granchio{animation:gq-dondola .34s ease-in-out infinite alternate}
+.gq-cammina.va .gq-granchio .zampe{animation:zampetta .17s ease-in-out infinite alternate}
+.gq-cammina.va .gq-granchio .chela{animation:gq-pinza 1.6s ease-in-out infinite}
+@keyframes gq-dondola{from{transform:translateY(0) rotate(-2deg)}to{transform:translateY(-2px) rotate(2deg)}}
+@keyframes gq-pinza{0%,60%,100%{transform:rotate(0)}70%{transform:rotate(-20deg)}80%{transform:rotate(5deg)}}
+.gq-granchio.festa{animation:gq-salto .5s cubic-bezier(.3,.7,.3,1) 2}
+@keyframes gq-salto{0%,100%{transform:translateY(0)}45%{transform:translateY(-26px) rotate(-5deg)}}
+.gq-granchio.festa .chela,.gq-granchio.gira .chela{animation:gq-applaude .15s ease-in-out 8 alternate}
+@keyframes gq-applaude{to{transform:rotate(-38deg)}}
+.gq-granchio.gira{animation:gq-capriola .9s cubic-bezier(.3,.7,.3,1)}
+@keyframes gq-capriola{0%{transform:none}55%{transform:translateY(-40px) rotate(200deg)}100%{transform:rotate(360deg)}}
+.gq-granchio.guarda{animation:gq-guarda 1.2s ease-in-out}
+@keyframes gq-guarda{25%{transform:rotate(-8deg)}50%{transform:rotate(8deg)}75%{transform:rotate(-4deg)}}
+.gq-fumetto{position:absolute;left:0;top:0;margin:0;max-width:30rem;font-family:var(--serif);font-style:italic;font-weight:500;
+  font-size:clamp(1.25rem,2.4vw,1.5rem);line-height:1.25;color:var(--ch-tenue,#6E6862);opacity:0;transform:translateY(6px)}
+.gq-fumetto.su{animation:gq-fumetto 3.4s var(--lenta,ease) forwards}
+@keyframes gq-fumetto{0%{opacity:0;transform:translateY(6px)}12%,82%{opacity:1;transform:none}100%{opacity:0}}
+.gq-coccio{display:none}
 
-/* testo e domande */
-.gq-testa{display:flex;justify-content:space-between;align-items:center;max-width:30rem;margin:0 auto .7rem}
-.gq-num{font-size:.68rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--corallo);margin:0 0 .9rem}
+/* testi */
+.gq-testa{display:flex;justify-content:space-between;align-items:baseline;margin:0 0 .8rem}
+.gq-num{display:block;font-size:.88rem;font-weight:400;color:var(--ch-tenue,#6E6862);margin:0 0 .8rem;letter-spacing:0;text-transform:none}
 .gq-testa .gq-num{margin:0}
-.gq-serie{font-size:.68rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--corallo);
-  padding:.25rem .65rem;border-radius:999px;opacity:0;transform:scale(.6);transition:opacity .3s,transform .4s cubic-bezier(.3,1.6,.5,1)}
-.gq-serie.on{opacity:1;transform:scale(1)}
-.gq-tempo{height:5px;max-width:30rem;margin:0 auto 1.6rem;background:var(--filetto);border-radius:5px;overflow:hidden}
-.gq-tempo i{display:block;height:100%;background:var(--seppia);transform-origin:left;border-radius:5px}
-.gq-tempo.ultimi i{background:var(--corallo);animation:gq-pulsa .5s ease-in-out infinite alternate}
-@keyframes gq-pulsa{to{opacity:.55}}
-.gq-domanda,.gq-titolo{font-family:var(--serif);font-weight:500;font-size:clamp(1.7rem,4vw,2.35rem);line-height:1.12;margin:0 auto 1.5rem;max-width:22ch;outline:none}
-.entra{animation:gq-entra .5s cubic-bezier(.2,.8,.2,1) both}
-@keyframes gq-entra{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.gq-intro{max-width:32rem;margin:0 auto 1.6rem;color:var(--seppia-tenue)}
-.gq .btn{cursor:pointer;font-family:inherit}
-.gq-risposte{display:grid;gap:.6rem;max-width:30rem;margin:0 auto}
-.gq-r{display:flex;align-items:center;gap:.9rem;font:inherit;font-size:1rem;font-weight:400;color:var(--seppia);text-align:left;cursor:pointer;
-  padding:.8rem 1rem;background:rgba(255,255,255,.8);border:1px solid var(--filetto);border-radius:6px;
-  transition:border-color .2s,background .2s,transform .2s,color .2s,box-shadow .2s}
-.gq-lettera{flex:none;display:grid;place-items:center;width:1.9rem;height:1.9rem;border-radius:50%;border:1px solid var(--filetto);
-  font-size:.75rem;font-weight:500;color:var(--seppia-tenue);transition:inherit}
-.gq-r:hover:not(:disabled){border-color:var(--seppia);transform:translateY(-2px);box-shadow:0 8px 18px rgba(43,33,29,.08)}
-.gq-r:hover:not(:disabled) .gq-lettera{background:var(--seppia);color:#fff;border-color:var(--seppia)}
-.gq-r:active:not(:disabled){transform:scale(.98)}
+.gq-tempo,.gq-avanzamento{height:1px;margin:0 0 2.2rem;background:var(--ch-filo,#E7E1D8);overflow:visible}
+.gq-tempo i,.gq-avanzamento i{display:block;height:1px;background:var(--ch-inchiostro,#24211F);transform-origin:left;transition:transform .6s var(--lenta,ease)}
+.gq-domanda,.gq-titolo{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,4vw,2.9rem);line-height:1.08;letter-spacing:-.01em;margin:0 0 1.8rem;outline:none}
+.gq-intro{max-width:36rem;margin:0 0 2rem;line-height:1.75;color:var(--ch-tenue,#6E6862)}
+.entra{animation:gq-entra .5s var(--lenta,ease) both}
+@keyframes gq-entra{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* risposte come righe dell'elenco, con il filetto sopra */
+.gq-risposte{border-bottom:1px solid var(--ch-filo,#E7E1D8)}
+.gq-r{display:flex;align-items:baseline;gap:1.4rem;width:100%;padding:1.15rem 0;background:none;border:0;border-top:1px solid var(--ch-filo,#E7E1D8);
+  font:inherit;font-size:1.05rem;font-weight:400;color:var(--ch-inchiostro,#24211F);text-align:left;cursor:pointer;transition:color .3s,padding .4s var(--lenta,ease)}
+.gq-lettera{flex:none;width:1.4rem;font-size:.78rem;font-weight:500;letter-spacing:.12em;color:var(--ch-tenue,#6E6862)}
+.gq-r:hover:not(:disabled){color:var(--ch-corallo,#B5322A);padding-left:.6rem}
 .gq-r:disabled{cursor:default}
-.gq-r.giusta{background:var(--seppia);border-color:var(--seppia);color:var(--conchiglia);animation:gq-giusta .5s cubic-bezier(.3,1.6,.5,1)}
-.gq-r.giusta .gq-lettera{background:#fff;color:var(--seppia);border-color:#fff}
-@keyframes gq-giusta{50%{transform:scale(1.04)}}
-.gq-r.sbagliata{border-color:var(--corallo);color:var(--corallo);animation:gq-no .4s ease}
-.gq-r.sbagliata .gq-lettera{border-color:var(--corallo);color:var(--corallo)}
-@keyframes gq-no{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
-.gq-r:disabled:not(.giusta):not(.sbagliata){opacity:.4}
-.gq-esito{max-width:30rem;margin:1.3rem auto 0;min-height:1px}
-.gq-esito p{font-size:.96rem;color:var(--seppia-tenue);margin-bottom:1.1rem;animation:gq-entra .4s ease both}
-.gq-esito strong{color:var(--seppia);font-weight:500}
-.gq-esito .btn{animation:gq-entra .4s ease .15s both}
+.gq-r.scelta{color:var(--ch-corallo,#B5322A);padding-left:.6rem}
+.gq-r.scelta .gq-lettera{color:var(--ch-corallo,#B5322A)}
+.gq-r:disabled:not(.scelta){opacity:.35}
 
 /* iscrizione */
-.gq-form{max-width:26rem;margin:0 auto 1.8rem;text-align:left}
-.gq-campo{display:block;margin-bottom:.9rem}
-.gq-campo span{display:block;font-size:.62rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--seppia-tenue);margin-bottom:.35rem}
-.gq-campo input{width:100%;font:inherit;font-size:1rem;color:var(--seppia);padding:.75rem .9rem;background:#fff;border:1px solid var(--filetto);border-radius:6px;-webkit-appearance:none;appearance:none}
-.gq-campo input:focus{outline:none;border-color:var(--seppia)}
-.gq-spunta{display:flex;gap:.7rem;align-items:flex-start;font-size:.88rem;line-height:1.5;color:var(--seppia);margin:.3rem 0 .4rem;cursor:pointer}
-.gq-spunta input{flex:none;width:1.15rem;height:1.15rem;margin-top:.15rem;accent-color:var(--seppia)}
-.gq-errore{min-height:1.3em;margin:0 0 .5rem;font-size:.85rem;color:var(--corallo)}
-.gq-iscrivi{width:100%}
-.gq-salta{display:block;margin:.8rem auto 0;background:none;border:0;font:inherit;font-size:.86rem;color:var(--seppia-tenue);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
-.gq-salta:hover{color:var(--seppia)}
-.gq-informativa{margin-top:1.1rem;font-size:.8rem;color:var(--seppia-tenue)}
-.gq-informativa summary{cursor:pointer;text-align:center}
-.gq-informativa p{margin-top:.6rem;line-height:1.6}
+.gq-form{max-width:30rem;margin:0 0 1rem}
+.gq-campo{display:block;margin-bottom:1.1rem}
+.gq-campo span{display:block;font-size:.88rem;font-weight:400;color:var(--ch-tenue,#6E6862);margin-bottom:.4rem}
+.gq-campo input{width:100%;font:inherit;font-size:1rem;color:var(--ch-inchiostro,#24211F);padding:.8rem .9rem;background:#fff;
+  border:1px solid var(--ch-filo,#E7E1D8);border-radius:2px;-webkit-appearance:none;appearance:none}
+.gq-campo input:focus{outline:none;border-color:var(--ch-inchiostro,#24211F)}
+.gq-spunta{display:flex;gap:.7rem;align-items:flex-start;font-size:.92rem;line-height:1.55;margin:.2rem 0 .4rem;cursor:pointer}
+.gq-spunta input{flex:none;width:1.05rem;height:1.05rem;margin-top:.2rem;accent-color:var(--ch-inchiostro,#24211F)}
+.gq-errore{min-height:1.3em;margin:0 0 .6rem;font-size:.88rem;color:var(--ch-corallo,#B5322A)}
+.gq .btn{cursor:pointer}
+.gq .btn.scuro{background:transparent;color:var(--ch-inchiostro,#24211F);border-color:var(--ch-inchiostro,#24211F)}
+.gq .btn.scuro:hover{background:var(--ch-inchiostro,#24211F);color:#fff}
+.gq-salta{display:inline-block;margin:1rem 0 0;padding:0 0 .2rem;background:none;border:0;border-bottom:1px solid currentColor;
+  font:inherit;font-size:.92rem;color:var(--ch-tenue,#6E6862);cursor:pointer;transition:color .3s}
+.gq-salta:hover{color:var(--ch-corallo,#B5322A)}
+.gq-form .gq-salta{display:block;width:max-content}
+.gq-informativa{margin-top:1.4rem;font-size:.82rem;color:var(--ch-tenue,#6E6862)}
+.gq-informativa summary{cursor:pointer}
+.gq-informativa p{margin-top:.6rem;line-height:1.6;max-width:36rem}
 .gq-miele{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .gq.in-gioco .gq-form,.gq.in-gioco .gq-classifica--mini{display:none}
 
-/* classifica */
-.gq-classifica{list-style:none;padding:0;margin:0 auto 2rem;max-width:24rem;text-align:left}
-.gq-classifica li{display:grid;grid-template-columns:3.4rem 1fr auto;gap:.8rem;align-items:baseline;padding:.7rem .8rem;border-top:1px solid var(--filetto)}
-.gq-classifica li:last-child{border-bottom:1px solid var(--filetto)}
-.gq-classifica b{font-family:var(--serif);font-weight:500;font-size:1.25rem;color:var(--corallo)}
-.gq-classifica span{font-size:.95rem}
-.gq-classifica em{font-style:normal;font-size:.62rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--corallo)}
-.gq-classifica li.tu{background:var(--seppia);color:var(--conchiglia);border-color:var(--seppia);border-radius:4px;transform:scale(1.03)}
-.gq-classifica li.tu b,.gq-classifica li.tu em{color:#E9B8A8}
-.gq-classifica--mini{margin-top:0;opacity:.85}
-.gq-classifica--mini li{padding:.45rem .8rem}
-.gq-classifica--mini span{font-size:.88rem}
-.gq-punti{font-family:var(--serif);font-size:1.6rem;color:var(--seppia-tenue);line-height:1;margin-bottom:.8rem}
-.gq-punti b{font-weight:500;font-size:clamp(4rem,12vw,6rem);color:var(--seppia)}
-.gq-azioni{justify-content:center}
-@media (prefers-reduced-motion:reduce){.gq *,.gq{animation:none!important;transition:none!important}.gq-fumetto.su{opacity:1;transform:translate(-50%,0)}}
-
-/* test: scelta e risultato */
-.gq-avanzamento i{transition:transform .6s var(--lenta,ease)}
-.gq-r.scelta{background:var(--seppia);border-color:var(--seppia);color:var(--conchiglia);animation:gq-giusta .5s cubic-bezier(.3,1.6,.5,1)}
-.gq-r.scelta .gq-lettera{background:#fff;color:var(--seppia);border-color:#fff}
-.gq-r:disabled:not(.scelta){opacity:.4}
-.gq-profilo-t{font-size:clamp(2.2rem,6vw,3.2rem);font-style:italic;margin-bottom:.8rem}
+/* risultato */
+.gq-profilo-t{font-style:italic;font-size:clamp(2.6rem,6vw,4rem);margin-bottom:1rem}
 .gq-profilo-d{font-size:1.05rem}
-.gq-giornata{max-width:28rem;margin:0 auto 1.8rem;padding:1.4rem 1.4rem .6rem;background:#fff;border:1px solid var(--filetto);border-radius:6px;text-align:left}
-.gq-giornata .eti{display:block;font-size:.62rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--corallo);margin-bottom:.6rem}
-.gq-giornata ol{list-style:none;margin:0;padding:0}
-.gq-giornata li{display:grid;grid-template-columns:6.2rem 1fr;gap:.8rem;padding:.75rem 0;border-top:1px solid var(--filetto)}
-.gq-giornata b{font-family:var(--serif);font-weight:500;font-size:1.15rem;color:var(--seppia)}
-.gq-giornata span{font-size:.95rem;line-height:1.55}
-@media(max-width:420px){.gq-giornata li{grid-template-columns:1fr;gap:.1rem}}
-.gq a.btn{text-decoration:none}
+.gq-giornata{margin:0 0 2.6rem}
+.gq-giornata .eti{display:block;font-size:.88rem;font-weight:400;letter-spacing:0;text-transform:none;color:var(--ch-tenue,#6E6862);margin-bottom:.8rem}
+.gq-giornata ol{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--ch-filo,#E7E1D8)}
+.gq-giornata li{display:grid;grid-template-columns:9rem 1fr;gap:1rem;padding:1.1rem 0;border-top:1px solid var(--ch-filo,#E7E1D8);align-items:baseline}
+.gq-giornata b{font-family:var(--serif);font-weight:500;font-size:1.3rem}
+.gq-giornata span{line-height:1.6}
+@media(max-width:560px){.gq-giornata li{grid-template-columns:1fr;gap:.2rem}}
+.gq-cta{margin:0 0 1.6rem;padding:2.2rem 0 0;border-top:1px solid var(--ch-filo,#E7E1D8)}
+.gq-cta__t{font-family:var(--serif);font-weight:500;font-size:clamp(1.8rem,3.4vw,2.4rem);line-height:1.1;margin:0 0 .6rem}
+.gq-cta__p{margin:0 0 1.6rem;color:var(--ch-tenue,#6E6862);line-height:1.7}
+.gq-azioni{display:flex;flex-wrap:wrap;gap:.8rem}
+.gq-dopo{display:flex;gap:1.4rem;align-items:center;margin:0}
+.gq-dopo span{display:none}
+.gq-dopo .gq-salta{margin:0}
+
+/* banner "Che tipo da Marechiaro sei?" (home) */
+.ch-quiz{background:var(--ch-fondo,#FBF9F5);color:var(--ch-inchiostro,#24211F);padding-block:clamp(4.5rem,9vw,7rem);border-top:1px solid var(--ch-filo,#E7E1D8)}
+.ch-quiz__griglia{display:grid;gap:2rem;align-items:center}
+@media(min-width:860px){.ch-quiz__griglia{grid-template-columns:1fr 1.4fr;gap:4rem}}
+.ch-quiz__palco{position:relative;height:150px;border-bottom:1px solid var(--ch-filo,#E7E1D8);overflow:hidden}
+.ch-quiz__granchio{position:absolute;left:50%;bottom:-2px;width:86px;margin-left:-43px;height:auto;overflow:visible;animation:gq-passeggia 10s ease-in-out infinite}
+.ch-quiz__granchio .zampe,.ch-quiz__granchio .chela{transform-box:view-box;transform-origin:0 0}
+.ch-quiz__granchio .zampe{animation:zampetta .17s ease-in-out infinite alternate}
+.ch-quiz__granchio .chela{animation:gq-pinza 1.6s ease-in-out infinite}
+.ch-quiz h2{font-family:var(--serif);font-style:normal;font-weight:500;font-size:clamp(2.2rem,4vw,3.6rem);line-height:1.06;letter-spacing:-.012em;margin:0 0 1rem}
+.ch-quiz p{line-height:1.75;color:var(--ch-tenue,#6E6862);max-width:34rem;margin:0 0 1.8rem}
+@media (prefers-reduced-motion:reduce){.gq *,.ch-quiz *{animation:none!important;transition:none!important}.gq-fumetto.su{opacity:1;transform:none}}
+
+/* ============ QUIZ: centrato e più giocoso (stessi colori e caratteri del sito) ============ */
+main:has(#gioco) .testata__testo{text-align:center;margin-inline:auto}
+main:has(#gioco) .testata__testo .guida{margin-inline:auto}
+.gq{margin:0 auto;max-width:46rem;text-align:center}
+.gq-palco{height:190px;max-width:34rem;margin:0 auto 2.6rem}
+.gq-cammina{width:104px;margin-left:-52px}
+@keyframes gq-passeggia{0%,100%{transform:translateX(-130%)}50%{transform:translateX(130%)}}
+@keyframes gq-salto{0%,100%{transform:translateY(0) scale(1)}15%{transform:translateY(3px) scale(1.1,.9)}50%{transform:translateY(-44px) rotate(-8deg) scale(.95,1.06)}85%{transform:translateY(0) scale(1.06,.94)}}
+@keyframes gq-capriola{0%{transform:none}25%{transform:translateY(4px) scale(1.1,.9)}60%{transform:translateY(-58px) rotate(200deg)}100%{transform:rotate(360deg)}}
+.gq-fumetto{left:50%;top:6px;transform:translate(-50%,6px);width:max-content;max-width:min(92%,26rem);padding:.7rem 1.2rem .75rem;
+  background:#fff;border:1px solid var(--ch-filo,#E7E1D8);color:var(--ch-inchiostro,#24211F);font-size:clamp(1.15rem,2.2vw,1.35rem);text-align:center}
+.gq-fumetto::after{content:"";position:absolute;left:50%;bottom:-7px;width:12px;height:12px;background:#fff;
+  border-right:1px solid var(--ch-filo,#E7E1D8);border-bottom:1px solid var(--ch-filo,#E7E1D8);transform:translateX(-50%) rotate(45deg)}
+@keyframes gq-fumetto{0%{opacity:0;transform:translate(-50%,8px) scale(.94)}12%{opacity:1;transform:translate(-50%,0) scale(1.03)}18%,82%{opacity:1;transform:translate(-50%,0) scale(1)}100%{opacity:0;transform:translate(-50%,-4px)}}
+.gq-coccio{display:block;position:absolute;bottom:14px;width:9px;height:9px;border-radius:50%;background:var(--ch-corallo,#B5322A);
+  animation:gq-coccio 1.1s cubic-bezier(.2,.7,.3,1) forwards}
+.gq-coccio:nth-child(2n){background:var(--sabbia,#D9C6A8);width:12px;height:10px;border-radius:50% 50% 35% 35%}
+@keyframes gq-coccio{0%{transform:translate(0,0) rotate(0);opacity:1}100%{transform:translate(var(--dx),var(--dy)) rotate(var(--r));opacity:0}}
+.gq-testa{justify-content:center;gap:1rem}
+.gq-tempo,.gq-avanzamento{max-width:20rem;margin:0 auto 2.4rem}
+.gq-intro{margin-inline:auto}
+.gq-domanda,.gq-titolo{margin-inline:auto;max-width:20ch}
+
+/* risposte come tessere da toccare */
+.gq-risposte{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;border:0;max-width:40rem;margin:0 auto}
+@media(max-width:560px){.gq-risposte{grid-template-columns:1fr}}
+.gq-r{flex-direction:column;align-items:center;justify-content:center;gap:.7rem;min-height:7.5rem;padding:1.3rem 1.1rem;
+  background:#fff;border:1px solid var(--ch-filo,#E7E1D8);text-align:center;font-size:1.02rem;line-height:1.4;
+  transition:transform .35s var(--lenta,ease),border-color .3s,background .3s,color .3s,box-shadow .35s}
+@media(max-width:560px){.gq-r{min-height:0;flex-direction:row;justify-content:flex-start;text-align:left;padding:1rem 1.1rem}}
+.gq-lettera{display:grid;place-items:center;width:2rem;height:2rem;border:1px solid var(--ch-filo,#E7E1D8);border-radius:50%;
+  font-size:.72rem;letter-spacing:0;transition:inherit}
+.gq-r:hover:not(:disabled){padding-left:1.1rem;color:var(--ch-inchiostro,#24211F);border-color:var(--ch-inchiostro,#24211F);transform:translateY(-4px);box-shadow:0 14px 26px rgba(36,33,31,.08)}
+.gq-r:hover:not(:disabled) .gq-lettera{background:var(--ch-corallo,#B5322A);border-color:var(--ch-corallo,#B5322A);color:#fff}
+.gq-r:active:not(:disabled){transform:scale(.97)}
+.gq-r.scelta{padding-left:1.1rem;background:var(--ch-inchiostro,#24211F);border-color:var(--ch-inchiostro,#24211F);color:#fff;animation:gq-scelta .45s cubic-bezier(.3,1.6,.5,1)}
+.gq-r.scelta .gq-lettera{background:var(--ch-corallo,#B5322A);border-color:var(--ch-corallo,#B5322A);color:#fff}
+@keyframes gq-scelta{50%{transform:scale(1.05) rotate(-1deg)}}
+
+/* iscrizione e risultato al centro */
+.gq-form{margin:0 auto 1rem;text-align:left}
+.gq-form .gq-iscrivi{width:100%}
+.gq-form .gq-salta{margin-inline:auto}
+.gq-informativa summary{text-align:center}
+.gq-giornata{max-width:34rem;margin:0 auto 2.6rem}
+.gq-giornata li{text-align:left}
+.gq-cta{max-width:34rem;margin:0 auto 1.6rem}
+.gq-azioni,.gq-dopo{justify-content:center}
+/* banner centrato */
+.ch-quiz__griglia{grid-template-columns:1fr!important;justify-items:center;text-align:center;gap:1.6rem!important;max-width:46rem}
+.ch-quiz__palco{width:min(100%,30rem);height:130px}
+.ch-quiz__granchio{width:96px;margin-left:-48px}
+.ch-quiz p{margin-inline:auto}
+main:has(#gioco) .racconto__testo{text-align:center;margin-inline:auto}main:has(#gioco) .racconto__testo .azioni{justify-content:center}
+
+/* ============ QUIZ · FOTO E VETRO (scelta definitiva) ============ */
+.gq-sez{position:relative;padding-block:clamp(3.5rem,8vw,6rem)!important;border-top:0;
+  background:#7FA9B8 url("/img/stabilimento-marechiaro-ostia-1600.webp") center/cover no-repeat!important}
+.gq-sez::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(36,33,31,.18) 0%,rgba(36,33,31,.38) 100%);pointer-events:none}
+.gq-sez>.wrap{position:relative}
+.gq{max-width:42rem;padding:clamp(1.6rem,4vw,2.8rem) clamp(1.2rem,4vw,2.8rem) clamp(2rem,4vw,2.8rem);color:#fff;
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.45);
+  backdrop-filter:blur(22px) saturate(140%);-webkit-backdrop-filter:blur(22px) saturate(140%)}
+.gq-palco{height:170px;margin-bottom:1.8rem;border-bottom-color:rgba(255,255,255,.4)}
+.gq-granchio{filter:drop-shadow(0 6px 10px rgba(0,0,0,.25))}
+.gq-num,.gq-testa .gq-num{font-size:.7rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.92)}
+.gq-tempo,.gq-avanzamento{height:3px;background:rgba(255,255,255,.3)}
+.gq-tempo i,.gq-avanzamento i{height:3px;background:#fff}
+.gq-domanda,.gq-titolo{color:#fff;text-shadow:0 2px 20px rgba(0,0,0,.18)}
+.gq-intro,.gq-profilo-d{color:rgba(255,255,255,.9)}
+.gq-r{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.5);color:#fff}
+.gq-lettera{border-color:rgba(255,255,255,.6);color:#fff}
+.gq-r:hover:not(:disabled){background:rgba(255,255,255,.28);border-color:#fff;color:#fff;box-shadow:none}
+.gq-r:hover:not(:disabled) .gq-lettera{background:#fff;border-color:#fff;color:var(--ch-inchiostro,#24211F)}
+.gq-r.scelta{background:#fff;border-color:#fff;color:var(--ch-inchiostro,#24211F)}
+.gq-r.scelta .gq-lettera{background:var(--ch-corallo,#B5322A);border-color:var(--ch-corallo,#B5322A);color:#fff}
+.gq-r:disabled:not(.scelta){opacity:.45}
+.gq-campo span,.gq-spunta{color:#fff}
+.gq-campo input{border-color:rgba(255,255,255,.6)}
+.gq-spunta input{accent-color:#fff}
+.gq-errore{color:#FFE1D9}
+.gq .btn{background:#fff;color:var(--ch-inchiostro,#24211F);border-color:#fff}
+.gq .btn:hover{background:var(--ch-inchiostro,#24211F);color:#fff;border-color:var(--ch-inchiostro,#24211F)}
+.gq .btn.scuro{background:transparent;color:#fff;border-color:rgba(255,255,255,.8)}
+.gq .btn.scuro:hover{background:#fff;color:var(--ch-inchiostro,#24211F)}
+.gq-salta,.gq-informativa{color:rgba(255,255,255,.88)}
+.gq-salta:hover{color:#fff}
+.gq-giornata .eti{color:rgba(255,255,255,.88)}
+.gq-giornata ol,.gq-giornata li{border-color:rgba(255,255,255,.35)}
+.gq-giornata b{color:#fff}
+.gq-cta{border-top-color:rgba(255,255,255,.35)}
+.gq-cta__p{color:rgba(255,255,255,.9)}
+.gq-profilo-t{color:#fff}
+.gq .gq-domanda,.gq .gq-titolo,.gq .gq-profilo-t,.gq .gq-cta__t{color:#fff!important}
+.gq a.btn,.gq button.btn{background:#fff!important;color:var(--ch-inchiostro,#24211F)!important;border-color:#fff!important}
+.gq a.btn:hover,.gq button.btn:hover{background:var(--ch-inchiostro,#24211F)!important;color:#fff!important;border-color:var(--ch-inchiostro,#24211F)!important}
+.gq a.btn.scuro{background:transparent!important;color:#fff!important;border-color:rgba(255,255,255,.8)!important}
+.gq a.btn.scuro:hover{background:#fff!important;color:var(--ch-inchiostro,#24211F)!important}
