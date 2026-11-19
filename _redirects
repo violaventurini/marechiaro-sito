@@ -1,4 +1,57 @@
-# I documenti di lavoro restano nel repository ma non vengono serviti online.
-# Chi prova a raggiungerli riceve la 404.
-/_strumenti/*          /404.html   404
-/LEGGIMI-GITHUB.md     /404.html   404
+# ── Indirizzi del vecchio sito ancora noti a Google → pagina nuova corrispondente (301 = spostata per sempre)
+/food-drink.html        /ristorante        301
+/food-drink             /ristorante        301
+/food                   /ristorante        301
+/ristorante-ostia       /ristorante        301
+/pizzeria               /ristorante        301
+/pranzo                 /menu-pranzo       301
+/cena                   /menu-cena         301
+/colazione              /menu-colazione    301
+/bar                    /aperitivi         301
+/aperitivo              /aperitivi         301
+/eventi                 /feste-gruppi      301
+/eventi.html            /feste-gruppi      301
+/feste                  /feste-gruppi      301
+/servizi                /spiaggia          301
+/servizi.html           /spiaggia          301
+/stabilimento           /spiaggia          301
+/lido                   /spiaggia          301
+/prezzi                 /spiaggia          301
+/listino                /spiaggia          301
+/chi-siamo              /storia            301
+/chi-siamo.html         /storia            301
+/about                  /storia            301
+/galleria               /                  301
+/galleria.html          /                  301
+/gallery                /                  301
+/gallery.html           /                  301
+/home                   /                  301
+/home.html              /                  301
+/prenota                /contatti          301
+/prenotazioni           /contatti          301
+/dove-siamo             /contatti          301
+/contact                /en/find-us        301
+/en/contact             /en/find-us        301
+/en/contacts            /en/find-us        301
+/en/events              /en/groups         301
+/en/about               /en/story          301
+/en/spiaggia            /en/beach          301
+/en/ristorante          /en/restaurant     301
+
+# ── La pagina di errore risponde sempre con il codice 404, mai come pagina normale
+/404                    /404.html          404!
+
+# ── Documenti di lavoro e script: restano nel repository ma online non esistono
+/_strumenti/*                  /404.html   404!
+/LEGGIMI-GITHUB.md             /404.html   404!
+/ELENCO-FILE.md                /404.html   404!
+/VERIFICA-DOPO-IL-CARICAMENTO.md /404.html 404!
+/piano-indicizzazione.md       /404.html   404!
+/carta.py                      /404.html   404!
+/costruisci-carte.py           /404.html   404!
+/costruisci.py                 /404.html   404!
+/evento.py                     /404.html   404!
+/genera-carte.py               /404.html   404!
+/genera-menu.py                /404.html   404!
+/menu-dati.py                  /404.html   404!
+/pagine.py                     /404.html   404!

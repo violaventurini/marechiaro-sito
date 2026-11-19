@@ -788,3 +788,9 @@ main:has(#gioco) .racconto__testo{text-align:center;margin-inline:auto}main:has(
 .gq-p{padding:1.8rem 0;border-bottom:1px solid var(--ch-filo,#E7E1D8)}
 .gq-p h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:1.7rem;line-height:1.1;margin:0 0 .6rem}
 .gq-p p{line-height:1.7;color:var(--ch-tenue,#6E6862);margin:0 0 1rem}
+
+/* ============ MENU: testo introduttivo della pagina Menu ============ */
+.sez .menu-racconto{max-width:44rem;margin:0 auto}
+.sez .menu-racconto h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.9rem,3.4vw,2.7rem);line-height:1.1;margin:0 0 1rem}
+.sez .menu-racconto p{line-height:1.8;margin:0 0 1.1rem;color:var(--ch-tenue,#6E6862)}
+.sez .menu-racconto a{color:var(--ch-inchiostro,#24211F);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
